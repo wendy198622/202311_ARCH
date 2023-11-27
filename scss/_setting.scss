@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;500&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.material-icons{
+  @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+      src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+        url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+        url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+    }
+}
+// font-family: 'Noto Sans TC', sans-serif;
+// font-family: 'Noto Serif TC', serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Roboto', sans-serif;
+
+body{ font-family: 'Roboto', 'Noto Sans TC', sans-serif;}
+*{ box-sizing: border-box; color: #010101;}
+a, a:hover, a:active, a:visited{ color: #000000; text-decoration: none; display: block; transition: all .3s; outline: 0;}
+img{ width: 100%; display: block;}
+.clearfix{ 
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+.pc{ display: block;}
+.mob{ display: none;}
+@media (max-width:800px){
+  .pc{ display: none;}
+  .mob{ display: block;}
+}
+.form_popup{
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+  .form_popup_box{
+      width: 660px;
+      height: 220px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      background: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      @media (max-width:800px){
+          width: 90%;
+          height: 300px;
+      }
+      p{
+          font-size: 24px;
+          line-height: 1.6;
+          font-weight: 500;
+      }
+      .popup_close{
+          font-size: 42px;
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          .material-icons{
+              font-size: 40px;
+          }
+          &:hover{
+              cursor: pointer;
+          }
+      }
+  }
+  &.is_acted{
+      opacity: 1;
+      visibility: visible;
+  }
+}
+
+input, button, textarea, select{
+  appearance:none;   
+  -moz-appearance:none;   
+  -webkit-appearance:none; 
+  -ms-appearance:none; 
+  border: 0;
+  position: relative;
+}
+
+.slick-slide, .slick-slide *{ outline: none !important;}
+.slick-dotted.slick-slider{ margin-bottom: 0 !important;}

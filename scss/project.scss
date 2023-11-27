@@ -1,0 +1,357 @@
+@import './setting';
+@import './header';
+@import './footer';
+
+// font-family: 'Noto Sans TC', sans-serif;
+// font-family: 'Noto Serif TC', serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Roboto', sans-serif;
+#header{
+    background-image: none;
+    
+    h1{
+        .white{ display: none;}
+        .black{ display: block;}
+    }
+    .nav{
+        ul li a{ color: #000;}
+    }
+}
+
+.project_title{
+    .container{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    h3{
+        // font-family: 'Noto Serif TC', serif;
+        // font-size: 26px;
+        // font-weight: 600;
+        // color: #00404b;
+        // text-align: center;
+        // letter-spacing: 2px;
+        margin: 160px 0;
+
+        span{
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            line-height: 1.6;
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+    }
+}
+
+.project_list{
+    .container{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    ul{
+        overflow: hidden;
+
+        li{
+            width: 33.3333%;
+            float: left;
+            position: relative;
+            margin-bottom: 120px;
+
+            h4{
+                font-family: 'Noto Serif TC', serif;
+                font-size: 26px;
+                line-height: 2;
+                font-weight: 500;
+                color: #000;
+                text-align: center;
+                letter-spacing: 4px;
+                transition: all .3s;
+            }   
+        
+            h5{
+                font-size: 16px;
+                font-weight: 200;
+                color: #000;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: all .3s;
+            }
+        
+            h6{
+                font-family: 'Noto Serif TC', serif;
+                font-size: 20px;
+                font-weight: 600;
+                color: #000;
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: all .3s;
+            }
+
+            &:hover{
+                cursor: pointer;
+
+                h4, h5, h6{
+                    color: #c49e6b;
+                    letter-spacing: 10px;
+                }
+            }
+
+            &.active{
+
+                h4, h5, h6{
+                    color: #c49e6b;
+                    letter-spacing: 10px;
+                }
+            }       
+        }
+    }
+}
+.projectpage_photo{}
+
+.projectpage_content{
+    position: absolute;
+    z-index: 99;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .container{
+        max-width: 1000px;
+        margin: 0 auto;
+        // overflow: hidden;
+    }
+
+    ul{
+        overflow: hidden;
+
+        li{
+            width: 100%;
+            position: relative;
+            margin-bottom: 120px;
+
+            h4{
+                font-family: 'Noto Serif TC', serif;
+                font-size: 36px;
+                line-height: 1.4;
+                font-weight: 500;
+                color: #fff;
+                // text-align: center;
+                letter-spacing: 4px;
+                transition: all .3s;
+            }   
+        
+            h5{
+                font-size: 22px;
+                font-weight: 200;
+                color: #fff;
+                // text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: all .3s;
+            }
+        
+            h6{
+                font-family: 'Noto Serif TC', serif;
+                font-size: 20px;
+                line-height: 3;
+                font-weight: 600;
+                color: #fff;
+                display: block;
+                // text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: all .3s;
+            }
+
+            p{
+                font-size: 15px;
+                line-height: 1.6;
+                font-weight: 300;
+                color: #fff;
+                letter-spacing: 2px;
+                margin-top: 36px;
+                text-align: justify;
+            } 
+
+            ol.projectinfo{
+                margin-top: 180px;
+                overflow: hidden;
+                
+                li{
+                    width: 300px;
+                    float: left;
+                    font-size: 14px;
+                    font-family: 'Noto Serif TC', serif;
+                    letter-spacing: 2px;
+                    color: #fff;
+                    margin-bottom: 20px;
+
+                    span{
+                        font-family: 'Noto Sans TC', sans-serif;
+                        letter-spacing: 2px;
+                        color: #fff;
+                        display: inline-block;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .backproject{
+        width: 50%;
+        float: left;
+        font-size: 12px;
+        font-family: 'Noto Serif TC', serif;
+        line-height: 2;
+        letter-spacing: 2px;
+        position: relative;
+        transition: all .3s;
+        
+        a{
+            color: #fff;
+            text-align: left;
+            display: block;
+
+            img{
+                width: 60px;
+                position: absolute;
+                left: -80px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all .3s;
+            }
+        }
+
+        &:hover{
+            margin-left: -10px;
+            
+            img{
+                left: -100px;
+            }
+        }
+    }
+
+    .closedetail{
+        width: 50%;
+        float: right;
+        font-size: 12px;
+        font-family: 'Noto Serif TC', serif;
+        line-height: 2;
+        letter-spacing: 2px;
+        position: relative;
+        transition: all .3s;
+        
+        a{
+            color: #fff;
+            text-align: right;
+            display: block;
+
+            img{
+                width: 18px;
+                position: absolute;
+                right: -40px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all .3s;
+            }
+        }
+
+        &:hover{
+            margin-right: -10px;
+            
+            img{
+                right: -60px;
+            }
+        }
+    }
+}
+
+.fullpage-wrapper {
+	width: 100%!important;
+	transform: none!important;
+	
+	.fp-section {
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			z-index: 1;
+		}
+		
+		width: 100%!important;
+		position: absolute;
+		left: 0;
+		top: 0;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 0;
+		transition: all .7s ease-in-out;
+		
+		.fp-slidesContainer {
+			width: 100%!important;
+			transform: none!important;
+			
+			.fp-slide {
+				&.active {
+					visibility: visible;
+					opacity: 1;
+					z-index: 1;
+				}
+				
+				width: 100%!important;
+				position: absolute;
+				left: 0;
+				top: 0;
+				visibility: hidden;
+				opacity: 0;
+				z-index: 0;
+				transition: all .7s ease-in-out;
+			}
+		}
+	}
+}
+#fp-nav, .fp-slidesNav {
+    
+    li{
+        display: block;
+        width: 1px;
+        height: 40px;
+        margin: 0;
+        position: relative;
+
+        a{
+            display: block;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            text-decoration: none;
+            
+            span {
+                top: 0;
+                left: 0;
+                width: 1px;
+                height: 48px;
+                border: none;
+                background: #000;
+                border-radius: none;
+                position: absolute;
+                z-index: 1;
+            }
+
+            &.active{
+
+                span{
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

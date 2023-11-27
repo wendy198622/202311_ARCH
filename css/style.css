@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;500&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;500&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@font-face {
+  .material-icons {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+  }
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #010101;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  outline: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.pc {
+  display: block;
+}
+
+.mob {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .pc {
+    display: none;
+  }
+  .mob {
+    display: block;
+  }
+}
+
+.form_popup {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.form_popup .form_popup_box {
+  width: 660px;
+  height: 220px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+@media (max-width: 800px) {
+  .form_popup .form_popup_box {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+.form_popup .form_popup_box p {
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.form_popup .form_popup_box .popup_close {
+  font-size: 42px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.form_popup .form_popup_box .popup_close .material-icons {
+  font-size: 40px;
+}
+
+.form_popup .form_popup_box .popup_close:hover {
+  cursor: pointer;
+}
+
+.form_popup.is_acted {
+  opacity: 1;
+  visibility: visible;
+}
+
+input, button, textarea, select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  border: 0;
+  position: relative;
+}
+
+.slick-slide, .slick-slide * {
+  outline: none !important;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0 !important;
+}
+
+.mouse_circle {
+  position: absolute;
+  z-index: 99;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  background: #CB4B16;
+  border-radius: 80%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+section {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+section .homeproject_photo {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  outline: 1px solid red;
+}
+
+section .homeproject_photo .slide {
+  padding: 60px;
+}
+
+section .homeproject_photo .slide.slick-active button:before,
+section .homeproject_photo .slide button:before {
+  color: black;
+  font-size: 12px;
+}
+
+section .homeproject_photo .slide img {
+  width: 800px !important;
+  margin: 0 auto;
+}
+
+section .homeproject_photo .slick-slide {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+section .homeproject_photo .slick-current {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+section .homeproject_photo .slick-dotted.slick-slider {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+section .homeproject_photo .slick-dots {
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+  width: auto;
+  bottom: auto;
+}
+
+section .homeproject_text {
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: left;
+  font-family: 'Playfair Display', 'Noto Serif TC', serif;
+}
+
+section .homeproject_text .slide .year {
+  font-size: 50px;
+}
+
+section .homeproject_text .slide .name {
+  font-size: 60px;
+}
+
+section .homeproject_text .slide .company {
+  font-size: 40px;
+}
+/*# sourceMappingURL=style.css.map */

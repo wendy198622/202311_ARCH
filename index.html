@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>明築輝皇</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Resource-type" content="" />
+    <!-- <meta property="og:image" content="https://www.zyed.com.tw/VITRUVIUS/img/1200x630.png"> -->
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- js -->
+    <!-- <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+
+    <!-- slider -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    
+    <!-- 滑鼠 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js" type="text/javascript"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+</head>
+
+<body>
+    <header id="header"></header>
+    <section>
+        <ul class="homeproject_photo homeproject_photo_slick">
+            <li class="slide">
+                <img src="img/projectphoto_01.jpg" alt="">
+            </li>
+            <li class="slide">
+                <img src="img/projectphoto_02.jpg" alt="">
+            </li>
+            <li class="slide">
+                <img src="img/projectphoto_03.jpg" alt="">
+            </li>
+            <li class="slide">
+                <img src="img/projectphoto_04.jpg" alt="">
+            </li>
+            <li class="slide">
+                <img src="img/projectphoto_05.jpg" alt="">
+            </li>
+        </ul>
+        <ul class="homeproject_text homeproject_text_slick">
+            <li class="slide">
+                <div class="year">2023</div>
+                <div class="name">明築輝皇</div>
+                <div class="company">明築建設</div>
+            </li>
+        </ul>
+    </section>
+    <footer></footer>
+</body>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#header').load('page/header.html');
+        $('#footer').load('page/footer.html');
+
+        const $slider = $('.homeproject_photo_slick');
+
+        $slider.slick({
+            infinite: true,
+            arrows: false,
+            vertical: true,
+            dots: true,
+            slidesToShow: 1,
+            centerMode: true,
+            centerPadding: '160px',
+            speed: 1200,
+            cssEase: 'cubic-bezier(0.86, 0, 0.07, 1)'
+        });
+
+        $slider.mousewheel(function(e) {
+            e.preventDefault()
+            if (e.deltaY < 0) {
+
+                if ($(this).slick('slickCurrentSlide') === $(this).find('.slick-slide').length - 1) {
+                return
+                }
+
+                $(this).slick('slickNext');
+
+            } else {
+
+                if ($(this).slick('slickCurrentSlide') === 0) {
+                return
+                }
+
+                $(this).slick('slickPrev')
+            }
+        });
+
+
+        //滑鼠圈圈
+        var $circle = $('.mouse_circle');
+
+        function moveCircle(e) {
+            TweenLite.to($circle, 0.3, {
+            css: {
+                left: e.pageX,
+                top: e.pageY
+                }
+            });
+        }
+
+        $(window).on('mousemove', moveCircle);
+
+
+    });
+
+</script>
+
+
+
+</html>

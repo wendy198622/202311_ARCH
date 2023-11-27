@@ -1,0 +1,169 @@
+@import './setting';
+@import './header';
+@import './footer';
+
+// font-family: 'Noto Sans TC', sans-serif;
+// font-family: 'Noto Serif TC', serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Roboto', sans-serif;
+
+#header{
+    background-image: linear-gradient(rgba(0,0,0,.5) -20%, rgba(0,0,0,0) 100%);
+    
+    h1{
+        .white{ display: block;}
+        .black{ display: none;}
+    }
+    .nav{
+        ul li a{ color: #fff;}
+    }
+}
+
+.aboutus_visual{
+    width: 100%;
+    height: 0;
+    padding-bottom: 42.2%;
+    overflow: hidden;
+
+    video{
+        margin-top: -7%;
+    }
+}
+
+.aboutus_organize{
+    width: 100%;
+    background: #f2f2f2;
+
+    .container{
+        max-width: 1400px;
+        margin:0 auto;
+        padding: 100px 0;
+    }
+
+    ul{
+        overflow: hidden;
+
+        li{
+            width: calc((100% - 16px) / 3);
+            float: left;
+            margin-right: 8px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.aboutus_team{
+
+    .container{
+        max-width: 1000px;
+        margin:0 auto;
+        padding: 100px 0;
+    }
+
+    h3{
+        font-family: 'Noto Serif TC', serif;
+        font-size: 26px;
+        font-weight: 600;
+        color: #00404b;
+        text-align: center;
+        letter-spacing: 2px;
+
+        span{
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #a3b0b3;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+
+    ul{
+        overflow: hidden;
+        margin-top: 60px;
+
+        li{
+            width: calc((100% - 56px) / 5);
+            float: left;
+            margin-right: 14px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            h4{
+                font-family: 'Noto Serif TC', serif;
+                font-size: 26px;
+                font-weight: 600;
+                text-align: center;
+                letter-spacing: 3px;
+                margin-top: 20px;
+            }
+
+            h5{
+                font-family: 'Noto Serif TC', serif;
+                font-size: 18px;
+                line-height: 1.6;
+                font-weight: 600;
+                text-align: center;
+                letter-spacing: 6px;
+            }
+
+            img{
+                margin-top: 14px;
+            }
+        }
+    }
+}
+
+.aboutus_team_master{
+    width: 100%;
+    background: #f2f2f2;
+    padding: 240px 0;
+
+    .container{
+        max-width: 840px;
+        margin:0 auto;
+        overflow: hidden;
+
+    }
+
+    .intro{
+        width: calc(400/840*100%);
+        float: left;
+
+
+        h4{
+            font-family: 'Noto Serif TC', serif;
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-top: 20px;
+            margin-top: 100px;
+        }
+
+        h5{
+            font-family: 'Noto Serif TC', serif;
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-top: 60px;
+        }
+
+        .signature{
+            width: calc(280/840*100%);
+            float: right;
+            margin-top: 60px;
+        }
+    }
+
+    .photo{
+        width: calc(340/840*100%);
+        float: right;
+    }
+}

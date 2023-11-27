@@ -1,0 +1,154 @@
+@import './setting';
+@import './header';
+@import './footer';
+
+// font-family: 'Noto Sans TC', sans-serif;
+// font-family: 'Noto Serif TC', serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Roboto', sans-serif;
+#header{
+    background-image: none;
+    
+    h1{
+        .white{ display: none;}
+        .black{ display: block;}
+    }
+    .nav{
+        ul li a{ color: #000;}
+    }
+}
+
+.contactus_title{
+    .container{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    h3{
+        font-family: 'Playfair Display', serif;
+        font-size: 26px;
+        line-height: 1.6;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 160px 0 40px;
+
+        span{
+            // font-family: 'Noto Serif TC', serif;
+            // font-size: 26px;
+            // font-weight: 600;
+            // color: #00404b;
+            // text-align: center;
+            // letter-spacing: 2px;
+        }
+    }
+}
+
+.contactus_form{
+    margin-bottom: 200px;
+    
+    .container{
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .item{
+        width: calc((100% - 100px) / 2);
+        float: left;
+        margin-right: 100px;
+        margin-top: 36px;
+        position: relative;
+
+        &.message{
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        &:nth-child(even){
+            margin-right: 0;
+        }
+
+        label{
+            display: none;
+        }
+
+        ::placeholder {
+            color: #7d7e7e;
+            font-family: 'Noto Serif TC', serif;
+            font-size: 16px;
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+        }
+
+        select, input[type="text"], textarea{
+            width: 100%;
+            font-family: 'Noto Serif TC', serif;
+            font-size: 16px;
+            line-height: 3;
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            color: #000;
+            border-bottom: 1px solid #000;
+        }
+
+        textarea{
+            height: 140px;
+            resize: none;
+        }
+
+        .code{
+            width: 120px;
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+
+    }
+
+    .hint{
+        width: 100%;
+        font-family: 'Noto Serif TC', serif;
+        font-size: 12px;
+        line-height: 2;
+        letter-spacing: 1px;
+        overflow: hidden;
+
+        .required{
+            width: 260px;
+            float: left;
+            text-align: left;
+        }
+        
+        .info{
+            width: calc(100% - 260px);
+            float: right;
+            text-align: right;
+
+            a{
+                color: #c9a063;
+                display: inline-block;
+                margin-left: 10px;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    button.submit{
+        width: calc((100% - 100px) / 2);
+        background-color: #7d7e7e;
+        color: #fff;
+        font-family: 'Noto Serif TC', serif;
+        font-size: 16px;
+        line-height: 2;
+        letter-spacing: 2px;
+        margin-top: 54px;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+
+    }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>明築輝皇</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Resource-type" content="" />
+    <!-- <meta property="og:image" content="https://www.zyed.com.tw/VITRUVIUS/img/1200x630.png"> -->
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/slick.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/slick-theme.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/aboutus.css" />
+    <!-- js -->
+    <!-- <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/slick.js"></script> -->
+    
+    <!-- 滑鼠 -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js" type="text/javascript"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" /> -->
+</head>
+
+<body>
+    <header id="header"></header>
+    <section>
+        <div class="aboutus_visual">
+            <div class="container">
+                <video width="100%" height="100%" preload autoplay muted loop>
+                    <source src="img/video-pc.mp4" type="video/mp4">
+                </video>  
+            </div>
+        </div>
+        <div class="aboutus_organize">
+            <div class="container">
+                <ul>
+                    <li><img src="img/aboutus_organize1.jpg" alt=""></li>
+                    <li><img src="img/aboutus_organize2.jpg" alt=""></li>
+                    <li><img src="img/aboutus_organize3.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="aboutus_team">
+            <div class="container">
+                <h3>
+                    建築團隊
+                    <span>team</span>
+                </h3>
+                <ul>
+                    <li>
+                        <img src="img/aboutus_team_photo1.png" alt="">
+                        <h4>呂文程</h4>
+                        <h5>全台十大建築師</h5>
+                    </li>
+                    <li>
+                        <h4>林大俊</h4>
+                        <h5>全台十大建築師</h5>
+                        <img src="img/aboutus_team_photo2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/aboutus_team_photo3.png" alt="">
+                        <h4>楊永豐</h4>
+                        <h5>結構顧問</h5>
+                    </li>
+                    <li>
+                        <h4>康明華</h4>
+                        <h5>空間設計師</h5>
+                        <img src="img/aboutus_team_photo4.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/aboutus_team_photo5.png" alt="">
+                        <h4>鄭詩哲</h4>
+                        <h5>機電技師</h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="aboutus_team_master">
+            <div class="container">
+                <div class="intro">
+                    <h4>型隨機轉的美學</h4>
+                    <h5>師承芝加哥學派，呂文程建築師<br>
+                            將Form Follows Function(型隨機轉)<br>
+                            的概念導入空間,<br>
+                            讓硬體去適應每一位家庭成員的生活習慣、<br>
+                            每一寸空間都是我們將國際建築的閱歷,<br>
+                            捏成最適合桃園人的形狀。</h5>
+                    <div class="signature">
+                        <img src="img/aboutus_team_signature.png" alt="">
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="img/aboutus_team_master.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#header').load('page/header.html');
+        $('#footer').load('page/footer.html');
+
+        const $slider = $('.homeproject_photo_slick');
+
+        $slider.slick({
+            infinite: true,
+            arrows: false,
+            vertical: true,
+            dots: true,
+            slidesToShow: 1,
+            centerMode: true,
+            centerPadding: '160px',
+            speed: 1200,
+            cssEase: 'cubic-bezier(0.86, 0, 0.07, 1)'
+        });
+
+        $slider.mousewheel(function(e) {
+            e.preventDefault()
+            if (e.deltaY < 0) {
+
+                if ($(this).slick('slickCurrentSlide') === $(this).find('.slick-slide').length - 1) {
+                return
+                }
+
+                $(this).slick('slickNext');
+
+            } else {
+
+                if ($(this).slick('slickCurrentSlide') === 0) {
+                return
+                }
+
+                $(this).slick('slickPrev')
+            }
+        });
+
+
+        //滑鼠圈圈
+        var $circle = $('.mouse_circle');
+
+        function moveCircle(e) {
+            TweenLite.to($circle, 0.3, {
+            css: {
+                left: e.pageX,
+                top: e.pageY
+                }
+            });
+        }
+
+        $(window).on('mousemove', moveCircle);
+
+
+    });
+
+</script>
+
+
+
+</html>

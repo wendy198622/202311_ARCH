@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- <script type="text/javascript">window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/greatbuilding.com.tw\/wp-includes\/js\/wp-emoji-release.min.js?ver=5c4d30aeb4e6059223dc156f675a1315"}};!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);</script>
+    <style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>
+        <link rel='stylesheet' id='wp-block-library-css' href='https://greatbuilding.com.tw/wp-includes/css/dist/block-library/style.min.css?ver=5c4d30aeb4e6059223dc156f675a1315' type='text/css' media='all'/>
+    <link rel='stylesheet' id='classic-theme-styles-css' href='https://greatbuilding.com.tw/wp-includes/css/classic-themes.min.css?ver=5c4d30aeb4e6059223dc156f675a1315' type='text/css' media='all'/>
+    <style id='global-styles-inline-css' type='text/css'>body{--wp--preset--color--black:#000;--wp--preset--color--cyan-bluish-gray:#abb8c3;--wp--preset--color--white:#fff;--wp--preset--color--pale-pink:#f78da7;--wp--preset--color--vivid-red:#cf2e2e;--wp--preset--color--luminous-vivid-orange:#ff6900;--wp--preset--color--luminous-vivid-amber:#fcb900;--wp--preset--color--light-green-cyan:#7bdcb5;--wp--preset--color--vivid-green-cyan:#00d084;--wp--preset--color--pale-cyan-blue:#8ed1fc;--wp--preset--color--vivid-cyan-blue:#0693e3;--wp--preset--color--vivid-purple:#9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple:linear-gradient(135deg,rgba(6,147,227,1) 0%,#9b51e0 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan:linear-gradient(135deg,#7adcb4 0%,#00d082 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange:linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red:linear-gradient(135deg,rgba(255,105,0,1) 0%,#cf2e2e 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray:linear-gradient(135deg,#eee 0%,#a9b8c3 100%);--wp--preset--gradient--cool-to-warm-spectrum:linear-gradient(135deg,#4aeadc 0%,#9778d1 20%,#cf2aba 40%,#ee2c82 60%,#fb6962 80%,#fef84c 100%);--wp--preset--gradient--blush-light-purple:linear-gradient(135deg,#ffceec 0%,#9896f0 100%);--wp--preset--gradient--blush-bordeaux:linear-gradient(135deg,#fecda5 0%,#fe2d2d 50%,#6b003e 100%);--wp--preset--gradient--luminous-dusk:linear-gradient(135deg,#ffcb70 0%,#c751c0 50%,#4158d0 100%);--wp--preset--gradient--pale-ocean:linear-gradient(135deg,#fff5cb 0%,#b6e3d4 50%,#33a7b5 100%);--wp--preset--gradient--electric-grass:linear-gradient(135deg,#caf880 0%,#71ce7e 100%);--wp--preset--gradient--midnight:linear-gradient(135deg,#020381 0%,#2874fc 100%);--wp--preset--duotone--dark-grayscale:url(#wp-duotone-dark-grayscale);--wp--preset--duotone--grayscale:url(#wp-duotone-grayscale);--wp--preset--duotone--purple-yellow:url(#wp-duotone-purple-yellow);--wp--preset--duotone--blue-red:url(#wp-duotone-blue-red);--wp--preset--duotone--midnight:url(#wp-duotone-midnight);--wp--preset--duotone--magenta-yellow:url(#wp-duotone-magenta-yellow);--wp--preset--duotone--purple-green:url(#wp-duotone-purple-green);--wp--preset--duotone--blue-orange:url(#wp-duotone-blue-orange);--wp--preset--font-size--small:13px;--wp--preset--font-size--medium:20px;--wp--preset--font-size--large:36px;--wp--preset--font-size--x-large:42px;--wp--preset--spacing--20:.44rem;--wp--preset--spacing--30:.67rem;--wp--preset--spacing--40:1rem;--wp--preset--spacing--50:1.5rem;--wp--preset--spacing--60:2.25rem;--wp--preset--spacing--70:3.38rem;--wp--preset--spacing--80:5.06rem;--wp--preset--shadow--natural:6px 6px 9px rgba(0,0,0,.2);--wp--preset--shadow--deep:12px 12px 50px rgba(0,0,0,.4);--wp--preset--shadow--sharp:6px 6px 0 rgba(0,0,0,.2);--wp--preset--shadow--outlined:6px 6px 0 -3px rgba(255,255,255,1) , 6px 6px rgba(0,0,0,1);--wp--preset--shadow--crisp:6px 6px 0 rgba(0,0,0,1)}:where(.is-layout-flex){gap:.5em}body .is-layout-flow>.alignleft{float:left;margin-inline-start:0;margin-inline-end:2em}body .is-layout-flow>.alignright{float:right;margin-inline-start:2em;margin-inline-end:0}body .is-layout-flow>.aligncenter{margin-left:auto!important;margin-right:auto!important}body .is-layout-constrained>.alignleft{float:left;margin-inline-start:0;margin-inline-end:2em}body .is-layout-constrained>.alignright{float:right;margin-inline-start:2em;margin-inline-end:0}body .is-layout-constrained>.aligncenter{margin-left:auto!important;margin-right:auto!important}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:var(--wp--style--global--content-size);margin-left:auto!important;margin-right:auto!important}body .is-layout-constrained>.alignwide{max-width:var(--wp--style--global--wide-size)}body .is-layout-flex{display:flex}body .is-layout-flex{flex-wrap:wrap;align-items:center}body .is-layout-flex>*{margin:0}:where(.wp-block-columns.is-layout-flex){gap:2em}.has-black-color{color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-color{color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-color{color:var(--wp--preset--color--white)!important}.has-pale-pink-color{color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-color{color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-color{color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-color{color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-color{color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-color{color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-color{color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-color{color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-color{color:var(--wp--preset--color--vivid-purple)!important}.has-black-background-color{background-color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-background-color{background-color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-background-color{background-color:var(--wp--preset--color--white)!important}.has-pale-pink-background-color{background-color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-background-color{background-color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-background-color{background-color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-background-color{background-color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-background-color{background-color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-background-color{background-color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-background-color{background-color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-background-color{background-color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-background-color{background-color:var(--wp--preset--color--vivid-purple)!important}.has-black-border-color{border-color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-border-color{border-color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-border-color{border-color:var(--wp--preset--color--white)!important}.has-pale-pink-border-color{border-color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-border-color{border-color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-border-color{border-color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-border-color{border-color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-border-color{border-color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-border-color{border-color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-border-color{border-color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-border-color{border-color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-border-color{border-color:var(--wp--preset--color--vivid-purple)!important}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background:var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple)!important}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background:var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan)!important}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background:var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange)!important}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background:var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red)!important}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background:var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray)!important}.has-cool-to-warm-spectrum-gradient-background{background:var(--wp--preset--gradient--cool-to-warm-spectrum)!important}.has-blush-light-purple-gradient-background{background:var(--wp--preset--gradient--blush-light-purple)!important}.has-blush-bordeaux-gradient-background{background:var(--wp--preset--gradient--blush-bordeaux)!important}.has-luminous-dusk-gradient-background{background:var(--wp--preset--gradient--luminous-dusk)!important}.has-pale-ocean-gradient-background{background:var(--wp--preset--gradient--pale-ocean)!important}.has-electric-grass-gradient-background{background:var(--wp--preset--gradient--electric-grass)!important}.has-midnight-gradient-background{background:var(--wp--preset--gradient--midnight)!important}.has-small-font-size{font-size:var(--wp--preset--font-size--small)!important}.has-medium-font-size{font-size:var(--wp--preset--font-size--medium)!important}.has-large-font-size{font-size:var(--wp--preset--font-size--large)!important}.has-x-large-font-size{font-size:var(--wp--preset--font-size--x-large)!important}.wp-block-navigation a:where(:not(.wp-element-button)){color:inherit}:where(.wp-block-columns.is-layout-flex){gap:2em}.wp-block-pullquote{font-size:1.5em;line-height:1.6}</style>
+    <link rel='stylesheet' id='contact-form-7-css' href='https://greatbuilding.com.tw/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.7.6' type='text/css' media='all'/>
+    <style id='contact-form-7-inline-css' type='text/css'>.wpcf7 .wpcf7-recaptcha iframe{margin-bottom:0}.wpcf7 .wpcf7-recaptcha[data-align="center"]>div{margin:0 auto}.wpcf7 .wpcf7-recaptcha[data-align="right"]>div{margin:0 0 0 auto}</style>
+    <link rel="https://api.w.org/" href="https://greatbuilding.com.tw/wp-json/"/><link rel="alternate" type="application/json" href="https://greatbuilding.com.tw/wp-json/wp/v2/pages/171"/><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://greatbuilding.com.tw/xmlrpc.php?rsd"/>
+    <link rel="alternate" type="application/json+oembed" href="https://greatbuilding.com.tw/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgreatbuilding.com.tw%2Fmain%2F"/>
+    <link rel="alternate" type="text/xml+oembed" href="https://greatbuilding.com.tw/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgreatbuilding.com.tw%2Fmain%2F&#038;format=xml"/>
+    <style type="text/css">.recentcomments a{display:inline!important;padding:0!important;margin:0!important}</style><link rel="icon" href="https://www.greatbuilding.com.tw/wp-content/uploads/2020/08/fav.jpg" type="image/png"/>
+    <link rel="icon" href="https://greatbuilding.com.tw/wp-content/uploads/2023/05/cropped-聯聚大頭貼for中維時期-32x32.jpg" sizes="32x32"/>
+    <link rel="icon" href="https://greatbuilding.com.tw/wp-content/uploads/2023/05/cropped-聯聚大頭貼for中維時期-192x192.jpg" sizes="192x192"/>
+    <link rel="apple-touch-icon" href="https://greatbuilding.com.tw/wp-content/uploads/2023/05/cropped-聯聚大頭貼for中維時期-180x180.jpg"/>
+    <meta name="msapplication-TileImage" content="https://greatbuilding.com.tw/wp-content/uploads/2023/05/cropped-聯聚大頭貼for中維時期-270x270.jpg"/> -->
+
+
+</head>
+
+
+
+<body>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="temp.css">
+
+  <section data-barba="wrapper">
+
+    <!-- <div id="preloadWrap" style="background-color: #f2f2f2; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 199;"></div> -->
+
+
+
+
+
+
+
+    <main data-barba="container" data-barba-namespace="index">
+
+      <header class="topmenuWrap grid-x align-justify align-middle">
+
+        <div class="logo cell shrink">
+          <a href="https://greatbuilding.com.tw/main/">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="278.19" height="33.23" viewBox="0 0 278.19 33.23">
+
+              <path
+                d="M43,17.45l-4.34-5.61-.16,0a28.57,28.57,0,0,1-3.44.66l-.46.06,1.71,1.94-5.3.31A97.46,97.46,0,0,0,41,7.32a18.45,18.45,0,0,0,1.51-1.2l.39-.35-.51-.08c-1.48-.27-3.06-.62-4.69-1.06l-.15,0-.1.12c-1,1.1-1.94,2.19-2.91,3.22L31,8.26a13.71,13.71,0,0,1,1.79-1.61c.64-.51,1.37-1.11,2.23-1.84l2-1.58,0-.07A3.63,3.63,0,0,1,38,2.31L38.5,2l-.63-.09c-.65-.09-2.31-.48-4.93-1.18L32.76.63l-.1.16a29.55,29.55,0,0,1-5.41,6.27,6.67,6.67,0,0,1-3.83,1.78L23,8.89l.21.34c.52.83,1,1.56,1.49,2.25l.09.12.16,0c1.93-.32,4.17-.6,6.67-.85a21,21,0,0,1-7.53,4.45l-.33.1.2.29c1.33,1.81,1.63,2.28,1.69,2.4v.23l.28,0c4.06-.52,8.09-.91,12-1.18L38.6,18c-1.12,0-2.37-.12-3.72-.24l-.34,0,.07.33a12.22,12.22,0,0,1,.24,2.46v2.12H31.39c0-.87.09-2.12.24-3.81l0-.29h-.29a49.46,49.46,0,0,1-5.18,0h-.32l.06.31a14.44,14.44,0,0,1,0,6.47l-.1.34.35,0c1.87-.08,4.49-.16,8-.25-1.25,2.19-4.21,3.84-8.79,4.89a8.94,8.94,0,0,0-1.79.41L23,31l-.26-1.57V24.21l3-.26v-.23A18.51,18.51,0,0,1,25.93,21l.05-.31-.32,0a18.6,18.6,0,0,0-2.95.46V5.65c1.11,0,2.52,0,4.2.13l.32,0-.06-.31a7.54,7.54,0,0,1,0-2.68l0-.3h-.31c-7.39.26-15.71.3-24.73.13a1.24,1.24,0,0,0-.56-.13H1.37V5.8l.27,0c1.4-.08,2.9-.12,4.45-.13V22.82L0,23.09l.16.34A22.32,22.32,0,0,0,1.92,26.5l.08.12.14,0a23.33,23.33,0,0,0,2.75-.39c.71-.1,5.09-.6,12.36-1.42a56,56,0,0,1-.49,7.59l-.05.3.3,0c2.13-.08,4.13-.08,5.93,0l.31,0L23,31l.65.2A34.49,34.49,0,0,1,29,33.16l.11.07,1.59-.85c5-2.22,8-4.93,8.82-8.08l.26-1.24c0-.34.16-1.93.49-4.71l0-.28h-1c1-.21,2.09-.4,3.23-.55ZM17.25,21.79l-5.7.72V18.17h5.7Zm0-6.23h-5.7V11.72h5.7Zm0-6.32h-5.7V5.65h5.7Z" />
+
+              <path
+                d="M55.88,11.22c-1.16.26-2.57.53-4.2.79l-.27,0,4.94-3.83A15.74,15.74,0,0,1,58.8,6.41l.51-.33L58.72,6a34.22,34.22,0,0,1-4.43-1.44l-.15-.06L54,4.57c-2,2-3.1,3.17-3.4,3.49l-3.48.22a79.72,79.72,0,0,1,6.72-6L54.3,2l-.56-.09a47.58,47.58,0,0,1-4.93-1l-.18,0-.1.15c-.16.26-.41.61-.74,1-2.42,3.61-4.87,5.83-7.27,6.61h-.74l2.41,2.89.14,0c2.12-.3,4-.51,5.46-.61-2.36,2-4.31,3.28-5.81,3.68l-.42.11.31.31a13,13,0,0,1,2.19,2.57l0,.07-1.05,0-.29,0,0,.3C43,19.2,43,23,43,29.12a36,36,0,0,1-.25,3.67l0,.27H43c2,0,3.8,0,5.44.13l.29,0,0-.28q-.24-3.45-.48-7.38h4.16l-.25,1.86.3,0c1.64-.08,3.38-.08,5.18,0l.28,0,0-.28a71.26,71.26,0,0,1,0-8.27l0-.27H52.18l0,.29a30.48,30.48,0,0,1,.24,3.93H48.25a40.34,40.34,0,0,1,.49-5l0-.3h-.3c-1.33.06-2.58.08-3.77.06,3-.33,6.69-.62,10.86-.87l1.26,1.47.15,0c1.46-.34,3-.65,4.45-.92l.46-.08-5.88-6Zm-7.56,3.22,2.91-2.25.34.26A19.83,19.83,0,0,1,53.44,14Z" />
+
+              <path
+                d="M113.38,16.44c2.6-1,4.74-2,6.37-2.73a61.21,61.21,0,0,1,8,3.77l.14.08.13-.1a13.58,13.58,0,0,1,4.39-2.07l.71-.21L129,13.6c-1.63-.6-3.57-1.31-5.78-2.09a34.14,34.14,0,0,0,6.64-7.42l.28-.41-.49,0c-6.58.27-13.41.27-20.32,0H109l.07.31a6.81,6.81,0,0,1,0,2.55l-.06.3h.31c3.51-.09,7.82-.13,12.83-.13a34,34,0,0,1-3.46,3.16L112,7.77l-.1.06a37.72,37.72,0,0,1-3.7,2l-.64.3.69.17c3.14.76,5.43,1.39,6.83,1.88a47.79,47.79,0,0,1-6.55,2.11,14.71,14.71,0,0,0-1.45.26l.69-1.23-.47,0c-.91.08-2,.2-3.2.36V5c1.12,0,2.58,0,4.45.13l.31,0-.06-.31a7.22,7.22,0,0,1,0-2.54l.06-.32-.32,0c-1.48.09-11.57.13-30,.13L75.05,2l0,.31a6.78,6.78,0,0,1,0,2.54l0,.3h.3l6-.14v9.78c-1.46,0-3.33.05-5.71.13l-.41,0,.2.36a18.46,18.46,0,0,1,1.22,2.6l.07.17h.18c12-.84,19.43-1.33,22-1.44a7.24,7.24,0,0,1-.22,1.12l-.09.32h2.58c-6.71.41-13.68.64-20.85.69h-.78l.63.45c1.44,1,2.23,1.85,2.38,2.49l0,.2,3.87-.2-.32.12a43.94,43.94,0,0,1-9.32,3.52,17.43,17.43,0,0,0-3.53.67l-.84.26.85.23a30,30,0,0,1,4.92,1.69l.1.05.1,0c.65-.26,1.37-.52,2.23-.79L94,22.22,93.27,22a9.32,9.32,0,0,1-1.7-.62l8.82-.59c0,6.14-.08,10.08-.24,11.7l0,.28h6v-.25c0-2.52-.08-5.61-.22-9.19A29.51,29.51,0,0,0,116.7,29l.51.13c2,.35,5.52,1,10.91,2.11l.17,0,.09-.15a12.28,12.28,0,0,1,3.89-3.35l.69-.42-.81,0c-7.26-.32-12.85-1-16.63-2.08l4.52-1c1.16-.27,3.56-.79,7.19-1.58l.67-.15-.6-.32A25,25,0,0,1,123.86,20l-.11-.08-.14.05a15.14,15.14,0,0,1-2,.65,87.78,87.78,0,0,1-10.52,2.74c-1.27-.9-2.5-1.85-3.65-2.82,4.35-.32,5-.35,5.08-.35s.58,0,1.25-.14c6.68-.35,10.18-.57,10.69-.66l.72-.12-.64-.34a22.93,22.93,0,0,1-3.93-2.61l-.07-.06h-.09a6.68,6.68,0,0,0-1.76.27c-2.42.28-4.87.54-7.37.77l.07,0A13.22,13.22,0,0,1,113.38,16.44ZM98.91,14c-5.7.32-9.86.54-12.4.63V12.77h12.4Zm0-3.58H86.51V8.82h12.4Zm0-3.82H86.51V5h12.4Zm5.21,11.25V16.33h2.72v-.88a10.32,10.32,0,0,1,4.31,1.75l.1.07Q107.74,17.6,104.12,17.85Z" />
+
+              <path
+                d="M99.48,25.06a18.86,18.86,0,0,1-4.16-1.82l-.12-.07-.13.06c-7,3.66-12.79,5.92-17,6.7a9.64,9.64,0,0,0-1.53.41l-.76.27.78.2a18.07,18.07,0,0,1,4.65,1.82l.1.06.12,0c10-3.82,15.24-5.9,15.87-6.33.67-.26,1.42-.53,2.22-.78l.75-.24Z" />
+
+              <path
+                d="M199.9,28q-8.76.21-15.35.16l0-.08a23.8,23.8,0,0,1-.24-3.4c5.48,0,10.73.09,15.61.26h.31l-.06-.3a6.83,6.83,0,0,1,0-2.55l.06-.3h-.31c-3,.08-8.2.13-15.61.13V19.75c4.49,0,8.9.05,13.13.13h.26V17h-.26c-2.45.09-6.87.13-13.13.13V15c6.44,0,10.77.09,12.87.26l.33,0-.06-.32a27.14,27.14,0,0,1-.25-4.32c2.37,0,4.53.05,6.43.13h.27V7.66h-.25c-1.91,0-4.08,0-6.45.12a28.49,28.49,0,0,1,.25-4.31l0-.31-.31,0c-2,.08-6.29.13-12.88.13a22.57,22.57,0,0,1,.24-3l.05-.3h-.31c-2,.09-4,.09-5.93,0H178l.05.3a24.67,24.67,0,0,1,.24,3c-4.8,0-8.63-.05-11.4-.13h-.32l.07.31a6.06,6.06,0,0,1,0,2.4l-.06.3h.3c4.33,0,8.17,0,11.41-.12V7.79c-6.29,0-11,0-13.88-.13h-.26V10.8h.26c3.57-.08,8.24-.13,13.88-.13V12.4c-4.48,0-8.06-.09-10.64-.26l-.33,0,.06.32a6.83,6.83,0,0,1,0,2.55l-.06.3h.32L178.33,15v2.12c-5,0-9,0-11.89-.13h-.61l.6.62a4.73,4.73,0,0,1-.21,1.88l-.24.38h.45c4.32,0,8.32,0,11.9-.12v2.13c-6.43,0-11.1-.05-13.88-.13h-.31l.06.31a6.76,6.76,0,0,1,0,2.54l0,.3h.3l13.88-.26a25.41,25.41,0,0,1-.24,3.36c-3.25-.12-5.9-.31-7.9-.56a35.26,35.26,0,0,1-9.85-2.89A37,37,0,0,0,164.69,13l.07-.32h-.33c-1.66.09-3.25.23-4.7.4-1,0-2,0-3.08.09,3-3,5.82-6.18,8.48-9.43l.36-.44-.56,0c-5.92.26-11.67.26-17.09,0l-.31,0,.05.31a7.54,7.54,0,0,1,0,2.68l-.05.31.31,0c2-.08,5-.12,8.88-.13-2.93,3.48-5.11,5.48-6.46,6l-3.14.6.27.33a10.24,10.24,0,0,1,1.69,3.22l.07.18.2,0c2.84-.34,5.83-.64,8.89-.9a21.76,21.76,0,0,1-1.68,5.88,1.79,1.79,0,0,0-.28.2l-3.91-4.68-.17.07a20.76,20.76,0,0,1-4.66,1.31l-.48.07.35.35a68,68,0,0,0,6.45,5.75,40.31,40.31,0,0,1-9.59,4.78l.06.48a22.17,22.17,0,0,1,6.37,1.82l.13.06.12-.08c.49-.35,1.07-.75,1.74-1.18L157.77,27a46,46,0,0,0,16.34,4.18c2.47.08,9,.21,19.85.39,3.93,0,6.6.05,7.91.13H202l.08-.12A10.73,10.73,0,0,1,205.74,28l-.15-.47ZM184.29,6.05h7.18V7.79h-7.18Zm0,4.61h7.18V12.4h-7.18Z" />
+
+              <path
+                d="M278.11,28.74c-7.22-.58-12.48-1.54-15.63-2.84a36,36,0,0,0,8.12-8.74c.49-.62,1-1.26,1.5-2l.29-.41h-.5c-9.54.25-17.31.26-23.14,0,4-2.27,6.21-4.67,6.53-7.14l.22-2.15h7.22c0,5.35.25,6.69.5,7.09,0,.34.35.61.87.79,1.54.82,5.72,1,12.78.68h.24v-.24a9.58,9.58,0,0,1,.72-3.2l.16-.42-.44.09a38.1,38.1,0,0,1-7.39.78c-1.2,0-1.46-.27-1.5-.35-.1-.34-.15-2,.26-8.21l0-.28h-.28c-6.41.27-12.75.27-18.83,0h-.27v.28c.17,3.33.09,5.5-.22,6.46-1.13,1.52-3.17,2.85-6,3.95l-.2,0V10.15h-.26c-6.91.27-14.33.27-22.06,0h-.5V13.3h.26c3.94-.09,9.28-.14,15.86-.14,1.48,0,3.38,0,5.65.11l-.53.2-.77.31.81.17c1.48.31,2.64.6,3.47.85l.05.27a8.27,8.27,0,0,1,0,2.82l0,.29,4.75-.14h1c-1.13.14-2.3.23-3.5.29l-.43,0,.23.36c.17.28,1,1.35,2.52,3.21a29.68,29.68,0,0,0,4.57,3.87,53.62,53.62,0,0,1-11.35,3.28c-.15-3.38-.15-6.64,0-9.69l0-.27h-.28c-7.56.27-14.73.26-21.3,0H221l0,.28c.16,1.67.24,4.77.24,9.2,0,.78-.08,1.89-.24,3.4l0,.28h6.23V32a3.29,3.29,0,0,0-.25-1.37V29.37c4.93,0,9.05.05,12.3.14-.64.08-1.29.18-1.93.29l-.93.16.89.32a20.79,20.79,0,0,1,5.39,2.6l.09.07.12,0q1.42-.37,2.73-.66a131.65,131.65,0,0,0,12.83-4.19,123.47,123.47,0,0,0,13.33,4.32h.07a2.74,2.74,0,0,1,.68.13l.15,0,.1-.12a14.19,14.19,0,0,1,5.36-3.23ZM236.68,26.5H227V22.12h9.67Zm21.56-2.68A13.88,13.88,0,0,1,252.82,18h11A19.37,19.37,0,0,1,258.24,23.82Z" />
+
+              <path
+                d="M246.09,8.68l.32,0-.06-.31a7.54,7.54,0,0,1,0-2.68l.05-.3h-.3c-2.36,0-5.38,0-9,.09L232.54.64l-.15,0a39.26,39.26,0,0,1-5.42,1l-.5.07.36.35c1,1,2.08,2.16,3.12,3.4-4.91,0-9.07,0-12.36-.14h-.31l.06.31a7.44,7.44,0,0,1,0,2.67l-.05.29h.29c3,0,10.14,0,21.33-.13C241.38,8.55,243.79,8.6,246.09,8.68Z" />
+
+              <path
+                d="M243.12,17.64h.31l-.06-.3a6.83,6.83,0,0,1,0-2.55l.06-.3h-.31c-7.89.26-15.65.26-23.05,0h-.26v3.14h.25c4,0,9.32,0,16.37-.13C238.44,17.51,240.69,17.56,243.12,17.64Z" />
+
+            </svg>
+
+          </a>
+        </div>
+
+        <div class="menu cell shrink show-for-large">MENU</div>
+
+        <div class="hamburger cell shrink hide-for-large">
+
+          <span class="item1"></span>
+
+          <span class="item2"></span>
+
+          <span class="item3"></span>
+
+        </div>
+
+      </header>
+
+
+
+      <div class="topmenu-fixWrap">
+
+        <ul class="topmenu-fixList grid-y align-middle">
+
+          <li class="cell shrink">
+
+            <a href="https://greatbuilding.com.tw/main">
+
+              <span class="ch">首頁</span>
+
+              <span class="en">HOME</span>
+
+            </a>
+
+          </li>
+
+          <li class="cell shrink">
+
+            <a href="https://greatbuilding.com.tw/about">
+
+              <span class="ch">關於聯聚</span>
+
+              <span class="en">ABOUT</span>
+
+            </a>
+
+          </li>
+
+          <li class="cell shrink">
+
+            <span class="ch">最新消息</span>
+
+            <span class="en">NEWS</span>
+
+
+
+            <ul class="subMenuList">
+
+              <li><a href="https://greatbuilding.com.tw/category/news/">
+
+                  <span class="sub-ch">最新消息</span>
+
+                  <span class="sub-en">NEWS</span>
+
+                </a></li>
+
+              <li><a href="https://greatbuilding.com.tw/category/events/">
+
+                  <span class="sub-ch">活動消息</span>
+
+                  <span class="sub-en">EVENTS</span>
+
+                </a></li>
+
+              <li><a href="https://greatbuilding.com.tw/category/progress/">
+
+                  <span class="sub-ch">工程進度</span>
+
+                  <span class="sub-en">PROGRESS</span>
+
+                </a></li>
+
+            </ul>
+
+          </li>
+
+          <li class="cell shrink">
+
+            <span class="ch">建案資訊</span>
+
+            <span class="en">PROJECTS</span>
+
+
+
+            <ul class="subMenuList">
+
+              <li><a href="https://greatbuilding.com.tw/main/?go=1">
+
+                  <span class="sub-ch">最新建案</span>
+
+                  <span class="sub-en">LATEST</span>
+
+                </a></li>
+
+              <li><a href="https://greatbuilding.com.tw/allproject">
+
+                  <span class="sub-ch">全部建案</span>
+
+                  <span class="sub-en">ALL</span>
+
+                </a></li>
+
+            </ul>
+
+          </li>
+
+          <li class="cell shrink">
+
+            <a href="https://greatbuilding.com.tw/category/csr/">
+
+              <span class="ch">社會責任</span>
+
+              <span class="en">CSR</span>
+
+            </a>
+
+          </li>
+
+          <li class="cell shrink">
+
+            <a href="https://greatbuilding.com.tw/contact/">
+
+              <span class="ch">聯絡我們</span>
+
+              <span class="en">CONTACT US</span>
+
+            </a>
+
+          </li>
+
+          <li class="cell shrink">
+
+            <a href="https://greatbuilding.com.tw/business/">
+
+              <span class="ch">聯聚集團</span>
+
+              <span class="en">OUR GROUP</span>
+
+            </a>
+
+          </li>
+
+        </ul>
+
+
+
+        <div class="close">CLOSE</div>
+
+      </div>
+
+
+
+      <div class="only-index-logo hide-for-large"><a href="home.php">
+
+
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="278.19" height="33.23" viewBox="0 0 278.19 33.23">
+
+
+
+            <path
+              d="M43,17.45l-4.34-5.61-.16,0a28.57,28.57,0,0,1-3.44.66l-.46.06,1.71,1.94-5.3.31A97.46,97.46,0,0,0,41,7.32a18.45,18.45,0,0,0,1.51-1.2l.39-.35-.51-.08c-1.48-.27-3.06-.62-4.69-1.06l-.15,0-.1.12c-1,1.1-1.94,2.19-2.91,3.22L31,8.26a13.71,13.71,0,0,1,1.79-1.61c.64-.51,1.37-1.11,2.23-1.84l2-1.58,0-.07A3.63,3.63,0,0,1,38,2.31L38.5,2l-.63-.09c-.65-.09-2.31-.48-4.93-1.18L32.76.63l-.1.16a29.55,29.55,0,0,1-5.41,6.27,6.67,6.67,0,0,1-3.83,1.78L23,8.89l.21.34c.52.83,1,1.56,1.49,2.25l.09.12.16,0c1.93-.32,4.17-.6,6.67-.85a21,21,0,0,1-7.53,4.45l-.33.1.2.29c1.33,1.81,1.63,2.28,1.69,2.4v.23l.28,0c4.06-.52,8.09-.91,12-1.18L38.6,18c-1.12,0-2.37-.12-3.72-.24l-.34,0,.07.33a12.22,12.22,0,0,1,.24,2.46v2.12H31.39c0-.87.09-2.12.24-3.81l0-.29h-.29a49.46,49.46,0,0,1-5.18,0h-.32l.06.31a14.44,14.44,0,0,1,0,6.47l-.1.34.35,0c1.87-.08,4.49-.16,8-.25-1.25,2.19-4.21,3.84-8.79,4.89a8.94,8.94,0,0,0-1.79.41L23,31l-.26-1.57V24.21l3-.26v-.23A18.51,18.51,0,0,1,25.93,21l.05-.31-.32,0a18.6,18.6,0,0,0-2.95.46V5.65c1.11,0,2.52,0,4.2.13l.32,0-.06-.31a7.54,7.54,0,0,1,0-2.68l0-.3h-.31c-7.39.26-15.71.3-24.73.13a1.24,1.24,0,0,0-.56-.13H1.37V5.8l.27,0c1.4-.08,2.9-.12,4.45-.13V22.82L0,23.09l.16.34A22.32,22.32,0,0,0,1.92,26.5l.08.12.14,0a23.33,23.33,0,0,0,2.75-.39c.71-.1,5.09-.6,12.36-1.42a56,56,0,0,1-.49,7.59l-.05.3.3,0c2.13-.08,4.13-.08,5.93,0l.31,0L23,31l.65.2A34.49,34.49,0,0,1,29,33.16l.11.07,1.59-.85c5-2.22,8-4.93,8.82-8.08l.26-1.24c0-.34.16-1.93.49-4.71l0-.28h-1c1-.21,2.09-.4,3.23-.55ZM17.25,21.79l-5.7.72V18.17h5.7Zm0-6.23h-5.7V11.72h5.7Zm0-6.32h-5.7V5.65h5.7Z" />
+
+
+
+            <path
+              d="M55.88,11.22c-1.16.26-2.57.53-4.2.79l-.27,0,4.94-3.83A15.74,15.74,0,0,1,58.8,6.41l.51-.33L58.72,6a34.22,34.22,0,0,1-4.43-1.44l-.15-.06L54,4.57c-2,2-3.1,3.17-3.4,3.49l-3.48.22a79.72,79.72,0,0,1,6.72-6L54.3,2l-.56-.09a47.58,47.58,0,0,1-4.93-1l-.18,0-.1.15c-.16.26-.41.61-.74,1-2.42,3.61-4.87,5.83-7.27,6.61h-.74l2.41,2.89.14,0c2.12-.3,4-.51,5.46-.61-2.36,2-4.31,3.28-5.81,3.68l-.42.11.31.31a13,13,0,0,1,2.19,2.57l0,.07-1.05,0-.29,0,0,.3C43,19.2,43,23,43,29.12a36,36,0,0,1-.25,3.67l0,.27H43c2,0,3.8,0,5.44.13l.29,0,0-.28q-.24-3.45-.48-7.38h4.16l-.25,1.86.3,0c1.64-.08,3.38-.08,5.18,0l.28,0,0-.28a71.26,71.26,0,0,1,0-8.27l0-.27H52.18l0,.29a30.48,30.48,0,0,1,.24,3.93H48.25a40.34,40.34,0,0,1,.49-5l0-.3h-.3c-1.33.06-2.58.08-3.77.06,3-.33,6.69-.62,10.86-.87l1.26,1.47.15,0c1.46-.34,3-.65,4.45-.92l.46-.08-5.88-6Zm-7.56,3.22,2.91-2.25.34.26A19.83,19.83,0,0,1,53.44,14Z" />
+
+
+
+            <path
+              d="M113.38,16.44c2.6-1,4.74-2,6.37-2.73a61.21,61.21,0,0,1,8,3.77l.14.08.13-.1a13.58,13.58,0,0,1,4.39-2.07l.71-.21L129,13.6c-1.63-.6-3.57-1.31-5.78-2.09a34.14,34.14,0,0,0,6.64-7.42l.28-.41-.49,0c-6.58.27-13.41.27-20.32,0H109l.07.31a6.81,6.81,0,0,1,0,2.55l-.06.3h.31c3.51-.09,7.82-.13,12.83-.13a34,34,0,0,1-3.46,3.16L112,7.77l-.1.06a37.72,37.72,0,0,1-3.7,2l-.64.3.69.17c3.14.76,5.43,1.39,6.83,1.88a47.79,47.79,0,0,1-6.55,2.11,14.71,14.71,0,0,0-1.45.26l.69-1.23-.47,0c-.91.08-2,.2-3.2.36V5c1.12,0,2.58,0,4.45.13l.31,0-.06-.31a7.22,7.22,0,0,1,0-2.54l.06-.32-.32,0c-1.48.09-11.57.13-30,.13L75.05,2l0,.31a6.78,6.78,0,0,1,0,2.54l0,.3h.3l6-.14v9.78c-1.46,0-3.33.05-5.71.13l-.41,0,.2.36a18.46,18.46,0,0,1,1.22,2.6l.07.17h.18c12-.84,19.43-1.33,22-1.44a7.24,7.24,0,0,1-.22,1.12l-.09.32h2.58c-6.71.41-13.68.64-20.85.69h-.78l.63.45c1.44,1,2.23,1.85,2.38,2.49l0,.2,3.87-.2-.32.12a43.94,43.94,0,0,1-9.32,3.52,17.43,17.43,0,0,0-3.53.67l-.84.26.85.23a30,30,0,0,1,4.92,1.69l.1.05.1,0c.65-.26,1.37-.52,2.23-.79L94,22.22,93.27,22a9.32,9.32,0,0,1-1.7-.62l8.82-.59c0,6.14-.08,10.08-.24,11.7l0,.28h6v-.25c0-2.52-.08-5.61-.22-9.19A29.51,29.51,0,0,0,116.7,29l.51.13c2,.35,5.52,1,10.91,2.11l.17,0,.09-.15a12.28,12.28,0,0,1,3.89-3.35l.69-.42-.81,0c-7.26-.32-12.85-1-16.63-2.08l4.52-1c1.16-.27,3.56-.79,7.19-1.58l.67-.15-.6-.32A25,25,0,0,1,123.86,20l-.11-.08-.14.05a15.14,15.14,0,0,1-2,.65,87.78,87.78,0,0,1-10.52,2.74c-1.27-.9-2.5-1.85-3.65-2.82,4.35-.32,5-.35,5.08-.35s.58,0,1.25-.14c6.68-.35,10.18-.57,10.69-.66l.72-.12-.64-.34a22.93,22.93,0,0,1-3.93-2.61l-.07-.06h-.09a6.68,6.68,0,0,0-1.76.27c-2.42.28-4.87.54-7.37.77l.07,0A13.22,13.22,0,0,1,113.38,16.44ZM98.91,14c-5.7.32-9.86.54-12.4.63V12.77h12.4Zm0-3.58H86.51V8.82h12.4Zm0-3.82H86.51V5h12.4Zm5.21,11.25V16.33h2.72v-.88a10.32,10.32,0,0,1,4.31,1.75l.1.07Q107.74,17.6,104.12,17.85Z" />
+
+
+
+            <path
+              d="M99.48,25.06a18.86,18.86,0,0,1-4.16-1.82l-.12-.07-.13.06c-7,3.66-12.79,5.92-17,6.7a9.64,9.64,0,0,0-1.53.41l-.76.27.78.2a18.07,18.07,0,0,1,4.65,1.82l.1.06.12,0c10-3.82,15.24-5.9,15.87-6.33.67-.26,1.42-.53,2.22-.78l.75-.24Z" />
+
+
+
+            <path
+              d="M199.9,28q-8.76.21-15.35.16l0-.08a23.8,23.8,0,0,1-.24-3.4c5.48,0,10.73.09,15.61.26h.31l-.06-.3a6.83,6.83,0,0,1,0-2.55l.06-.3h-.31c-3,.08-8.2.13-15.61.13V19.75c4.49,0,8.9.05,13.13.13h.26V17h-.26c-2.45.09-6.87.13-13.13.13V15c6.44,0,10.77.09,12.87.26l.33,0-.06-.32a27.14,27.14,0,0,1-.25-4.32c2.37,0,4.53.05,6.43.13h.27V7.66h-.25c-1.91,0-4.08,0-6.45.12a28.49,28.49,0,0,1,.25-4.31l0-.31-.31,0c-2,.08-6.29.13-12.88.13a22.57,22.57,0,0,1,.24-3l.05-.3h-.31c-2,.09-4,.09-5.93,0H178l.05.3a24.67,24.67,0,0,1,.24,3c-4.8,0-8.63-.05-11.4-.13h-.32l.07.31a6.06,6.06,0,0,1,0,2.4l-.06.3h.3c4.33,0,8.17,0,11.41-.12V7.79c-6.29,0-11,0-13.88-.13h-.26V10.8h.26c3.57-.08,8.24-.13,13.88-.13V12.4c-4.48,0-8.06-.09-10.64-.26l-.33,0,.06.32a6.83,6.83,0,0,1,0,2.55l-.06.3h.32L178.33,15v2.12c-5,0-9,0-11.89-.13h-.61l.6.62a4.73,4.73,0,0,1-.21,1.88l-.24.38h.45c4.32,0,8.32,0,11.9-.12v2.13c-6.43,0-11.1-.05-13.88-.13h-.31l.06.31a6.76,6.76,0,0,1,0,2.54l0,.3h.3l13.88-.26a25.41,25.41,0,0,1-.24,3.36c-3.25-.12-5.9-.31-7.9-.56a35.26,35.26,0,0,1-9.85-2.89A37,37,0,0,0,164.69,13l.07-.32h-.33c-1.66.09-3.25.23-4.7.4-1,0-2,0-3.08.09,3-3,5.82-6.18,8.48-9.43l.36-.44-.56,0c-5.92.26-11.67.26-17.09,0l-.31,0,.05.31a7.54,7.54,0,0,1,0,2.68l-.05.31.31,0c2-.08,5-.12,8.88-.13-2.93,3.48-5.11,5.48-6.46,6l-3.14.6.27.33a10.24,10.24,0,0,1,1.69,3.22l.07.18.2,0c2.84-.34,5.83-.64,8.89-.9a21.76,21.76,0,0,1-1.68,5.88,1.79,1.79,0,0,0-.28.2l-3.91-4.68-.17.07a20.76,20.76,0,0,1-4.66,1.31l-.48.07.35.35a68,68,0,0,0,6.45,5.75,40.31,40.31,0,0,1-9.59,4.78l.06.48a22.17,22.17,0,0,1,6.37,1.82l.13.06.12-.08c.49-.35,1.07-.75,1.74-1.18L157.77,27a46,46,0,0,0,16.34,4.18c2.47.08,9,.21,19.85.39,3.93,0,6.6.05,7.91.13H202l.08-.12A10.73,10.73,0,0,1,205.74,28l-.15-.47ZM184.29,6.05h7.18V7.79h-7.18Zm0,4.61h7.18V12.4h-7.18Z" />
+
+
+
+            <path
+              d="M278.11,28.74c-7.22-.58-12.48-1.54-15.63-2.84a36,36,0,0,0,8.12-8.74c.49-.62,1-1.26,1.5-2l.29-.41h-.5c-9.54.25-17.31.26-23.14,0,4-2.27,6.21-4.67,6.53-7.14l.22-2.15h7.22c0,5.35.25,6.69.5,7.09,0,.34.35.61.87.79,1.54.82,5.72,1,12.78.68h.24v-.24a9.58,9.58,0,0,1,.72-3.2l.16-.42-.44.09a38.1,38.1,0,0,1-7.39.78c-1.2,0-1.46-.27-1.5-.35-.1-.34-.15-2,.26-8.21l0-.28h-.28c-6.41.27-12.75.27-18.83,0h-.27v.28c.17,3.33.09,5.5-.22,6.46-1.13,1.52-3.17,2.85-6,3.95l-.2,0V10.15h-.26c-6.91.27-14.33.27-22.06,0h-.5V13.3h.26c3.94-.09,9.28-.14,15.86-.14,1.48,0,3.38,0,5.65.11l-.53.2-.77.31.81.17c1.48.31,2.64.6,3.47.85l.05.27a8.27,8.27,0,0,1,0,2.82l0,.29,4.75-.14h1c-1.13.14-2.3.23-3.5.29l-.43,0,.23.36c.17.28,1,1.35,2.52,3.21a29.68,29.68,0,0,0,4.57,3.87,53.62,53.62,0,0,1-11.35,3.28c-.15-3.38-.15-6.64,0-9.69l0-.27h-.28c-7.56.27-14.73.26-21.3,0H221l0,.28c.16,1.67.24,4.77.24,9.2,0,.78-.08,1.89-.24,3.4l0,.28h6.23V32a3.29,3.29,0,0,0-.25-1.37V29.37c4.93,0,9.05.05,12.3.14-.64.08-1.29.18-1.93.29l-.93.16.89.32a20.79,20.79,0,0,1,5.39,2.6l.09.07.12,0q1.42-.37,2.73-.66a131.65,131.65,0,0,0,12.83-4.19,123.47,123.47,0,0,0,13.33,4.32h.07a2.74,2.74,0,0,1,.68.13l.15,0,.1-.12a14.19,14.19,0,0,1,5.36-3.23ZM236.68,26.5H227V22.12h9.67Zm21.56-2.68A13.88,13.88,0,0,1,252.82,18h11A19.37,19.37,0,0,1,258.24,23.82Z" />
+
+
+
+            <path
+              d="M246.09,8.68l.32,0-.06-.31a7.54,7.54,0,0,1,0-2.68l.05-.3h-.3c-2.36,0-5.38,0-9,.09L232.54.64l-.15,0a39.26,39.26,0,0,1-5.42,1l-.5.07.36.35c1,1,2.08,2.16,3.12,3.4-4.91,0-9.07,0-12.36-.14h-.31l.06.31a7.44,7.44,0,0,1,0,2.67l-.05.29h.29c3,0,10.14,0,21.33-.13C241.38,8.55,243.79,8.6,246.09,8.68Z" />
+
+
+
+            <path
+              d="M243.12,17.64h.31l-.06-.3a6.83,6.83,0,0,1,0-2.55l.06-.3h-.31c-7.89.26-15.65.26-23.05,0h-.26v3.14h.25c4,0,9.32,0,16.37-.13C238.44,17.51,240.69,17.56,243.12,17.64Z" />
+
+
+
+          </svg>
+
+
+
+        </a></div>
+
+
+
+
+
+
+
+      <div class="only-index-hamburger hide-for-large">
+
+        <span class="item1"></span>
+
+
+        <span class="item2"></span>
+
+        <span class="item3"></span>
+
+      </div>
+
+
+
+
+
+
+
+      <ul class="beforescene">
+
+        <li>建築的感動需要兩個人</li>
+
+
+        <li>一個人會做 &nbsp; 一個人能懂</li>
+
+      </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="index-bg" data-kore="4">
+
+
+
+
+
+
+        <li
+          style="background: url(https://greatbuilding.com.tw/wp-content/uploads/2023/08/KUMAWEB_工作區域-1.jpg) center center/cover no-repeat;">
+
+
+
+
+          <a href="https://kumatower.greatbuilding.com.tw" target="_blank"></a>
+
+          <div class="blockbox"></div>
+
+        </li>
+
+
+        <li
+          style="background: url(https://greatbuilding.com.tw/wp-content/uploads/2021/09/211105_V2_官網建案1919-22-scaled.jpg) center center/cover no-repeat;">
+
+
+
+
+          <a href="https://smallisnewbig.greatbuilding.com.tw/" target="_blank"></a>
+
+          <div class="blockbox"></div>
+
+        </li>
+
+
+        <li
+          style="background: url(https://greatbuilding.com.tw/wp-content/uploads/2020/07/greatbuilding2006182.jpg) center center/cover no-repeat">
+
+
+
+
+          <a href="https://www.greatbuilding.com.tw/聯聚瑞安大廈/" target="_blank"></a>
+
+          <div class="blockbox"></div>
+
+        </li>
+
+
+        <li
+          style="background: url(https://greatbuilding.com.tw/wp-content/uploads/2020/07/00聯聚瑞和大廈_PlatoPalace.jpg) center center/cover no-repeat;">
+
+
+
+
+          <a href="https://greatbuilding.com.tw/project/platopalace/"></a>
+
+          <div class="blockbox"></div>
+
+        </li>
+
+
+        <li
+          style="background: url(https://greatbuilding.com.tw/wp-content/uploads/2018/05/lj_homepage.jpg) center center/cover no-repeat">
+
+
+
+
+          <a href="https://greatbuilding.com.tw/project/landmark/"></a>
+
+          <div class="blockbox"></div>
+
+        </li>
+
+
+        <li
+          style="background: url(https://greatbuilding.com.tw/wp-content/uploads/2018/05/lj_artpalace.jpg) center center/cover no-repeat">
+
+
+
+
+          <a href="https://greatbuilding.com.tw/project/artpalace/"></a>
+
+          <div class="blockbox"></div>
+
+        </li>
+
+
+        <li
+          style="background: url(https://greatbuilding.com.tw/wp-content/uploads/2017/07/lj_savoypalace.jpg) center center/cover no-repeat">
+
+
+
+
+          <a
+            href="https://greatbuilding.com.tw/project/%e8%81%af%e8%81%9a%e4%bf%9d%e5%92%8c%e5%a4%a7%e5%bb%88savoypalace/"></a>
+
+          <div class="blockbox"></div>
+
+        </li>
+
+
+        <li
+          style="background: url(https://greatbuilding.com.tw/wp-content/uploads/2014/07/lj_royalpalace.jpg) center center/cover no-repeat">
+
+
+
+
+          <a href="https://greatbuilding.com.tw/project/royalpalace/"></a>
+
+          <div class="blockbox"></div>
+
+        </li>
+
+
+
+      </ul>
+
+
+      <ul class="index-title">
+
+        <li>
+
+          <div class="title"
+            style="background: url(https://greatbuilding.com.tw/wp-content/uploads/2020/07/Plato_css_sprites2.png) 0 0/100% no-repeat">
+
+
+            <a href="https://greatbuilding.com.tw/project/platopalace/" class="skiptrans"></a>
+
+          </div>
+
+          <div class="more-area grid-x align-justify">
+
+
+
+            <div class="more cell shrink">
+              <a href="https://greatbuilding.com.tw/project/platopalace/" class="skiptrans">
+                READ MORE
+                <script data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+                  (function () { for (var g = "function" == typeof Object.defineProperties ? Object.defineProperty : function (b, c, a) { if (a.get || a.set) throw new TypeError("ES3 does not support getters and setters."); b != Array.prototype && b != Object.prototype && (b[c] = a.value) }, h = "undefined" != typeof window && window === this ? this : "undefined" != typeof global && null != global ? global : this, k = ["String", "prototype", "repeat"], l = 0; l < k.length - 1; l++) { var m = k[l]; m in h || (h[m] = {}); h = h[m] } var n = k[k.length - 1], p = h[n], q = p ? p : function (b) { var c; if (null == this) throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined"); c = this + ""; if (0 > b || 1342177279 < b) throw new RangeError("Invalid count value"); b |= 0; for (var a = ""; b;)if (b & 1 && (a += c), b >>>= 1) c += c; return a }; q != p && null != q && g(h, n, { configurable: !0, writable: !0, value: q }); var t = this; function u(b, c) { var a = b.split("."), d = t; a[0] in d || !d.execScript || d.execScript("var " + a[0]); for (var e; a.length && (e = a.shift());)a.length || void 0 === c ? d[e] ? d = d[e] : d = d[e] = {} : d[e] = c }; function v(b) { var c = b.length; if (0 < c) { for (var a = Array(c), d = 0; d < c; d++)a[d] = b[d]; return a } return [] }; function w(b) { var c = window; if (c.addEventListener) c.addEventListener("load", b, !1); else if (c.attachEvent) c.attachEvent("onload", b); else { var a = c.onload; c.onload = function () { b.call(this); a && a.call(this) } } }; var x; function y(b, c, a, d, e) { this.h = b; this.j = c; this.l = a; this.f = e; this.g = { height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight, width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth }; this.i = d; this.b = {}; this.a = []; this.c = {} } function z(b, c) { var a, d, e = c.getAttribute("data-pagespeed-url-hash"); if (a = e && !(e in b.c)) if (0 >= c.offsetWidth && 0 >= c.offsetHeight) a = !1; else { d = c.getBoundingClientRect(); var f = document.body; a = d.top + ("pageYOffset" in window ? window.pageYOffset : (document.documentElement || f.parentNode || f).scrollTop); d = d.left + ("pageXOffset" in window ? window.pageXOffset : (document.documentElement || f.parentNode || f).scrollLeft); f = a.toString() + "," + d; b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0, a = a <= b.g.height && d <= b.g.width) } a && (b.a.push(e), b.c[e] = !0) } y.prototype.checkImageForCriticality = function (b) { b.getBoundingClientRect && z(this, b) }; u("pagespeed.CriticalImages.checkImageForCriticality", function (b) { x.checkImageForCriticality(b) }); u("pagespeed.CriticalImages.checkCriticalImages", function () { A(x) }); function A(b) { b.b = {}; for (var c = ["IMG", "INPUT"], a = [], d = 0; d < c.length; ++d)a = a.concat(v(document.getElementsByTagName(c[d]))); if (a.length && a[0].getBoundingClientRect) { for (d = 0; c = a[d]; ++d)z(b, c); a = "oh=" + b.l; b.f && (a += "&n=" + b.f); if (c = !!b.a.length) for (a += "&ci=" + encodeURIComponent(b.a[0]), d = 1; d < b.a.length; ++d) { var e = "," + encodeURIComponent(b.a[d]); 131072 >= a.length + e.length && (a += e) } b.i && (e = "&rd=" + encodeURIComponent(JSON.stringify(B())), 131072 >= a.length + e.length && (a += e), c = !0); C = a; if (c) { d = b.h; b = b.j; var f; if (window.XMLHttpRequest) f = new XMLHttpRequest; else if (window.ActiveXObject) try { f = new ActiveXObject("Msxml2.XMLHTTP") } catch (r) { try { f = new ActiveXObject("Microsoft.XMLHTTP") } catch (D) { } } f && (f.open("POST", d + (-1 == d.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(b)), f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), f.send(a)) } } } function B() { var b = {}, c; c = document.getElementsByTagName("IMG"); if (!c.length) return {}; var a = c[0]; if (!("naturalWidth" in a && "naturalHeight" in a)) return {}; for (var d = 0; a = c[d]; ++d) { var e = a.getAttribute("data-pagespeed-url-hash"); e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight || e in b && a.width >= b[e].o && a.height >= b[e].m) && (b[e] = { rw: a.width, rh: a.height, ow: a.naturalWidth, oh: a.naturalHeight }) } return b } var C = ""; u("pagespeed.CriticalImages.getBeaconData", function () { return C }); u("pagespeed.CriticalImages.Run", function (b, c, a, d, e, f) { var r = new y(b, c, a, e, f); x = r; d && w(function () { window.setTimeout(function () { A(r) }, 0) }) }); })(); pagespeed.CriticalImages.Run('/mod_pagespeed_beacon', 'https://greatbuilding.com.tw/main/', '8Xxa2XQLv9', true, false, 'Yr7DxS_qXHc');
+//]]></script><img src="https://greatbuilding.com.tw/wp-content/themes/goods-design/images/index-title-arrow.svg"
+                  data-pagespeed-url-hash="3907262788"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+              </a>
+            </div>
+
+            <div class="all cell shrink trigger">ALL</div>
+
+          </div>
+
+        </li>
+
+      </ul>
+
+
+      <ul class="index-build">
+
+
+
+
+        <li><img src="" data-pagespeed-url-hash="2334190935"
+            onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></li>
+
+
+
+
+        <li><img src="" data-pagespeed-url-hash="2334190935"
+            onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></li>
+
+
+
+
+        <li><img src="" data-pagespeed-url-hash="2334190935"
+            onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></li>
+
+
+
+
+        <li><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/05/home_386.png"
+            data-pagespeed-url-hash="3974891027" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></li>
+
+
+
+
+        <li><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/07/2019222.png"
+            data-pagespeed-url-hash="2040045330" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></li>
+
+
+
+
+        <li><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/05/home_34.png"
+            data-pagespeed-url-hash="310861069" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></li>
+
+
+
+
+        <li><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/07/home_35.png"
+            data-pagespeed-url-hash="2774404928" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></li>
+
+
+
+
+        <li><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/07/home-1.png"
+            data-pagespeed-url-hash="3112803171" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></li>
+
+
+      </ul>
+
+
+
+
+      <ul class="index-buildingname">
+
+
+        <li data-hide="0">
+
+          <div class="year">
+
+
+
+
+          </div>
+
+          <div class="title-area"><img src="" data-pagespeed-url-hash="2334190935"
+              onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+
+        </li>
+
+
+
+        <li data-hide="0">
+
+          <div class="year">
+
+
+
+
+          </div>
+
+          <div class="title-area"><img src="" data-pagespeed-url-hash="2334190935"
+              onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+
+        </li>
+
+
+
+        <li data-hide="0">
+
+          <div class="year">
+
+
+
+
+          </div>
+
+          <div class="title-area"><img src="" data-pagespeed-url-hash="2334190935"
+              onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+
+        </li>
+
+
+
+        <li data-hide="0">
+
+          <div class="year">
+
+
+            <i>2</i> <i>0</i> <i>2</i> <i>1</i>
+
+          </div>
+
+          <div class="title-area"><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/05/home_385.png"
+              data-pagespeed-url-hash="3680391106" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          </div>
+
+        </li>
+
+
+
+        <li data-hide="0">
+
+          <div class="year">
+
+
+            <i>2</i> <i>0</i> <i>1</i> <i>9</i>
+
+          </div>
+
+          <div class="title-area"><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/07/text-1.png"
+              data-pagespeed-url-hash="1690490349" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          </div>
+
+        </li>
+
+
+
+        <li data-hide="0">
+
+          <div class="year">
+
+
+            <i>2</i> <i>0</i> <i>1</i> <i>8</i>
+
+          </div>
+
+          <div class="title-area"><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/05/home_18.png"
+              data-pagespeed-url-hash="1639292779" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          </div>
+
+        </li>
+
+
+
+        <li data-hide="0">
+
+          <div class="year">
+
+
+            <i>2</i> <i>0</i> <i>1</i> <i>7</i>
+
+          </div>
+
+          <div class="title-area"><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/07/home_20.png"
+              data-pagespeed-url-hash="1377121336" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          </div>
+
+        </li>
+
+
+
+        <li data-hide="0">
+
+          <div class="year">
+
+
+            <i>2</i> <i>0</i> <i>1</i> <i>4</i>
+
+          </div>
+
+          <div class="title-area"><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/07/text-2.png"
+              data-pagespeed-url-hash="1984990270" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          </div>
+
+        </li>
+
+
+
+      </ul>
+
+
+
+
+
+
+
+      <div class="index-progress grid-y align-middle">
+
+
+
+        <div class="top cell shrink"></div>
+
+
+
+        <div class="bar cell shrink">
+
+
+
+          <div class="shadowbar"></div>
+
+
+
+        </div>
+
+
+
+        <div class="bot cell shrink"></div>
+
+
+
+        <div class="num cell shrink"><span id="index-now">0</span>/<span id="index-total">0</span></div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+      <div class="index-gotoall"><a href="project_all.php">ALL</a></div>
+
+
+
+
+
+
+
+      <div class="ryder-cursor">
+
+
+
+        <div class="arrow-top"><img
+            src="https://greatbuilding.com.tw/wp-content/themes/goods-design/images/cursor-top.svg"
+            data-pagespeed-url-hash="3090391295" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+        </div>
+
+
+
+        <div class="circle"></div>
+
+
+
+        <div class="arrow-bot"><img
+            src="https://greatbuilding.com.tw/wp-content/themes/goods-design/images/cursor-bot.svg"
+            data-pagespeed-url-hash="1239123201" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+      <div class="spotlight"></div>
+
+
+
+    </main>
+
+
+
+  </section>
+
+
+  <div class="fancyWrap">
+
+    <div class="fancy-container">
+
+      <div class="fancy-close"></div>
+
+
+
+
+
+      <a href="https://kumatower.greatbuilding.com.tw/"
+        target="_blank">
+
+        <div class="pic-area"><img src="https://greatbuilding.com.tw/wp-content/uploads/2020/07/中維官網popup_750x750.jpg">
+        </div>
+
+      </a>
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+</body>
+
+<script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.min.js"></script>
+<script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/TweenMax.min.js"></script>
+<!-- <script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/slick.min.js"></script> -->
+<!-- <link rel="stylesheet" href="https://greatbuilding.com.tw/wp-content/themes/goods-design/css/slick.css"> -->
+<script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.mousewheel.min.js"></script>
+<script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/barba.umd.js"></script>
+<!-- <script crossorigin="anonymous"
+  src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script> -->
+<!-- <link rel="stylesheet" href="https://greatbuilding.com.tw/wp-content/themes/goods-design/css/animate.css"> -->
+<script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/wow.min.js"></script>
+<!-- <script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.validate.min.js"></script> -->
+<script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.touchSwipe.min.js"></script>
+<link rel="stylesheet" href="https://greatbuilding.com.tw/wp-content/themes/goods-design/css/jquery.fancybox.min.css" />
+<script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.fancybox.min.js"></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script> -->
+<!-- <link rel="stylesheet" href="https://greatbuilding.com.tw/wp-content/themes/goods-design/css/twentytwenty.css"> -->
+<!-- <script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.twentytwenty.js"></script> -->
+<script src="https://greatbuilding.com.tw/wp-content/themes/goods-design/dist/common.js?t=1136"></script>
+
+</html>

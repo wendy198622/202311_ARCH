@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;500&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap');
+
+@import './setting';
+
+.mouse_circle {
+    position: absolute;
+    z-index: 99;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    background: #CB4B16;
+    border-radius: 80%;
+    backface-visibility: hidden;
+}
+
+
+section{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .homeproject_photo{
+        width: 100%;
+        // height: 100vh;
+        margin: 0 auto;
+        text-align: center;
+        outline: 1px solid red;
+
+        .slide{
+            // width: 54% !important;
+            padding: 60px;
+
+            &.slick-active button:before,
+            button:before {
+                    color: black;
+                    font-size: 12px;
+            }
+
+            img{
+                width: 800px !important;
+                margin: 0 auto;
+            }
+        }
+
+        .slick-slide{
+            transition: all .5s;
+            transition-delay: .3s;
+        }
+        .slick-current{
+            transform: scale(1.3);
+        }
+        .slick-dotted.slick-slider {
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+
+        .slick-dots {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) rotate(90deg);
+            width: auto;
+            bottom: auto;
+        }
+    }
+
+    .homeproject_text{
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%,-50%);
+        text-align: left;
+        font-family: 'Playfair Display', 'Noto Serif TC', serif;
+
+        .slide{
+
+            .year{
+                font-size: 50px;
+            }
+            .name{
+                font-size: 60px;
+            }
+            .company{
+                font-size: 40px;
+            }
+        }
+
+    }
+}
