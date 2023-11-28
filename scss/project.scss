@@ -112,7 +112,17 @@
         }
     }
 }
-.projectpage_photo{}
+.projectpage_photo{
+
+    ul{
+
+        li{
+            background-repeat: no-repeat;
+            background-size: cover !important;
+            // background-attachment: fixed;
+        }
+    }
+}
 
 .projectpage_content{
     position: absolute;

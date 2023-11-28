@@ -1,22 +1,106 @@
 <div class="container">
-    <h1>
-        <img class="white" src="../img/logo.svg" alt="">
-        <img class="black" src="../img/logo_black.svg" alt="">
-    </h1>
-    <div class="nav">
-        <ul>
-            <li>
-                <a href="#">ABOUT</a>
+    <div class="topmenuWrap">
+        <h1>
+            <img class="white" src="../img/logo.svg" alt="">
+            <img class="black" src="../img/logo_black.svg" alt="">
+        </h1>
+        <div class="nav">
+            <div class="menu cell shrink show-for-large">MENU</div>
+            <div class="hamburger cell shrink hide-for-large">
+                <span class="item1"></span>
+                <span class="item2"></span>
+                <span class="item3"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="topmenu-fixWrap">
+        <ul class="topmenu-fixList">
+            <li class="cell">
+                <a href="#">
+                    <span class="ch">首頁</span>
+                    <span class="en">HOME</span>
+                </a>
             </li>
-            <li>
-                <a href="#">最新消息</a>
+            <li class="cell">
+                <a href="#">
+                    <span class="ch">關於我們</span>
+                    <span class="en">ABOUT</span>
+                </a>
             </li>
-            <li>
-                <a href="#">建案資訊</a>
+            <li class="cell">
+                <a href="#">
+                    <span class="ch">最新消息</span>
+                    <span class="en">NEWS</span>
+                </a>
+                <!-- <ul class="subMenuList">
+                    <li>
+                        <a href="#">
+                            <span class="sub-ch">最新消息</span>
+                            <span class="sub-en">NEWS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="sub-ch">活動消息</span>
+                            <span class="sub-en">EVENTS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="sub-ch">工程進度</span>
+                            <span class="sub-en">PROGRESS</span>
+                        </a>
+                    </li>
+                </ul> -->
             </li>
-            <li>
-                <a href="#">聯絡我們</a>
+            <li class="cell">
+                <a href="#">
+                    <span class="ch">建案資訊</span>
+                    <span class="en">PROJECTS</span>
+                </a>
+                <!-- <ul class="subMenuList">
+                    <li>
+                        <a href="#">
+                            <span class="sub-ch">最新建案</span>
+                            <span class="sub-en">LATEST</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="sub-ch">全部建案</span>
+                            <span class="sub-en">ALL</span>
+                        </a>
+                    </li>
+                </ul> -->
+            </li>
+            <li class="cell">
+                <a href="#">
+                    <span class="ch">聯絡我們</span>
+                    <span class="en">CONTACT US</span>
+                </a>
+            </li>
+            <li class="cell">
+                <a href="#" class="social"><img src="../img/line.svg" alt=""></a>
+                <a href="#" class="social"><img src="../img/youtube.svg" alt=""></a>
+                </a>
             </li>
         </ul>
+        <div class="close">CLOSE</div>
     </div>
 </div>
+
+<script>
+
+
+
+    $(".menu").click(function() {
+        $(".topmenu-fixWrap").css("display","block");
+        $(".topmenu-fixList>li").addClass("is-active");
+    });
+    $(".close").click(function() {
+        $(".topmenu-fixWrap").css("display","none");
+        $(".topmenu-fixList>li").removeClass("is-active");
+    });
+
+</script>
