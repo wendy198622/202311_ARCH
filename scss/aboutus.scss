@@ -11,11 +11,11 @@
     background-image: linear-gradient(rgba(0,0,0,.5) -20%, rgba(0,0,0,0) 100%);
     
     h1{
-        .white{ display: block;}
-        .black{ display: none;}
+        .white{ display: none;}
+        .black{ display: block;}
     }
     .nav{
-        ul li a{ color: #fff;}
+        .menu{ color: #000;}
     }
 }
 

@@ -499,7 +499,7 @@ footer .copyright a {
   display: block;
 }
 
-#header .nav ul li a {
+#header .nav .menu {
   color: #000;
 }
 

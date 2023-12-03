@@ -493,15 +493,15 @@ footer .copyright a {
 }
 
 #header h1 .white {
-  display: block;
-}
-
-#header h1 .black {
   display: none;
 }
 
-#header .nav ul li a {
-  color: #fff;
+#header h1 .black {
+  display: block;
+}
+
+#header .nav .menu {
+  color: #000;
 }
 
 .aboutus_visual {
