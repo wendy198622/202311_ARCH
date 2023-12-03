@@ -319,15 +319,16 @@
             //     var thumb = $(slider.$slides[i]).data();
             //     return '<a class="dot">'+ ('0' + (++i) + '/' + '0'+ Math.ceil(slider.slideCount) ) +'</a>';
             // },
+        }).on('afterChange', function(event, slick, currentSlide){
+            var currentOption = "" + currentSlide;
+            var $select = $('.select');
+            var $listItem = $select.find('.select-options').find('li[rel="' + currentOption + '"]');
+            $listItem.trigger('click');
         });
 
         $('.news_content_slick').find('.slick-slide').each(function(index){
-                $('#slick-dots-select').append('<option value="' + index + '">Slide ' + (index + 1) + '</option>');
-        });
-
-        $('#slick-dots-select').on('change', function() {
-                var selectedIndex = $(this).val();
-                $('.news_content_slick').slick('slickGoTo', parseInt(selectedIndex));
+            var totalLen = $('.news_content_slick').find('.slick-slide').length
+            $('#slick-dots-select').append('<option value="' + index + '"> ' + toNumStr(index + 1) + ' / '+ toNumStr(totalLen) +' </option>');
         });
 
         $(".slick-dots").click(function() {
@@ -338,9 +339,6 @@
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
         });
-
-
-
 
         //select
         $('select').each(function(){
@@ -378,13 +376,14 @@
             });
         
             $listItems.click(function(e) {
+                console.log("listItems.click")
                 e.stopPropagation();
                 $styledSelect.text($(this).text()).removeClass('active');
                 $this.val($(this).attr('rel'));
-            $list.find('li.is-selected').removeClass('is-selected');
-            $list.find('li[rel="' + $(this).attr('rel') + '"]').addClass('is-selected');
+                $list.find('li.is-selected').removeClass('is-selected');
+                $list.find('li[rel="' + $(this).attr('rel') + '"]').addClass('is-selected');
                 $list.hide();
-                //console.log($this.val());
+                $('.news_content_slick').slick('slickGoTo', parseInt($(this).attr('rel')));
             });
         
             $(document).click(function() {
@@ -394,7 +393,13 @@
 
         });
         
-
+        function toNumStr(num) {
+            let numStr = num.toString();
+            if (numStr.length < 2) {
+                numStr = "0" + numStr;
+            }
+            return numStr;
+        }
 
     });
 
