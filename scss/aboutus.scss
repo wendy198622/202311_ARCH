@@ -38,15 +38,32 @@
         max-width: 1400px;
         margin:0 auto;
         padding: 100px 0;
+        @media (max-width:1480px){
+            width: 90%;
+        }
+        @media (max-width:1080px){
+            overflow-x: scroll;
+        }
     }
 
     ul{
         overflow: hidden;
+        @media (max-width:1080px){
+            width: 1080px;
+        }
+        @media (max-width:600px){
+            width: 600px;
+        }
 
         li{
             width: calc((100% - 16px) / 3);
             float: left;
             margin-right: 8px;
+            @media (max-width:1080px){
+                width: calc((100% - 24px) / 3);
+                float: unset;
+                display: inline-block;
+            }
 
             &:last-child{
                 margin-right: 0;
@@ -61,6 +78,10 @@
         max-width: 1000px;
         margin:0 auto;
         padding: 100px 0;
+        @media (max-width:1080px){
+            width: 90%;
+            overflow-x: scroll;
+        }
     }
 
     h3{
@@ -85,11 +106,20 @@
     ul{
         overflow: hidden;
         margin-top: 60px;
+        @media (max-width:1080px){
+            width: 1080px;
+        }
 
         li{
             width: calc((100% - 56px) / 5);
             float: left;
             margin-right: 14px;
+            @media (max-width:1080px){
+                width: calc((100% - 72px) / 5);
+                float: unset;
+                display: inline-block;
+                vertical-align: top;
+            }
 
             &:last-child{
                 margin-right: 0;
@@ -124,17 +154,37 @@
     width: 100%;
     background: #f2f2f2;
     padding: 240px 0;
+    @media (max-width:960px){
+        padding: 120px 0;
+    }
 
     .container{
         max-width: 840px;
         margin:0 auto;
         overflow: hidden;
+        @media (max-width:960px){
+            width: 90%;
+        }
 
+    }
+
+    .photo{
+        width: calc(340/840*100%);
+        float: right;
+        @media (max-width:960px){
+            width: 320px;
+            float: unset;
+            margin: 0 auto;
+        }
     }
 
     .intro{
         width: calc(400/840*100%);
         float: left;
+        @media (max-width:960px){
+            width: 100%;
+            float: left;
+        }
 
 
         h4{
@@ -156,14 +206,9 @@
         }
 
         .signature{
-            width: calc(280/840*100%);
+            width: 132px;
             float: right;
             margin-top: 60px;
         }
-    }
-
-    .photo{
-        width: calc(340/840*100%);
-        float: right;
     }
 }

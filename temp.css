@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700,900|Playfair+Display:400,700,900&display=swap");
-
-
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+section{
+    background: url(img/theme_bg.jpg) top center repeat;
+}
+header{
+    position: relative;
+    z-index: 10;
+}
 .css_mover{cursor:pointer}
 .css_mover img:nth-child(1){display:inline}
 .css_mover img:nth-child(2){display:none}
@@ -2213,9 +2219,9 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 .index-bg li .blockbox{cursor:pointer}
 .index-bg li a{position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1}
 .index-bg li .blockbox{position:absolute;top:0;right:0;bottom:0;left:0;z-index:1;pointer-events:none}
-/* .only-index-logo{z-index:49;position:fixed;top:25px;left:20px;-webkit-transition:all 1s;transition:all 1s;-webkit-transform:translateY(-68px);-ms-transform:translateY(-68px);transform:translateY(-68px);opacity:0}
+.only-index-logo{z-index:49;position:fixed;top:25px;left:20px;-webkit-transition:all 1s;transition:all 1s;-webkit-transform:translateY(-68px);-ms-transform:translateY(-68px);transform:translateY(-68px);opacity:0}
 .only-index-logo.is-show{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);opacity:1}
-.only-index-logo svg{width:201px;height:auto;fill:#fff}
+.only-index-logo img{width:160px;height:auto;fill:#fff}
 @media screen and (max-width: 106.24875em){
     .only-index-logo svg{width:190px}
 }
@@ -2265,14 +2271,14 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 .topmenuWrap.force-black .menu{color:#000}
 .topmenuWrap.force-black .topmenuList>li .en,.topmenuWrap.force-black .topmenuList>li .ch{color:#000}
 .topmenuWrap.force-black .hamburger span{background-color:#000}
-.topmenuWrap .logo{position:relative;z-index:4}
-.topmenuWrap .logo svg{width:201px;height:auto}
-@media screen and (max-width: 106.24875em){
+.topmenuWrap .logo{width: 180px;position:relative;z-index:4}
+/* .topmenuWrap .logo svg{width:201px;height:auto} */
+/* @media screen and (max-width: 106.24875em){
     .topmenuWrap .logo svg{width:190px}
 }
 @media screen and (max-width: 64.06125em){
     .topmenuWrap .logo svg{width:120px}
-}
+} */
 .topmenuWrap .menu{font-family:"Playfair Display",Arial,Helvetica,serif;font-size:25px;letter-spacing:5px;color:#000;cursor:pointer}
 @media screen and (max-width: 106.24875em){
     .topmenuWrap .menu{font-size:22px;letter-spacing:4px}
@@ -2296,7 +2302,7 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 .topmenuWrap .hamburger span{display:block;width:100%;height:2px;background-color:#000}
 .topmenuWrap .hamburger .item1{position:absolute;top:0;-webkit-transition:top 0.4s 0.4s ,-webkit-transform 0.4s;transition:top 0.4s 0.4s ,-webkit-transform 0.4s;transition:transform 0.4s ,top 0.4s 0.4s;transition:transform 0.4s ,top 0.4s 0.4s ,-webkit-transform 0.4s}
 .topmenuWrap .hamburger .item2{position:absolute;top:50%;-webkit-transition:opacity 0.8s;transition:opacity 0.8s}
-.topmenuWrap .hamburger .item3{position:absolute;top:100%;-webkit-transition:top 0.4s 0.4s ,-webkit-transform 0.4s;transition:top 0.4s 0.4s ,-webkit-transform 0.4s;transition:transform 0.4s ,top 0.4s 0.4s;transition:transform 0.4s ,top 0.4s 0.4s ,-webkit-transform 0.4s} */
+.topmenuWrap .hamburger .item3{position:absolute;top:100%;-webkit-transition:top 0.4s 0.4s ,-webkit-transform 0.4s;transition:top 0.4s 0.4s ,-webkit-transform 0.4s;transition:transform 0.4s ,top 0.4s 0.4s;transition:transform 0.4s ,top 0.4s 0.4s ,-webkit-transform 0.4s}
 .search-form .icon{cursor:pointer}
 .search-form .icon svg{stroke:#1a1a1a}
 .search-form input[type='text']{font-family:Arial,Helvetica,"HEITI TC","暺煾��-蝜�","敺株��迤暺煾��","暺煾��",sans-serif;font-size:18px;letter-spacing:1px;color:#1a1a1a;background-color:transparent;border:none;border-bottom:1px solid #1a1a1a;max-width:200px}
@@ -2317,7 +2323,7 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 .index-title.is-show .title{opacity:1;-webkit-animation:hehe 3s steps(60) both;animation:hehe 3s steps(60) both;-webkit-transition:all 0s;transition:all 0s}
 .index-title.is-show .more-area{-webkit-clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);-webkit-transition:all 2s 1s;transition:all 2s 1s}
 .index-title.is-hide{pointer-events:none;opacity:0;-webkit-transition:all 1s;transition:all 1s}
-.index-title .title{margin-bottom:40px;width:480px;height:124px;background:url(../images/css_sprites.png) 0 0/100% no-repeat;opacity:0;position:relative}
+.index-title .title{margin-bottom:40px;width:480px;height:180px;background:url(../images/css_sprites.png) 0 0/100% no-repeat;opacity:0;position:relative}
 @media screen and (max-width: 106.24875em){
     .index-title .title{-webkit-transform:scale(0.77);-ms-transform:scale(0.77);transform:scale(0.77);margin:0 -58px 20px}
 }
@@ -2362,6 +2368,7 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 .index-progress .bar .shadowbar{position:absolute;top:0;right:0;bottom:100%;left:0;background-color:#fff}
 .index-progress .bot{width:0;height:0;border-style:solid;border-width:8px 4px 0 4px;border-color:#ffffff transparent transparent transparent;cursor:pointer}
 .index-progress .num{font-family:"Noto Serif TC",serif;font-weight:900;font-size:19px;letter-spacing:6px;color:#fff;margin-top:15px}
+.index-progress .num span{color:#ffffff;}
 @media screen and (max-width: 106.24875em){
     .index-progress .num{font-size:16px;letter-spacing:5px}
 }
@@ -2369,6 +2376,7 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
     .index-progress .num{font-size:12px;letter-spacing:1px}
 }
 .index-gotoall{font-family:"Noto Serif TC",serif;font-weight:700;font-size:18px;letter-spacing:1px;color:#fff;z-index:19;position:fixed;top:50%;right:65px;margin-top:180px;opacity:0;-webkit-transform:translateY(30px);-ms-transform:translateY(30px);transform:translateY(30px)}
+.index-gotoall a{color: #fff;}
 .index-gotoall.is-show{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);-webkit-transition:all 1s 1s;transition:all 1s 1s}
 .index-gotoall.is-hide{opacity:0;right:-70px;-webkit-transition:all 1s;transition:all 1s}
 @media screen and (max-width: 106.24875em){
@@ -2412,14 +2420,14 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 @media screen and (max-width: 64.06125em){
     .index-buildingname li{left:50%;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);margin-top:80px}
 }
-.index-buildingname .year{font-family:"Playfair Display",Arial,Helvetica,serif;font-size:95px;color:#fff;margin-bottom:20px}
+.index-buildingname .year{font-family: 'Gulzar', serif;font-size:72px;color:#fff;margin-bottom:10px}
 @media screen and (max-width: 106.24875em){
-    .index-buildingname .year{font-size:73px}
+    .index-buildingname .year{font-size:60px}
 }
 @media screen and (max-width: 64.06125em){
     .index-buildingname .year{font-size:49px;margin-bottom:12px}
 }
-.index-buildingname .year i{display:inline-block;vertical-align:top;opacity:0;-webkit-transform:translateY(60px);-ms-transform:translateY(60px);transform:translateY(60px)}
+.index-buildingname .year i{color:#fff;display:inline-block;vertical-align:top;opacity:0;-webkit-transform:translateY(60px);-ms-transform:translateY(60px);transform:translateY(60px)}
 @media screen and (max-width: 106.24875em){
     .index-buildingname .year i{margin-right:-4px}
 }
@@ -2991,16 +2999,23 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 @media screen and (max-width: 64.06125em){
     .contactForm .contactFinish{font-size:17px;letter-spacing:1px}
 }
-.topmenu-fixWrap{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:99;background-color:#000}
+.topmenu-fixWrap{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:99;background: url(../img/theme_bg.jpg) top center repeat;}
 .topmenu-fixWrap .topmenu-fixList{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}
 .topmenu-fixWrap .topmenu-fixList>li{opacity:0;-webkit-transform:translateX(-100px);-ms-transform:translateX(-100px);transform:translateX(-100px);position:relative;text-align:center;padding:24px 0}
+.topmenu-fixWrap .topmenu-fixList .social{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+}
 @media screen and (max-width: 106.24875em){
     .topmenu-fixWrap .topmenu-fixList>li{padding:20px 0}
 }
 @media screen and (max-width: 64.06125em){
     .topmenu-fixWrap .topmenu-fixList>li{padding:16px 0}
 }
-.topmenu-fixWrap .topmenu-fixList>li:hover .en{opacity:1;margin-left:0;-webkit-transition-delay:.2s;transition-delay:.2s}
+.topmenu-fixWrap .topmenu-fixList>li:hover .en{opacity:1;margin-left:0;-webkit-transition-delay:.2s;transition-delay:.2s; color: #c9a063;}
 .topmenu-fixWrap .topmenu-fixList>li:hover .ch{opacity:0;-webkit-transform:translateX(30px);-ms-transform:translateX(30px);transform:translateX(30px);-webkit-transition-delay:0s;transition-delay:0s}
 .topmenu-fixWrap .topmenu-fixList>li:hover .subMenuList{max-height:78px;margin-top:18px}
 .topmenu-fixWrap .topmenu-fixList>li .en{font-family:"Playfair Display",Arial,Helvetica,serif;font-size:30px;letter-spacing:6px;color:#dfdfdf;display:inline-block;position:absolute;top:21px;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);opacity:0;-webkit-transition:all .6s;transition:all .6s;white-space:nowrap;margin-left:-30px}
@@ -3059,7 +3074,13 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 @media screen and (max-width: 64.06125em){
     .newsList .pic{max-width:100%;margin-right:0;margin-bottom:16px}
 }
-.newsList .article-container .year-area{font-family:"Noto Serif TC",serif;font-weight:600;font-size:12px;letter-spacing:2px;color:#808080;margin-bottom:14px}
+.newsList .article-container .year-area{
+    font-family:"Noto Serif TC",serif;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:2px;
+    color:#808080;
+    margin-bottom:14px}
 @media screen and (max-width: 64.06125em){
     .newsList .article-container .year-area{margin-bottom:10px}
 }

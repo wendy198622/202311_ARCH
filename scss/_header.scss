@@ -60,14 +60,14 @@
     }
 
     .topmenu-fixWrap{
-        // display:none;
+        display:none;
         position:fixed;
         top:0;
         right:0;
         bottom:0;
         left:0;
         z-index:99;
-        background-color:#000;
+        background: url(../img/theme_bg.jpg) top center repeat;
 
         .topmenu-fixList{
             position:absolute;

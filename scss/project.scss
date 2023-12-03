@@ -10,11 +10,11 @@
     background-image: none;
     
     h1{
-        .white{ display: none;}
-        .black{ display: block;}
+        .white{ display: block;}
+        .black{ display: none;}
     }
     .nav{
-        ul li a{ color: #000;}
+        .menu{ color: #fff;}
     }
 }
 
@@ -22,6 +22,9 @@
     .container{
         max-width: 1000px;
         margin: 0 auto;
+        @media (max-width:1080px){
+            width: 90%;
+        }
     }
 
     h3{
@@ -113,18 +116,125 @@
     }
 }
 .projectpage_photo{
+    position: relative;
 
     ul{
 
         li{
             background-repeat: no-repeat;
             background-size: cover !important;
-            // background-attachment: fixed;
+            background-attachment: fixed;
+
+            .mask{
+                width: 100%;
+                height: 100vh;
+                background: rgba(0,0,0,.8);
+                position: fixed;
+                z-index: 2;
+                display: none;
+                transform: all .3s;
+            
+                &.active{
+                    filter: blur(5px);
+                }
+            }
+
+            ol.projectpage_content_detail{
+                width: 100%;
+                max-width: 1000px;
+                position: fixed;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 140px;
+                z-index: 5;
+                overflow: hidden;
+                display: none;
+                text-align: left;
+                @media (max-width:1080px){
+                    width: 80%;
+                }
+
+                li{
+                    width: 100%;
+                    position: relative;
+                    margin-bottom: 120px;
+
+                    h4{
+                        font-family: 'Noto Serif TC', serif;
+                        font-size: 36px;
+                        line-height: 1.4;
+                        font-weight: 600;
+                        color: #fff;
+                        // text-align: center;
+                        letter-spacing: 4px;
+                        transition: all .3s;
+                    }   
+                
+                    h5{
+                        font-size: 20px;
+                        line-height: 1.4;
+                        font-weight: 200;
+                        color: #fff;
+                        // text-align: center;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        transition: all .3s;
+                    }
+                
+                    h6{
+                        font-family: 'Noto Serif TC', serif;
+                        font-size: 20px;
+                        line-height: 3;
+                        font-weight: 600;
+                        color: #fff;
+                        display: block;
+                        // text-align: center;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        transition: all .3s;
+                    }
+
+                    p{
+                        font-size: 15px;
+                        line-height: 1.6;
+                        font-weight: 300;
+                        color: #fff;
+                        letter-spacing: 2px;
+                        margin-top: 36px;
+                        text-align: justify;
+                    } 
+
+                    ol.projectinfo{
+                        margin-top: 180px;
+                        overflow: hidden;
+                        
+                        li{
+                            width: 300px;
+                            float: left;
+                            font-size: 14px;
+                            font-family: 'Noto Serif TC', serif;
+                            letter-spacing: 2px;
+                            color: #fff;
+                            margin-bottom: 20px;
+
+                            span{
+                                font-family: 'Noto Sans TC', sans-serif;
+                                letter-spacing: 2px;
+                                color: #fff;
+                                display: inline-block;
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 .projectpage_content{
+    width: 100%;
+    max-width: 1000px;
     position: absolute;
     z-index: 99;
     top: 140px;
@@ -132,102 +242,43 @@
     transform: translateX(-50%);
 
     .container{
+        width: 100%;
         max-width: 1000px;
+        height: calc(100vh - 200px);
         margin: 0 auto;
         // overflow: hidden;
-    }
-
-    ul{
-        overflow: hidden;
-
-        li{
-            width: 100%;
-            position: relative;
-            margin-bottom: 120px;
-
-            h4{
-                font-family: 'Noto Serif TC', serif;
-                font-size: 36px;
-                line-height: 1.4;
-                font-weight: 500;
-                color: #fff;
-                // text-align: center;
-                letter-spacing: 4px;
-                transition: all .3s;
-            }   
-        
-            h5{
-                font-size: 22px;
-                font-weight: 200;
-                color: #fff;
-                // text-align: center;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                transition: all .3s;
-            }
-        
-            h6{
-                font-family: 'Noto Serif TC', serif;
-                font-size: 20px;
-                line-height: 3;
-                font-weight: 600;
-                color: #fff;
-                display: block;
-                // text-align: center;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                transition: all .3s;
-            }
-
-            p{
-                font-size: 15px;
-                line-height: 1.6;
-                font-weight: 300;
-                color: #fff;
-                letter-spacing: 2px;
-                margin-top: 36px;
-                text-align: justify;
-            } 
-
-            ol.projectinfo{
-                margin-top: 180px;
-                overflow: hidden;
-                
-                li{
-                    width: 300px;
-                    float: left;
-                    font-size: 14px;
-                    font-family: 'Noto Serif TC', serif;
-                    letter-spacing: 2px;
-                    color: #fff;
-                    margin-bottom: 20px;
-
-                    span{
-                        font-family: 'Noto Sans TC', sans-serif;
-                        letter-spacing: 2px;
-                        color: #fff;
-                        display: inline-block;
-                        margin-right: 20px;
-                    }
-                }
-            }
+        @media (max-width:1080px){
+            width: 90%;
         }
     }
 
     .backproject{
-        width: 50%;
-        float: left;
+        position: absolute;
+        left: 0;
+        bottom: 0;
         font-size: 12px;
         font-family: 'Noto Serif TC', serif;
         line-height: 2;
         letter-spacing: 2px;
-        position: relative;
         transition: all .3s;
+        @media (max-width:1280px){
+            left: 120px;
+        }
+        @media (max-width:640px){
+            left: 40px;
+        }
         
         a{
             color: #fff;
             text-align: left;
             display: block;
+
+            span{
+                color: #fff;
+                @media (max-width:640px){
+                    display: none;
+                }
+            }
 
             img{
                 width: 60px;
@@ -236,6 +287,14 @@
                 top: 50%;
                 transform: translateY(-50%);
                 transition: all .3s;
+
+                @media (max-width:640px){
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    transform: none;
+                    margin-top: 10px;
+                }
             }
         }
 
@@ -244,45 +303,103 @@
             
             img{
                 left: -100px;
+                @media (max-width:640px){
+                    left: auto;
+                }
             }
         }
     }
 
     .closedetail{
-        width: 50%;
-        float: right;
+        position: absolute;
+        right: 0;
+        bottom: 0;
         font-size: 12px;
         font-family: 'Noto Serif TC', serif;
         line-height: 2;
         letter-spacing: 2px;
-        position: relative;
         transition: all .3s;
+        @media (max-width:1280px){
+            right: 140px;
+        }
+        @media (max-width:640px){
+            right: 80px;
+        }
         
         a{
             color: #fff;
             text-align: right;
             display: block;
 
+            span{
+                color: #fff;
+                @media (max-width:640px){
+                    display: none;
+                }
+            }
+
             img{
                 width: 18px;
                 position: absolute;
                 right: -40px;
                 top: 50%;
-                transform: translateY(-50%);
+                transform: translateY(-50%) rotate(135deg);
+                transform-origin: 50% 50%;
                 transition: all .3s;
+
+                @media (max-width:640px){
+                    position: relative;
+                    right: auto;
+                    top: auto;
+                    transform: rotate(135deg);
+                    margin: 10px auto 0;
+                }
+
+                &.active{
+                    transform: translateY(-50%) rotate(0deg);
+                    @media (max-width:640px){
+                        transform: rotate(0deg);
+                    }
+                }
             }
         }
 
         &:hover{
             margin-right: -10px;
+            transform: translateX(-20px);
             
             img{
-                right: -60px;
+                right: -50px;
+                @media (max-width:640px){
+                    right: auto;
+                }
             }
+        }
+    }
+
+    .slideContent{
+        width: 60px;
+        position: absolute;
+        z-index: 10;
+        position: absolute;
+        right: -120px;
+        bottom: 14px;
+        text-align: right;
+        @media (max-width:1280px){
+            right: 20px;
+        }
+
+        .num{
+            color: #fff;
+            font-size: 22px;
+            letter-spacing: 5px;
+            font-family: 'Noto Serif TC', serif;
+
         }
     }
 }
 
+// fullpage fading
 .fullpage-wrapper {
 	width: 100%!important;
 	transform: none!important;
@@ -324,41 +441,69 @@
 				transition: all .7s ease-in-out;
 			}
 		}
-	}
+    }
+    
+    .fp-watermark{
+        // display: none;
+    }
 }
 #fp-nav, .fp-slidesNav {
+
+    ul{
     
-    li{
-        display: block;
-        width: 1px;
-        height: 40px;
-        margin: 0;
-        position: relative;
-
-        a{
+        li, li:hover{
             display: block;
+            width: 1px;
+            height: 40px;
+            margin: 0;
             position: relative;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-            text-decoration: none;
-            
-            span {
-                top: 0;
-                left: 0;
-                width: 1px;
-                height: 48px;
-                border: none;
-                background: #000;
-                border-radius: none;
-                position: absolute;
+    
+            a{
+                display: block;
+                position: relative;
                 z-index: 1;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                text-decoration: none;
+                
+                span {
+                    top: 0;
+                    left: 0;
+                    width: 1px;
+                    height: 48px;
+                    border: none;
+                    background: #000;
+                    border-radius: 0;
+                    position: absolute;
+                    z-index: 1;
+                    margin-left: -2px;
+                    transition: all .3s;
+                }
+    
+                &.active{
+    
+                    span{
+                        top: 0;
+                        left: 0;
+                        width: 1px;
+                        height: 48px;
+                        border: none;
+                        background: #fff;
+                        border-radius: 0;
+                        position: absolute;
+                        z-index: 1;
+                        margin-left: -2px;
+                    }
+                }
             }
-
-            &.active{
-
-                span{
+        }
+    
+        li:hover{
+    
+            a{
+                
+                span {
                     background: #fff;
                 }
             }
