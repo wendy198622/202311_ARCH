@@ -3078,7 +3078,7 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 @media screen and (max-width: 64.06125em){
     .contactForm .contactFinish{font-size:17px;letter-spacing:1px}
 }
-.topmenu-fixWrap{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:99;background: url(../img/theme_bg.jpg) top center repeat;}
+.topmenu-fixWrap{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:99;background: url(./img/theme_bg.jpg) top center repeat;}
 .topmenu-fixWrap .topmenu-fixList{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}
 .topmenu-fixWrap .topmenu-fixList>li{opacity:0;-webkit-transform:translateX(-100px);-ms-transform:translateX(-100px);transform:translateX(-100px);position:relative;text-align:center;padding:24px 0}
 .topmenu-fixWrap .topmenu-fixList .social{
