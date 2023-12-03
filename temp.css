@@ -3460,8 +3460,17 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 }
 .fancy-container .fancy-close{z-index:1;position:absolute;top:40px;right:50px;width:32px;height:32px;cursor:pointer}
 @media screen and (max-width: 64.06125em){
-    .fancy-container .fancy-close{position:absolute;top:30px;right:30px;width:20px;height:20px;}
+    .fancy-container .fancy-close{
+        position:absolute;
+        top: 7%;
+        right: 7%;
+        width: 3vw;
+        height: 3vw;
+    }
 }
+/* @media screen and (max-width: 39.99875em){
+    .fancy-container{top:20px;right:20px;}
+} */
 .fancy-container .fancy-close:before,.fancy-container .fancy-close:after{
     content:'';width:100%;height:1px;background-color:#fff;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%) rotate(45deg);-ms-transform:translate(-50%, -50%) rotate(45deg);transform:translate(-50%, -50%) rotate(45deg)}
 .fancy-container .fancy-close:after{-webkit-transform:translate(-50%, -50%) rotate(-45deg);-ms-transform:translate(-50%, -50%) rotate(-45deg);transform:translate(-50%, -50%) rotate(-45deg)}
