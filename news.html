@@ -264,14 +264,7 @@
                     </li>
                 </ul>
                 <!-- <a class="news_content_slick_dot"></a> -->
-                <select name="pets" id="pet-select" class="news_content_slick_dot">
-                    <option value="">--Please choose an option--</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="hamster">Hamster</option>
-                    <option value="parrot">Parrot</option>
-                    <option value="spider">Spider</option>
-                    <option value="goldfish">Goldfish</option>
+                <select  name="pets" id="slick-dots-select" class="news_content_slick_dot">
                 </select>
             </div>
         </div>
@@ -292,15 +285,24 @@
             // vertical: true,
             // verticalSwiping: true,
             arrow: true,
-            dots: true,
-            dotsClass: "news_content_slick_dot",
+            //dots: true,
+            //dotsClass: "news_content_slick_dot",
             infinite: false,
             speed: 500,
             fade: true,
-            customPaging : function(slider, i) {
-                var thumb = $(slider.$slides[i]).data();
-                return '<a class="dot">'+ ('0' + (++i) + '/' + '0'+ Math.ceil(slider.slideCount) ) +'</a>';
-            },
+            // customPaging : function(slider, i) {
+            //     var thumb = $(slider.$slides[i]).data();
+            //     return '<a class="dot">'+ ('0' + (++i) + '/' + '0'+ Math.ceil(slider.slideCount) ) +'</a>';
+            // },
+        });
+
+        $('.news_content_slick').find('.slick-slide').each(function(index){
+                $('#slick-dots-select').append('<option value="' + index + '">Slide ' + (index + 1) + '</option>');
+        });
+
+        $('#slick-dots-select').on('change', function() {
+                var selectedIndex = $(this).val();
+                $('.news_content_slick').slick('slickGoTo', parseInt(selectedIndex));
         });
 
         $(".slick-dots").click(function() {

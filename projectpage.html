@@ -222,17 +222,20 @@
     var myFullpage = new fullpage('#fullpage', {
         verticalCentered: false,
         navigation: true,
-        navigationPosition: 'right'
+        navigationPosition: 'right',
+        onLeave: function(origin, destination, direction) {
+                var currentPage = destination.index + 1;
+                var totalPage = $('#fullpage').find('.section').length
+                updatePageIndicator(currentPage, totalPage);
+        }
     });
 
     $('#fullpage').each(function(){
-        var section = $(this),
-            sectionSlides = section.find('.section'),
-            totalItems = sectionSlides.length,
-            currentIndex = sectionSlides.filter('.active').index() + 1,
-            numContainer = $('section').find('.num'); //assuming you have numContainers in every section
-
-        numContainer.html(currentIndex + '/' + totalItems);
+        var section = $(this)
+        sectionSlides = section.find('.section')
+        totalItems = sectionSlides.length
+        currentIndex = sectionSlides.filter('.active').index() + 1
+        updatePageIndicator(currentIndex, totalItems)
     });
 
 
@@ -251,6 +254,10 @@
         //     $(this).addClass("active");
         //     $(this).siblings().removeClass("active");
         // });
+    function updatePageIndicator(currentPage, totalPage) {
+        numContainer = $('section').find('.num');
+        numContainer.html(currentPage + '/' + totalPage);
+    }
 
 </script>
 
