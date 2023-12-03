@@ -508,6 +508,12 @@ footer .copyright a {
   margin: 0 auto;
 }
 
+@media (max-width: 1480px) {
+  .contactus_title .container {
+    width: 90%;
+  }
+}
+
 .contactus_title h3 {
   font-family: 'Playfair Display', serif;
   font-size: 26px;
@@ -529,12 +535,25 @@ footer .copyright a {
   overflow: hidden;
 }
 
+@media (max-width: 1480px) {
+  .contactus_form .container {
+    width: 90%;
+  }
+}
+
 .contactus_form .item {
   width: calc((100% - 100px) / 2);
   float: left;
   margin-right: 100px;
   margin-top: 36px;
   position: relative;
+}
+
+@media (max-width: 800px) {
+  .contactus_form .item {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .contactus_form .item.message {
@@ -642,6 +661,12 @@ footer .copyright a {
   line-height: 2;
   letter-spacing: 2px;
   margin-top: 54px;
+}
+
+@media (max-width: 800px) {
+  .contactus_form button.submit {
+    width: 100%;
+  }
 }
 
 .contactus_form button.submit:hover {

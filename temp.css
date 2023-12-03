@@ -3454,7 +3454,7 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 @media screen and (max-width: 64.06125em){
     .fancy-container .pic-area{height:calc(100% - 28px)}
 }
-.fancy-container .fancy-close{z-index:1;position:absolute;top:40px;right:50px;width:50px;height:50px;cursor:pointer}
+.fancy-container .fancy-close{z-index:1;position:absolute;top:40px;right:50px;width:32px;height:32px;cursor:pointer}
 @media screen and (max-width: 64.06125em){
     .fancy-container .fancy-close{position:absolute;top:3%;right:8%;width:40px;height:40px;margin:30px auto 0}
 }

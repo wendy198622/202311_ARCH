@@ -492,14 +492,30 @@ footer .copyright a {
 }
 
 #header h1 .white {
-  display: block;
-}
-
-#header h1 .black {
   display: none;
 }
 
+#header h1 .black {
+  display: block;
+}
+
 #header .nav .menu {
+  color: #000;
+}
+
+#header.inner_hd {
+  background-image: none;
+}
+
+#header.inner_hd h1 .white {
+  display: block;
+}
+
+#header.inner_hd h1 .black {
+  display: none;
+}
+
+#header.inner_hd .nav .menu {
   color: #fff;
 }
 
@@ -542,6 +558,12 @@ footer .copyright a {
   float: left;
   position: relative;
   margin-bottom: 120px;
+}
+
+@media (max-width: 800px) {
+  .project_list ul li {
+    width: 50%;
+  }
 }
 
 .project_list ul li h4 {

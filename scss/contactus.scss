@@ -22,6 +22,9 @@
     .container{
         max-width: 1000px;
         margin: 0 auto;
+        @media (max-width:1480px){
+            width: 90%;
+        }
     }
 
     h3{
@@ -52,6 +55,9 @@
         max-width: 1000px;
         margin: 0 auto;
         overflow: hidden;
+        @media (max-width:1480px){
+            width: 90%;
+        }
     }
 
     .item{
@@ -60,6 +66,10 @@
         margin-right: 100px;
         margin-top: 36px;
         position: relative;
+        @media (max-width:800px){
+            width: 100%;
+            margin-right: 0;
+        }
 
         &.message{
             width: 100%;
@@ -144,6 +154,9 @@
         line-height: 2;
         letter-spacing: 2px;
         margin-top: 54px;
+        @media (max-width:800px){
+            width: 100%;
+        }
 
         &:hover{
             cursor: pointer;
