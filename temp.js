@@ -1324,13 +1324,13 @@
     
                                     opts: {
     
-                                        smallBtn: false, //鋆⊿𢒰��撠嫲
+                                        smallBtn: false,
     
                                         trapFocus: false,
     
-                                        toolbar: false, //�𢰧銝𡃏�㘾���𥟇�厰��
+                                        toolbar: false, 
     
-                                        touch: false //敺�銝𧢲�𡝗𠗊��𨀣��
+                                        touch: false
     
                                     }
     
