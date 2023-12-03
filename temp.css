@@ -3418,11 +3418,31 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 @media screen and (max-width: 64.06125em){
     .pn-call{display:block}
 }
-.fancyWrap{display:none;position:relative;height:100%;z-index:99;background:rgba(0,0,0,0) !important}
+.fancyWrap{
+    /* display:none; */
+    /* position:relative;*/
+    width: 100%;
+    height:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:99;
+    background:rgba(0,0,0,.6) !important;
+}
 @media screen and (max-width: 64.06125em){
     .fancyWrap{overflow:hidden !important;padding:0 !important}
 }
-.fancy-container{text-align:center;position:relative;height:100%;background:rgba(0,0,0,0) !important}
+.fancy-container{
+    background:rgba(0,0,0,0) !important;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
 @media screen and (max-width: 64.06125em){
     .fancy-container{height:calc(var(--vh, 1vh) * 100);padding:20px 12px}
 }
