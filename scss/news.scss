@@ -419,6 +419,10 @@
         color: #fff;
         width: 140px;
         height: 40px;
+        @media (max-width:1080px){
+            left: 5%;
+            margin-left: 0;
+        }
       }
       .select-styled {
         position: absolute; 

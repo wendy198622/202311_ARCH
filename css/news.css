@@ -848,6 +848,13 @@ footer .copyright a {
   height: 40px;
 }
 
+@media (max-width: 1080px) {
+  .news_content .select {
+    left: 5%;
+    margin-left: 0;
+  }
+}
+
 .news_content .select-styled {
   position: absolute;
   top: 0;
