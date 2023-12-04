@@ -17,16 +17,18 @@
     <link rel="stylesheet" type="text/css" href="css/aboutus.css" />
     <!-- js -->
     <!-- <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/slick.js"></script>
-    <script src="js/wow.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/slick.js"></script> -->
+    <!-- <script src="js/wow.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> -->
     
-    <!-- 滑鼠 -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js" type="text/javascript"></script>
-    
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
 </head>
 
 <body>
@@ -35,16 +37,25 @@
         <div class="aboutus_visual">
             <div class="container">
                 <video width="100%" height="100%" preload autoplay muted loop>
-                    <source src="img/video-pc.mp4" type="video/mp4">
+                    <!-- <source src="img/video-pc.mp4" type="video/mp4"> -->
                 </video>  
             </div>
         </div>
-        <div class="aboutus_organize">
+        <div class="aboutus_organize project project-left">
             <div class="container">
-                <ul>
-                    <li class="wow fadeInUp"><img src="img/aboutus_organize1.jpg" alt=""></li>
-                    <li class="wow fadeInUp" data-wow-delay=".2s"><img src="img/aboutus_organize2.jpg" alt=""></li>
-                    <li class="wow fadeInUp" data-wow-delay=".4s"><img src="img/aboutus_organize3.jpg" alt=""></li>
+                <ul class="">
+                    <li class="box">
+                        <img src="img/aboutus_organize1.jpg" alt="">
+                        <div class="overlay"></div>
+                    </li>
+                    <li class="box">
+                        <img src="img/aboutus_organize2.jpg" alt="">
+                        <div class="overlay"></div>
+                    </li>
+                    <li class="box">
+                        <img src="img/aboutus_organize3.jpg" alt="">
+                        <div class="overlay"></div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -103,6 +114,9 @@
             </div>
         </div>
     </section>
+
+
+
     <footer id="footer"></footer>
 </body>
 
@@ -110,62 +124,35 @@
 
     $(document).ready(function () {
 
-        new WOW().init();
-
         $('#header').load('page/header.html');
         $('#footer').load('page/footer.html');
 
-        const $slider = $('.homeproject_photo_slick');
+        var controller = new ScrollMagic.Controller();
 
-        $slider.slick({
-            infinite: true,
-            arrows: false,
-            vertical: true,
-            dots: true,
-            slidesToShow: 1,
-            centerMode: true,
-            centerPadding: '160px',
-            speed: 1200,
-            cssEase: 'cubic-bezier(0.86, 0, 0.07, 1)'
+        $(".project").each(function(){
+            
+            var picOverlay = $(this).find(".overlay");
+            var animateIn = new TimelineMax();
+                
+            animateIn
+            .fromTo(picOverlay, 2, 
+            {skewX:0, scale:1.5}, 
+            {skewX:0, xPercent:100, transformOrigin: "0% 100%", ease: Power4.easeOut},
+            "-=1")
+            
+            var scene = new ScrollMagic.Scene({
+                triggerElement: this,
+            })
+
+            // .addIndicators()
+            .setTween(animateIn).addTo(controller);
+
         });
-
-        $slider.mousewheel(function(e) {
-            e.preventDefault()
-            if (e.deltaY < 0) {
-
-                if ($(this).slick('slickCurrentSlide') === $(this).find('.slick-slide').length - 1) {
-                return
-                }
-
-                $(this).slick('slickNext');
-
-            } else {
-
-                if ($(this).slick('slickCurrentSlide') === 0) {
-                return
-                }
-
-                $(this).slick('slickPrev')
-            }
-        });
-
-
-        //滑鼠圈圈
-        var $circle = $('.mouse_circle');
-
-        function moveCircle(e) {
-            TweenLite.to($circle, 0.3, {
-            css: {
-                left: e.pageX,
-                top: e.pageY
-                }
-            });
-        }
-
-        $(window).on('mousemove', moveCircle);
-
 
     });
+
+    
+
 
 </script>
 

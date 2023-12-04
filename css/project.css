@@ -620,6 +620,10 @@ footer .copyright a {
   position: relative;
 }
 
+.projectpage_photo ul {
+  background: #000;
+}
+
 .projectpage_photo ul li {
   background-repeat: no-repeat;
   background-size: cover !important;

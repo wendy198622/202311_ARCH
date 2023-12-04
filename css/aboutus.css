@@ -728,4 +728,27 @@ footer .copyright a {
   float: right;
   margin-top: 60px;
 }
+
+.aboutus_organize {
+  width: 100%;
+}
+
+.aboutus_organize li {
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutus_organize li img {
+  width: 100%;
+}
+
+.aboutus_organize li .overlay {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #f2f2f2;
+  width: 100%;
+  height: 100%;
+}
 /*# sourceMappingURL=aboutus.css.map */
