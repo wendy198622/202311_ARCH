@@ -73,6 +73,7 @@
 }
 
 .aboutus_team{
+    width: 100%;
 
     .container{
         max-width: 1000px;
@@ -214,7 +215,7 @@
 }
 
 
-.aboutus_organize {
+.aboutus_organize, .aboutus_team {
     width: 100%;
     li {
         // width: 33%;
@@ -236,7 +237,14 @@
         }
     }
 }
-  
+.aboutus_team{
+    li {
+
+        .overlay {
+            background: #fff;
+        }
+    }
+}
   
   
   

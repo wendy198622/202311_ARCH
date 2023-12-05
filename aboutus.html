@@ -19,7 +19,7 @@
     <!-- <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> -->
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- <script type="text/javascript" src="js/slick.js"></script> -->
-    <!-- <script src="js/wow.min.js"></script> -->
+    <script src="js/wow.min.js"></script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> -->
     
@@ -59,37 +59,42 @@
                 </ul>
             </div>
         </div>
-        <div class="aboutus_team">
+        <div class="aboutus_team project-left">
             <div class="container">
                 <h3>
                     建築團隊
                     <span>team</span>
                 </h3>
                 <ul>
-                    <li class="wow fadeInUp">
+                    <li class="box">
                         <img src="img/aboutus_team_photo1.png" alt="">
                         <h4>呂文程</h4>
                         <h5>全台十大建築師</h5>
+                        <div class="overlay"></div>
                     </li>
-                    <li class="wow fadeInUp" data-wow-delay=".2s">
+                    <li class="box">
                         <h4>林大俊</h4>
                         <h5>全台十大建築師</h5>
                         <img src="img/aboutus_team_photo2.png" alt="">
+                        <div class="overlay"></div>
                     </li>
-                    <li class="wow fadeInUp" data-wow-delay=".4s">
+                    <li class="box">
                         <img src="img/aboutus_team_photo3.png" alt="">
                         <h4>楊永豐</h4>
                         <h5>結構顧問</h5>
+                        <div class="overlay"></div>
                     </li>
-                    <li class="wow fadeInUp" data-wow-delay=".6s">
+                    <li class="box">
                         <h4>康明華</h4>
                         <h5>空間設計師</h5>
                         <img src="img/aboutus_team_photo4.png" alt="">
+                        <div class="overlay"></div>
                     </li>
-                    <li class="wow fadeInUp" data-wow-delay=".8s">
+                    <li class="box">
                         <img src="img/aboutus_team_photo5.png" alt="">
                         <h4>鄭詩哲</h4>
                         <h5>機電技師</h5>
+                        <div class="overlay"></div>
                     </li>
                 </ul>
             </div>
@@ -124,12 +129,14 @@
 
     $(document).ready(function () {
 
+        new WOW().init();
+
         $('#header').load('page/header.html');
         $('#footer').load('page/footer.html');
 
         var controller = new ScrollMagic.Controller();
 
-        $(".project").each(function(){
+        $(".project, .aboutus_team").each(function(){
             
             var picOverlay = $(this).find(".overlay");
             var animateIn = new TimelineMax();

@@ -572,6 +572,10 @@ footer .copyright a {
   margin-right: 0;
 }
 
+.aboutus_team {
+  width: 100%;
+}
+
 .aboutus_team .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -729,20 +733,20 @@ footer .copyright a {
   margin-top: 60px;
 }
 
-.aboutus_organize {
+.aboutus_organize, .aboutus_team {
   width: 100%;
 }
 
-.aboutus_organize li {
+.aboutus_organize li, .aboutus_team li {
   position: relative;
   overflow: hidden;
 }
 
-.aboutus_organize li img {
+.aboutus_organize li img, .aboutus_team li img {
   width: 100%;
 }
 
-.aboutus_organize li .overlay {
+.aboutus_organize li .overlay, .aboutus_team li .overlay {
   display: block;
   position: absolute;
   left: 0;
@@ -750,5 +754,9 @@ footer .copyright a {
   background: #f2f2f2;
   width: 100%;
   height: 100%;
+}
+
+.aboutus_team li .overlay {
+  background: #fff;
 }
 /*# sourceMappingURL=aboutus.css.map */
