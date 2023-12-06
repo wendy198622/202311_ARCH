@@ -64,7 +64,7 @@
                 <li class="section" id="section1" style="background-image: url(img/projectphoto_01.jpg);">
                     <!-- <img src="img/projectphoto_01.jpg" alt=""> -->
                 </li>
-                <li class="section" id="section2" style="background-image: url(img/projectphoto_01.jpg);">
+                <li class="section opentext" id="section2" style="background-image: url(img/projectphoto_01.jpg);">
                     <!-- <img src="img/projectphoto_02.jpg" alt=""> -->
                     <div class="projectpage_popup">
                         <div class="mask"></div>
@@ -180,14 +180,19 @@
         updatePageIndicator(currentIndex, totalItems)
     });
 
-
     $(".closedetail").click(function (e) {
         e.preventDefault();
-        $(".projectpage_popup").toggle();
+        $(".closedetail img").toggleClass("active");
+        $(".projectpage_popup").toggleClass("active");
         $(".mask").toggleClass("active")
         // $(".projectpage_photo>ul>li").toggleClass("bg-active");
-        $(".closedetail img").toggleClass("active");
         // $(".toggleHide").toggle();
+    });
+
+    $(document).ready(function () {
+        if ($('.opentext.active').length > 0) {
+            $('.closedetail img').addClass('active');
+        }
     });
     
 
@@ -196,6 +201,15 @@
         //     $(this).siblings().removeClass("active");
         // });
     function updatePageIndicator(currentPage, totalPage) {
+        if (currentPage == 2) {            
+            $('.closedetail img').css({
+                'transform': 'translateY(-50%) rotate(0deg)'
+            });
+        } else {
+            $('.closedetail img').css({
+                'transform': 'translateY(-50%) rotate(-135deg)'
+            });
+        }
         console.log("updatePageIndicator")
         numContainer = $('section').find('.num');
         numContainer.html(currentPage + '/' + totalPage);

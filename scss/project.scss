@@ -135,6 +135,9 @@
 
     .projectpage_popup{
         display: none;
+        &.active{
+            display: block;
+        }
 
         .mask{
             width: 100%;
@@ -517,15 +520,10 @@
                     transform: rotate(-135deg);
                     margin: 10px auto 0;
                 }
-            }
 
-            &:hover, &.active{
-                img{
-                    transform: translateY(-50%) rotate(0deg);
-                    @media (max-width:640px){
-                        transform: rotate(0deg);
-                    }
-                }
+                // &.active{
+                //     transform: translateY(-50%) rotate(0deg);
+                // }
             }
         }
 
@@ -533,10 +531,20 @@
             margin-right: -10px;
             transform: translateX(-20px);
             
-            img{
+            a img{
                 right: -10px;
+                transform: translateY(-10px) rotate(0deg);
                 @media (max-width:640px){
                     right: auto;
+                }
+            }
+        }
+
+        &.active{
+            a img{
+                transform: translateY(-50%) rotate(0deg);
+                @media (max-width:640px){
+                    transform: rotate(0deg);
                 }
             }
         }
