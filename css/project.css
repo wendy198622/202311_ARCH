@@ -940,7 +940,7 @@ footer .copyright a {
 .projectpage_photo ul#fullpage li:nth-child(2).active .projectpage_popup .mask {
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   position: fixed;
   z-index: 2;
   -webkit-backdrop-filter: blur(3px);
@@ -1048,8 +1048,7 @@ footer .copyright a {
 }
 
 .projectpage_content {
-  width: 100%;
-  max-width: 1000px;
+  width: 90%;
   position: absolute;
   z-index: 99;
   top: 140px;
@@ -1099,6 +1098,7 @@ footer .copyright a {
   color: #fff;
   text-align: left;
   display: block;
+  padding-left: 100px;
 }
 
 .projectpage_content .backproject a span {
@@ -1114,7 +1114,7 @@ footer .copyright a {
 .projectpage_content .backproject a img {
   width: 60px;
   position: absolute;
-  left: -80px;
+  left: 0%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1149,7 +1149,7 @@ footer .copyright a {
 
 .projectpage_content .closedetail {
   position: absolute;
-  right: 0;
+  right: 100px;
   bottom: 0;
   font-size: 12px;
   font-family: 'Noto Serif TC', serif;
@@ -1175,6 +1175,7 @@ footer .copyright a {
   color: #fff;
   text-align: right;
   display: block;
+  padding-right: 50px;
 }
 
 .projectpage_content .closedetail a span {
@@ -1190,10 +1191,10 @@ footer .copyright a {
 .projectpage_content .closedetail a img {
   width: 18px;
   position: absolute;
-  right: -40px;
+  right: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%) rotate(135deg);
-          transform: translateY(-50%) rotate(135deg);
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+          transform: translateY(-50%) rotate(-135deg);
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-transition: all .3s;
@@ -1205,19 +1206,19 @@ footer .copyright a {
     position: relative;
     right: auto;
     top: auto;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
     margin: 10px auto 0;
   }
 }
 
-.projectpage_content .closedetail a img.active {
+.projectpage_content .closedetail a:hover img, .projectpage_content .closedetail a.active img {
   -webkit-transform: translateY(-50%) rotate(0deg);
           transform: translateY(-50%) rotate(0deg);
 }
 
 @media (max-width: 640px) {
-  .projectpage_content .closedetail a img.active {
+  .projectpage_content .closedetail a:hover img, .projectpage_content .closedetail a.active img {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
@@ -1230,7 +1231,7 @@ footer .copyright a {
 }
 
 .projectpage_content .closedetail:hover img {
-  right: -50px;
+  right: -10px;
 }
 
 @media (max-width: 640px) {
@@ -1241,10 +1242,10 @@ footer .copyright a {
 
 .projectpage_content .slideContent {
   width: 60px;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   position: absolute;
-  right: -120px;
+  right: 0%;
   bottom: 14px;
   text-align: right;
 }
@@ -1358,5 +1359,32 @@ footer .copyright a {
 
 #fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
   background: #fff;
+}
+
+#fp-nav {
+  right: 50px !important;
+  height: 80%;
+  top: 20%;
+  -webkit-transform: none;
+          transform: none;
+}
+
+#fp-nav ul {
+  height: 100%;
+}
+
+#fp-nav ul li {
+  height: calc(100% / 6);
+}
+
+#fp-nav ul li a span {
+  height: 100%;
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  height: 100%;
 }
 /*# sourceMappingURL=project.css.map */

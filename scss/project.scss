@@ -259,7 +259,7 @@
                     .mask{
                         width: 100%;
                         height: 100vh;
-                        background: rgba(0,0,0,.6);
+                        background: rgba(0,0,0,.4);
                         position: fixed;
                         z-index: 2;
                         backdrop-filter: blur(3px);
@@ -366,8 +366,8 @@
 }
 
 .projectpage_content{
-    width: 100%;
-    max-width: 1000px;
+    width: 90%;
+    // max-width: 1000px;
     position: absolute;
     z-index: 99;
     top: 140px;
@@ -405,6 +405,7 @@
             color: #fff;
             text-align: left;
             display: block;
+            padding-left: 100px;
 
             span{
                 color: #fff;
@@ -416,7 +417,7 @@
             img{
                 width: 60px;
                 position: absolute;
-                left: -80px;
+                left: 0%;
                 top: 50%;
                 transform: translateY(-50%);
                 transition: all .3s;
@@ -445,7 +446,7 @@
 
     .closedetail{
         position: absolute;
-        right: 0;
+        right: 100px;
         bottom: 0;
         font-size: 12px;
         font-family: 'Noto Serif TC', serif;
@@ -463,6 +464,7 @@
             color: #fff;
             text-align: right;
             display: block;
+            padding-right: 50px;
 
             span{
                 color: #fff;
@@ -474,9 +476,9 @@
             img{
                 width: 18px;
                 position: absolute;
-                right: -40px;
+                right: 0;
                 top: 50%;
-                transform: translateY(-50%) rotate(135deg);
+                transform: translateY(-50%) rotate(-135deg);
                 transform-origin: 50% 50%;
                 transition: all .3s;
 
@@ -484,11 +486,13 @@
                     position: relative;
                     right: auto;
                     top: auto;
-                    transform: rotate(135deg);
+                    transform: rotate(-135deg);
                     margin: 10px auto 0;
                 }
+            }
 
-                &.active{
+            &:hover, &.active{
+                img{
                     transform: translateY(-50%) rotate(0deg);
                     @media (max-width:640px){
                         transform: rotate(0deg);
@@ -502,7 +506,7 @@
             transform: translateX(-20px);
             
             img{
-                right: -50px;
+                right: -10px;
                 @media (max-width:640px){
                     right: auto;
                 }
@@ -512,10 +516,10 @@
 
     .slideContent{
         width: 60px;
-        position: absolute;
+        position: fixed;
         z-index: 10;
         position: absolute;
-        right: -120px;
+        right: 0%;
         bottom: 14px;
         text-align: right;
         @media (max-width:1280px){
@@ -642,4 +646,26 @@
         }
     }
 }
+#fp-nav{
+    right: 50px !important;
+    height: 80%;
+    top: 20%;
+    transform: none;
+
+    ul{
+        height: 100%;
+        li{
+            height: calc(100% / 6);
+            a{
+                span{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+#fp-nav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li a.active span, 
+.fp-slidesNav ul li:hover a.active span{ height: 100%;}
 
