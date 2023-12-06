@@ -1047,6 +1047,29 @@ footer .copyright a {
   margin-right: 20px;
 }
 
+.projectpage_photo .fullpage_scrollbar {
+  width: 1px;
+  height: 80vh;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  right: 60px;
+}
+
+.projectpage_photo .fullpage_scrollbar .topline {
+  width: 1px;
+  height: 60%;
+  background: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.projectpage_photo .fullpage_scrollbar .bgline {
+  width: 1px;
+  height: 100%;
+  background: #000;
+}
+
 .projectpage_content {
   width: 90%;
   position: absolute;
@@ -1367,6 +1390,7 @@ footer .copyright a {
   top: 20%;
   -webkit-transform: none;
           transform: none;
+  display: none;
 }
 
 #fp-nav ul {
