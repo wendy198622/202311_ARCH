@@ -133,117 +133,123 @@
 .projectpage_photo{
     position: relative;
 
-    ul{
+    .projectpage_popup{
+        display: none;
+
+        .mask{
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,.6);
+            position: fixed;
+            z-index: 2;
+
+            &.active{
+                backdrop-filter: blur(3px);
+            }
+        }
+
+        ol.projectpage_content_detail{
+            width: 100%;
+            max-width: 1000px;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 140px;
+            z-index: 5;
+            overflow: hidden;
+            text-align: left;
+            @media (max-width:1080px){
+                width: 80%;
+            }
+
+            li{
+                width: 100%;
+                max-width: 600px;
+                position: relative;
+                margin-bottom: 120px;
+
+                h4{
+                    font-family: 'Noto Serif TC', serif;
+                    font-size: 36px;
+                    line-height: 1.4;
+                    font-weight: 600;
+                    color: #fff;
+                    // text-align: center;
+                    letter-spacing: 4px;
+                    transition: all .3s;
+                }   
+            
+                h5{
+                    font-size: 20px;
+                    line-height: 1.4;
+                    font-weight: 200;
+                    color: #fff;
+                    // text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    transition: all .3s;
+                }
+            
+                h6{
+                    font-family: 'Noto Serif TC', serif;
+                    font-size: 20px;
+                    line-height: 3;
+                    font-weight: 600;
+                    color: #fff;
+                    display: block;
+                    // text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    transition: all .3s;
+                }
+
+                p{
+                    font-size: 15px;
+                    line-height: 1.6;
+                    font-weight: 300;
+                    color: #fff;
+                    letter-spacing: 2px;
+                    margin-top: 36px;
+                    text-align: justify;
+                } 
+
+                ol.projectinfo{
+                    margin-top: 60px;
+                    overflow: hidden;
+                    
+                    li{
+                        width: 50%;
+                        float: left;
+                        font-size: 14px;
+                        font-family: 'Noto Serif TC', serif;
+                        letter-spacing: 2px;
+                        color: #fff;
+                        margin-bottom: 20px;
+                        @media (max-width:800px){
+                            width: 100%;
+                        }
+
+                        span{
+                            font-family: 'Noto Sans TC', sans-serif;
+                            letter-spacing: 2px;
+                            color: #fff;
+                            display: inline-block;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    ul#fullpage{
         background: #000;
 
         li{
             background-repeat: no-repeat;
             background-size: cover !important;
             background-attachment: fixed;
-
-            .mask{
-                width: 100%;
-                height: 100vh;
-                background: rgba(0,0,0,.8);
-                position: fixed;
-                z-index: 2;
-                display: none;
-                transform: all .3s;
-            
-                &.active{
-                    filter: blur(5px);
-                }
-            }
-
-            ol.projectpage_content_detail{
-                width: 100%;
-                max-width: 1000px;
-                position: fixed;
-                left: 50%;
-                transform: translateX(-50%);
-                top: 140px;
-                z-index: 5;
-                overflow: hidden;
-                display: none;
-                text-align: left;
-                @media (max-width:1080px){
-                    width: 80%;
-                }
-
-                li{
-                    width: 100%;
-                    position: relative;
-                    margin-bottom: 120px;
-
-                    h4{
-                        font-family: 'Noto Serif TC', serif;
-                        font-size: 36px;
-                        line-height: 1.4;
-                        font-weight: 600;
-                        color: #fff;
-                        // text-align: center;
-                        letter-spacing: 4px;
-                        transition: all .3s;
-                    }   
-                
-                    h5{
-                        font-size: 20px;
-                        line-height: 1.4;
-                        font-weight: 200;
-                        color: #fff;
-                        // text-align: center;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        transition: all .3s;
-                    }
-                
-                    h6{
-                        font-family: 'Noto Serif TC', serif;
-                        font-size: 20px;
-                        line-height: 3;
-                        font-weight: 600;
-                        color: #fff;
-                        display: block;
-                        // text-align: center;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        transition: all .3s;
-                    }
-
-                    p{
-                        font-size: 15px;
-                        line-height: 1.6;
-                        font-weight: 300;
-                        color: #fff;
-                        letter-spacing: 2px;
-                        margin-top: 36px;
-                        text-align: justify;
-                    } 
-
-                    ol.projectinfo{
-                        margin-top: 180px;
-                        overflow: hidden;
-                        
-                        li{
-                            width: 300px;
-                            float: left;
-                            font-size: 14px;
-                            font-family: 'Noto Serif TC', serif;
-                            letter-spacing: 2px;
-                            color: #fff;
-                            margin-bottom: 20px;
-
-                            span{
-                                font-family: 'Noto Sans TC', sans-serif;
-                                letter-spacing: 2px;
-                                color: #fff;
-                                display: inline-block;
-                                margin-right: 20px;
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }

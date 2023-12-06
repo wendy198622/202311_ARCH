@@ -7,7 +7,7 @@
             </a>
         </h1>
         <div class="nav">
-            <div class="menu cell shrink show-for-large">MENU</div>
+            <div class="menu cell shrink show-for-large" id="menu">MENU</div>
             <div class="hamburger cell shrink hide-for-large">
                 <span class="item1"></span>
                 <span class="item2"></span>
@@ -25,13 +25,13 @@
                 </a>
             </li>
             <li class="cell">
-                <a href="aboutus.html" target="_blank">
+                <a href="aboutus.html">
                     <span class="ch">關於我們</span>
                     <span class="en">ABOUT</span>
                 </a>
             </li>
             <li class="cell">
-                <a href="news.html" target="_blank">
+                <a href="news.html">
                     <span class="ch">最新消息</span>
                     <span class="en">NEWS</span>
                 </a>
@@ -57,27 +57,13 @@
                 </ul> -->
             </li>
             <li class="cell">
-                <a href="project.html" target="_blank">
+                <a href="project.html">
                     <span class="ch">建案資訊</span>
                     <span class="en">PROJECTS</span>
                 </a>
-                <!-- <ul class="subMenuList">
-                    <li>
-                        <a href="#">
-                            <span class="sub-ch">最新建案</span>
-                            <span class="sub-en">LATEST</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="sub-ch">全部建案</span>
-                            <span class="sub-en">ALL</span>
-                        </a>
-                    </li>
-                </ul> -->
             </li>
             <li class="cell">
-                <a href="contactus.html" target="_blank">
+                <a href="contactus.html">
                     <span class="ch">聯絡我們</span>
                     <span class="en">CONTACT US</span>
                 </a>
@@ -93,15 +79,17 @@
 
 <script>
 
-$(document).ready(function () {
-    $(".menu").click(function() {
-        $(".topmenu-fixWrap").css("display","block");
-        $(".topmenu-fixList>li").addClass("is-active");
+    $(document).ready(function () {
+        $(".menu").click(function() {
+            $(".topmenu-fixWrap").css("display","block");
+            $(".topmenu-fixList>li").addClass("is-active");
+        });
+        $(".close").click(function() {
+            $(".topmenu-fixWrap").css("display","none");
+            $(".topmenu-fixList>li").removeClass("is-active");
+        });
     });
-    $(".close").click(function() {
-        $(".topmenu-fixWrap").css("display","none");
-        $(".topmenu-fixList>li").removeClass("is-active");
-    });
-});
+
+
 
 </script>
