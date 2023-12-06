@@ -135,7 +135,6 @@
 
         $('#header').load('page/header.html');
         $('#footer').load('page/footer.html');
-	
         // $('#fullpage').fullpage({
         //     anchors: [
         //         'page1', 'page2', 'page3', 'page4', 'page5', 'page6'
@@ -163,13 +162,13 @@
     });
 
     var myFullpage = new fullpage('#fullpage', {
-        verticalCentered: false,
-        navigation: true,
-        navigationPosition: 'right',
-        onLeave: function(origin, destination, direction) {
-                var currentPage = destination.index + 1;
-                var totalPage = $('#fullpage').find('.section').length
-                updatePageIndicator(currentPage, totalPage);
+            verticalCentered: false,
+            navigation: true,
+            navigationPosition: 'right',
+            onLeave: function(origin, destination, direction) {
+            var currentPage = destination.index + 1;
+            var totalPage = $('#fullpage').find('.section').length
+            updatePageIndicator(currentPage, totalPage);
         }
     });
 
@@ -197,8 +196,13 @@
         //     $(this).siblings().removeClass("active");
         // });
     function updatePageIndicator(currentPage, totalPage) {
+        console.log("updatePageIndicator")
         numContainer = $('section').find('.num');
         numContainer.html(currentPage + '/' + totalPage);
+        var scrollPercentage = (currentPage / totalPage) * 100;
+        scrollPercentage = Math.min(100, Math.max(0, scrollPercentage));
+        // 更新topline的高度
+        $('.topline').css('height', scrollPercentage + '%');
     }
 
 </script>
