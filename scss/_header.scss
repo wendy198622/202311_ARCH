@@ -2,10 +2,9 @@
     width: 100%;
     padding: 40px 60px;
     position: fixed;
-    z-index:100;
+    z-index:10;
     top: 0;
     transition: all 1s;
-    opacity:1;
     
     h1{
         width: 150px;
@@ -60,7 +59,6 @@
     }
 
     .topmenu-fixWrap{
-        display:none;
         position:fixed;
         top:0;
         right:0;
@@ -68,6 +66,7 @@
         left:0;
         z-index:99;
         background: url(../img/theme_bg.jpg) top center repeat;
+        display:none;
 
         .topmenu-fixList{
             position:absolute;
@@ -76,12 +75,40 @@
             transform:translate(-50%, -50%);
 
             &>li{
-                // opacity:0;
-                // transform:translateX(-100px);
                 position:relative;
                 text-align:center;
                 padding:24px 0;
+                transform:translateX(-50px);
                 transition: all .3s;
+
+                &.allmenu{
+                    display: none;
+                }
+
+                &.active{
+                    animation: move 2s forwards;
+                }
+                &:nth-child(1){ &.active{ animation-delay: .1s;}}
+                &:nth-child(2){ &.active{ animation-delay: .2s;}}
+                &:nth-child(3){ &.active{ animation-delay: .3s;}}
+                &:nth-child(4){ &.active{ animation-delay: .4s;}}
+                &:nth-child(5){ &.active{ animation-delay: .5s;}}
+                &:nth-child(6){ &.active{ animation-delay: .6s;}}
+                &:nth-child(7){ &.active{ animation-delay: .7s;}}
+                &:nth-child(8){ &.active{ animation-delay: .8s;}}
+                &:nth-child(9){ &.active{ animation-delay: .9s;}}
+                &:nth-child(10){ &.active{ animation-delay: 1s;}}
+
+                @keyframes move {
+                    from{
+                        transform:translateX(-50px);
+                        // display: none;
+                    }
+                    to{
+                        transform:translateX(0px);
+                        // display: block;
+                    }
+                }
     
                 .en{
                     font-family:"Playfair Display",Arial,Helvetica,serif;
@@ -130,10 +157,6 @@
                         margin-top:18px;
                     }
                 }
-            }
-
-            &.active{
-                &>li{}
             }
         }
 

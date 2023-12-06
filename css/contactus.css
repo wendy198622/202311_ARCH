@@ -140,15 +140,118 @@ input, button, textarea, select {
   margin-bottom: 0 !important;
 }
 
+.grid-x {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.grid-x > .auto {
+  width: auto;
+}
+
+.grid-x > .shrink {
+  width: auto;
+}
+
+.cell {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  min-height: 0px;
+  min-width: 0px;
+  width: 100%;
+}
+
+.cell .auto {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0px;
+}
+
+.cell .shrink {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.align-left {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.align-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.align-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.align-justify {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.align-spaced {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.align-left.vertical.menu > li > a {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.align-right.vertical.menu > li > a {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.align-center.vertical.menu > li > a {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.align-top {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.align-bottom {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.align-middle {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 #header {
   width: 100%;
   padding: 40px 60px;
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   top: 0;
   -webkit-transition: all 1s;
   transition: all 1s;
-  opacity: 1;
 }
 
 #header h1 {
@@ -208,7 +311,6 @@ input, button, textarea, select {
 }
 
 #header .topmenu-fixWrap {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -216,6 +318,7 @@ input, button, textarea, select {
   left: 0;
   z-index: 99;
   background: url(../img/theme_bg.jpg) top center repeat;
+  display: none;
 }
 
 #header .topmenu-fixWrap .topmenu-fixList {
@@ -230,8 +333,91 @@ input, button, textarea, select {
   position: relative;
   text-align: center;
   padding: 24px 0;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li.allmenu {
+  display: none;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li.active {
+  -webkit-animation: move 2s forwards;
+          animation: move 2s forwards;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(1).active {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(2).active {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(3).active {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(4).active {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(5).active {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(6).active {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(7).active {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(8).active {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(9).active {
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
+#header .topmenu-fixWrap .topmenu-fixList > li:nth-child(10).active {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
 #header .topmenu-fixWrap .topmenu-fixList > li .en {
