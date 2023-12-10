@@ -347,8 +347,8 @@ input, button, textarea, select {
 }
 
 #header .topmenu-fixWrap .topmenu-fixList > li.active {
-  -webkit-animation: move 2s forwards;
-          animation: move 2s forwards;
+  -webkit-animation: move 2s forwards linear;
+          animation: move 2s forwards linear;
 }
 
 #header .topmenu-fixWrap .topmenu-fixList > li:nth-child(1).active {

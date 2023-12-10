@@ -344,8 +344,8 @@ input, button, textarea, select {
 }
 
 #header .topmenu-fixWrap .topmenu-fixList > li.active {
-  -webkit-animation: move 2s forwards;
-          animation: move 2s forwards;
+  -webkit-animation: move 2s forwards linear;
+          animation: move 2s forwards linear;
 }
 
 #header .topmenu-fixWrap .topmenu-fixList > li:nth-child(1).active {
@@ -714,7 +714,7 @@ footer .copyright a {
 }
 
 .aboutus_organize .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
 }
@@ -763,6 +763,13 @@ footer .copyright a {
 
 .aboutus_organize ul li:last-child {
   margin-right: 0;
+}
+
+.aboutus_organize ul li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .aboutus_team {
@@ -926,30 +933,26 @@ footer .copyright a {
   margin-top: 60px;
 }
 
-.aboutus_organize, .aboutus_team {
+.aboutus_team {
   width: 100%;
 }
 
-.aboutus_organize li, .aboutus_team li {
+.aboutus_team li {
   position: relative;
   overflow: hidden;
 }
 
-.aboutus_organize li img, .aboutus_team li img {
+.aboutus_team li img {
   width: 100%;
 }
 
-.aboutus_organize li .overlay, .aboutus_team li .overlay {
+.aboutus_team li .overlay {
   display: block;
   position: absolute;
   left: 0;
   top: 0;
-  background: #f2f2f2;
+  background: #fff;
   width: 100%;
   height: 100%;
-}
-
-.aboutus_team li .overlay {
-  background: #fff;
 }
 /*# sourceMappingURL=aboutus.css.map */

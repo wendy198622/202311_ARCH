@@ -35,7 +35,7 @@
     background: #f2f2f2;
 
     .container{
-        max-width: 1400px;
+        max-width: 1200px;
         margin:0 auto;
         padding: 100px 0;
         @media (max-width:1480px){
@@ -67,6 +67,12 @@
 
             &:last-child{
                 margin-right: 0;
+            }
+
+            img{
+                width:100%;
+                height:100%;
+                object-fit: cover;
             }
         }
     }
@@ -214,8 +220,7 @@
     }
 }
 
-
-.aboutus_organize, .aboutus_team {
+.aboutus_team {
     width: 100%;
     li {
         // width: 33%;
@@ -231,20 +236,14 @@
             position: absolute;
             left: 0;
             top: 0;
-            background: #f2f2f2;
+            background: #fff;
             width: 100%;
             height: 100%;
         }
     }
 }
-.aboutus_team{
-    li {
 
-        .overlay {
-            background: #fff;
-        }
-    }
-}
+
   
   
   

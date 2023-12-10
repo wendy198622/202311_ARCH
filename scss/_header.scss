@@ -86,7 +86,7 @@
                 }
 
                 &.active{
-                    animation: move 2s forwards;
+                    animation: move 2s forwards linear;
                 }
                 &:nth-child(1){ &.active{ animation-delay: .1s;}}
                 &:nth-child(2){ &.active{ animation-delay: .2s;}}

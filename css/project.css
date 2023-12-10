@@ -344,8 +344,8 @@ input, button, textarea, select {
 }
 
 #header .topmenu-fixWrap .topmenu-fixList > li.active {
-  -webkit-animation: move 2s forwards;
-          animation: move 2s forwards;
+  -webkit-animation: move 2s forwards linear;
+          animation: move 2s forwards linear;
 }
 
 #header .topmenu-fixWrap .topmenu-fixList > li:nth-child(1).active {
@@ -1062,7 +1062,7 @@ footer .copyright a {
   width: 1px;
   height: 80vh;
   position: fixed;
-  z-index: 99;
+  z-index: 9;
   bottom: 0;
   right: 50px;
 }
@@ -1084,7 +1084,7 @@ footer .copyright a {
 .projectpage_content {
   width: 90%;
   position: absolute;
-  z-index: 99;
+  z-index: 9;
   top: 140px;
   left: 50%;
   -webkit-transform: translateX(-50%);
