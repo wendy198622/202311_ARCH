@@ -1070,7 +1070,7 @@ section main .index-buildingname.is-allout {
 }
 
 section main .index-progress {
-  z-index: 19;
+  z-index: 9;
   position: fixed;
   top: 50%;
   -webkit-transform: translateY(-50%);
