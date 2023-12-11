@@ -1067,6 +1067,12 @@ footer .copyright a {
   right: 50px;
 }
 
+@media (max-width: 800px) {
+  .projectpage_photo .fullpage_scrollbar {
+    right: 20px;
+  }
+}
+
 .projectpage_photo .fullpage_scrollbar .topline {
   width: 1px;
   height: 60%;
@@ -1082,11 +1088,11 @@ footer .copyright a {
 }
 
 .projectpage_content {
-  width: 90%;
+  width: 80%;
   position: absolute;
   z-index: 9;
-  top: 140px;
   left: 50%;
+  bottom: 50px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -1122,9 +1128,9 @@ footer .copyright a {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .projectpage_content .backproject {
-    left: 40px;
+    left: 0px;
   }
 }
 
@@ -1133,6 +1139,12 @@ footer .copyright a {
   text-align: left;
   display: block;
   padding-left: 100px;
+}
+
+@media (max-width: 800px) {
+  .projectpage_content .backproject a {
+    padding-left: 0;
+  }
 }
 
 .projectpage_content .backproject a span {
@@ -1199,9 +1211,10 @@ footer .copyright a {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .projectpage_content .closedetail {
-    right: 80px;
+    right: 20px;
+    bottom: -10px;
   }
 }
 
@@ -1289,6 +1302,13 @@ footer .copyright a {
 @media (max-width: 1280px) {
   .projectpage_content .slideContent {
     right: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .projectpage_content .slideContent {
+    right: 0;
+    bottom: 6px;
   }
 }
 
