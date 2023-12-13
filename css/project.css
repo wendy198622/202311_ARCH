@@ -672,7 +672,7 @@ footer .copyright a {
 
 @media (max-width: 600px) {
   .projectpage_photo .projectpage_popup ol.projectpage_content_detail {
-    top: 80px;
+    top: 10%;
   }
 }
 
@@ -784,6 +784,7 @@ footer .copyright a {
 @media (max-width: 600px) {
   .projectpage_photo .projectpage_popup ol.projectpage_content_detail li ol.projectinfo li {
     margin-bottom: 10px;
+    font-size: 12px;
   }
 }
 
@@ -840,7 +841,7 @@ footer .copyright a {
 
 @media (max-width: 600px) {
   .projectpage_photo ul#fullpage li:nth-child(2).active .projectpage_popup ol.projectpage_content_detail {
-    top: 80px;
+    top: 10%;
   }
 }
 
@@ -952,6 +953,7 @@ footer .copyright a {
 @media (max-width: 600px) {
   .projectpage_photo ul#fullpage li:nth-child(2).active .projectpage_popup ol.projectpage_content_detail li ol.projectinfo li {
     margin-bottom: 10px;
+    font-size: 12px;
   }
 }
 
