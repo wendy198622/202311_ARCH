@@ -138,17 +138,14 @@
         &.active{
             display: block;
         }
-
+            
         .mask{
             width: 100%;
             height: 100vh;
-            background: rgba(0,0,0,.6);
+            background: rgba(0,0,0,.4);
             position: fixed;
             z-index: 2;
-
-            &.active{
-                backdrop-filter: blur(3px);
-            }
+            backdrop-filter: blur(3px);
         }
 
         ol.projectpage_content_detail{
@@ -163,6 +160,9 @@
             text-align: left;
             @media (max-width:1080px){
                 width: 80%;
+            }
+            @media (max-width:600px){
+                top: 80px;
             }
 
             li{
@@ -180,6 +180,9 @@
                     // text-align: center;
                     letter-spacing: 4px;
                     transition: all .3s;
+                    @media (max-width:600px){
+                        font-size: 24px;
+                    }
                 }   
             
                 h5{
@@ -191,6 +194,9 @@
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     transition: all .3s;
+                    @media (max-width:600px){
+                        font-size: 16px;
+                    }
                 }
             
                 h6{
@@ -204,6 +210,10 @@
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     transition: all .3s;
+                    @media (max-width:600px){
+                        font-size: 16px;
+                        line-height: 2;
+                    }
                 }
 
                 p{
@@ -214,11 +224,18 @@
                     letter-spacing: 2px;
                     margin-top: 36px;
                     text-align: justify;
+                    @media (max-width:600px){
+                        font-size: 13px;
+                        margin-top: 20px;
+                    }
                 } 
 
                 ol.projectinfo{
                     margin-top: 60px;
                     overflow: hidden;
+                    @media (max-width:600px){
+                        margin-top: 20px;
+                    }
                     
                     li{
                         width: 50%;
@@ -230,6 +247,9 @@
                         margin-bottom: 20px;
                         @media (max-width:800px){
                             width: 100%;
+                        }
+                        @media (max-width:600px){
+                            margin-bottom: 10px;
                         }
 
                         span{
@@ -281,6 +301,9 @@
                         @media (max-width:1080px){
                             width: 80%;
                         }
+                        @media (max-width:600px){
+                            top: 80px;
+                        }
             
                         li{
                             width: 100%;
@@ -297,6 +320,9 @@
                                 // text-align: center;
                                 letter-spacing: 4px;
                                 transition: all .3s;
+                                @media (max-width:600px){
+                                    font-size: 24px;
+                                }
                             }   
                         
                             h5{
@@ -308,6 +334,9 @@
                                 text-transform: uppercase;
                                 letter-spacing: 2px;
                                 transition: all .3s;
+                                @media (max-width:600px){
+                                    font-size: 16px;
+                                }
                             }
                         
                             h6{
@@ -321,6 +350,10 @@
                                 text-transform: uppercase;
                                 letter-spacing: 2px;
                                 transition: all .3s;
+                                @media (max-width:600px){
+                                    font-size: 16px;
+                                    line-height: 2;
+                                }
                             }
             
                             p{
@@ -331,11 +364,18 @@
                                 letter-spacing: 2px;
                                 margin-top: 36px;
                                 text-align: justify;
+                                @media (max-width:600px){
+                                    font-size: 13px;
+                                    margin-top: 20px;
+                                }
                             } 
             
                             ol.projectinfo{
                                 margin-top: 60px;
                                 overflow: hidden;
+                                @media (max-width:600px){
+                                    margin-top: 20px;
+                                }
                                 
                                 li{
                                     width: 50%;
@@ -347,6 +387,9 @@
                                     margin-bottom: 20px;
                                     @media (max-width:800px){
                                         width: 100%;
+                                    }
+                                    @media (max-width:600px){
+                                        margin-bottom: 10px;
                                     }
             
                                     span{
@@ -373,7 +416,8 @@
         z-index: 9;
         bottom: 0;
         right: 50px;
-        @media (max-width:800px){
+        @media (max-width:600px){
+            height: 60vh;
             right: 20px;
         }
 
