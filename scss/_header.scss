@@ -1,115 +1,56 @@
-#header {
+
+
+#header{
     width: 100%;
-    padding: 40px 60px;
+    height: 90px;
     position: fixed;
-    z-index:10;
     top: 0;
-    transition: all 1s;
-    
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+
     h1{
         width: 150px;
-        float: left;
+        position: fixed;
+        top: 26px;
+        left: 5%
     }
 
-    .nav{
-        float: right;
-
-        .menu{
-            font-family: 'Playfair Display','Noto Serif TC', serif;
-            font-size:25px;
-            letter-spacing:5px;
-            color:#000;
-            cursor:pointer;
-        }
-        .hamburger{
-            width:26px;
-            height:18px;
-            position:relative;
-            display: none;
-
-            span{
-                display:block;
-                width:100%;
-                height:2px;
-                background-color:#000;
-            }
-            .item1{
-                position:absolute;
-                top:0;
-                -webkit-transition:top 0.4s 0.4s ,-webkit-transform 0.4s;
-                transition:top 0.4s 0.4s ,-webkit-transform 0.4s;
-                transition:transform 0.4s ,top 0.4s 0.4s;
-                transition:transform 0.4s ,top 0.4s 0.4s ,-webkit-transform 0.4s;
-            }
-            .item2{
-                position:absolute;
-                top:50%;
-                -webkit-transition:opacity 0.8s;
-                transition:opacity 0.8s;
-            }
-            .item3{
-                position:absolute;
-                top:100%;
-                -webkit-transition:top 0.4s 0.4s ,-webkit-transform 0.4s;
-                transition:top 0.4s 0.4s ,-webkit-transform 0.4s;
-                transition:transform 0.4s ,top 0.4s 0.4s;
-                transition:transform 0.4s ,top 0.4s 0.4s ,-webkit-transform 0.4s;
-            }
+    .menu-overlay {
+        position: absolute;
+        width: 100%;
+        height: 0vh;
+        overflow: hidden;
+  
+        .block {
+              position: absolute;
+              width: 100%;
+              height: 100vh;
+              background: #101010;
+              left: 0;
+              background: url(../img/theme_bg.jpg) top center repeat;
         }
     }
-
     .topmenu-fixWrap{
-        position:fixed;
-        top:0;
-        right:0;
-        bottom:0;
-        left:0;
-        z-index:99;
-        background: url(../img/theme_bg.jpg) top center repeat;
-        display:none;
+        height: 90px;
 
-        .topmenu-fixList{
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%, -50%);
-
-            &>li{
-                position:relative;
-                text-align:center;
-                padding:24px 0;
-                transform:translateX(-50px);
-                transition: all .3s;
-
-                &.allmenu{
-                    display: none;
-                }
-
-                &.active{
-                    animation: move 2s forwards linear;
-                }
-                &:nth-child(1){ &.active{ animation-delay: .1s;}}
-                &:nth-child(2){ &.active{ animation-delay: .2s;}}
-                &:nth-child(3){ &.active{ animation-delay: .3s;}}
-                &:nth-child(4){ &.active{ animation-delay: .4s;}}
-                &:nth-child(5){ &.active{ animation-delay: .5s;}}
-                &:nth-child(6){ &.active{ animation-delay: .6s;}}
-                &:nth-child(7){ &.active{ animation-delay: .7s;}}
-                &:nth-child(8){ &.active{ animation-delay: .8s;}}
-                &:nth-child(9){ &.active{ animation-delay: .9s;}}
-                &:nth-child(10){ &.active{ animation-delay: 1s;}}
-
-                @keyframes move {
-                    from{
-                        transform:translateX(-50px);
-                        // display: none;
-                    }
-                    to{
-                        transform:translateX(0px);
-                        // display: block;
-                    }
-                }
+        .topmenu-fixList {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            list-style: none;
     
+            li {
+                padding: 12px 0;
+                color: #fff;
+                font-size: 36px;
+                font-weight: 500;
+                opacity: 1;
                 .en{
                     font-family:"Playfair Display",Arial,Helvetica,serif;
                     font-size:30px;
@@ -124,6 +65,7 @@
                     transition:all .6s;
                     white-space:nowrap;
                     margin-left:-30px;
+                    text-align: center;
                 }
                 .ch{
                     font-family:"Noto Serif TC",serif;
@@ -133,7 +75,6 @@
                     display:inline-block;
                     transition:all .6s .2s;
                 }
-
                 .social{
                     width: 32px;
                     height: 32px;
@@ -141,109 +82,53 @@
                     text-align: center;
                     margin: 0 5px;
                 }
-    
                 &:hover{
-                    .en{opacity:1;
-                        margin-left:0;
-                        transition-delay:.2s;
+                    .en{
+                        opacity:1;
+                        transition-delay:0s;
+                        // transform:translateX(-40%);
+                        margin-left: 0;
+                        color: #c9a063;
                     }
                     .ch{
                         opacity:0;
-                        transform:translateX(30px);
-                        transition-delay:0s;
+                        transform: translateX(30px);
+                        transition-delay: 0s;
                     }
-                    .subMenuList{
-                        max-height:78px;
-                        margin-top:18px;
-                    }
-                }
-            }
-        }
 
-        .subMenuList{
-            margin-top:0;
-            overflow:hidden;
-            -webkit-transition:all 1s;
-            transition:all 1s;
-            max-height:0;
-            
-            &>li{
-                text-align:center;
-                position:relative;
-                min-width:180px;
-                margin-bottom:10px;
-    
-                &:last-child{
-                    margin-bottom:0;
-                }
-    
-                &:hover a:before{
-                    width:20px;
-                }
-    
-                &:hover .sub-en{
-                    opacity:1;
-                    margin-left:0;
-                    transition-delay:.2s;
-                }
-    
-                &:hover .sub-ch{
-                    opacity:0;
-                    transform:translateX(30px);
-                    transition-delay:0s;
-                }
-    
-                a{
-                    position:relative;
-                }
-    
-                a:before{
-                    content:'';
-                    width:0;
-                    height:1px;
-                    background-color:#fff;
-                    position:absolute;
-                    top:50%;
-                    right:calc(100% + 10px);
-                    transition:all .5s;
-                }
-    
-                .sub-en{
-                    font-family: 'Playfair Display','Noto Serif TC', serif;
-                    font-size:17px;
-                    color:#fff;
-                    position:absolute;
-                    top:0;
-                    left:50%;
-                    transform:translateX(-50%);
-                    margin-left:-10px;
-                    opacity:0;
-                    transition:all .6s;
-                }
-    
-                .sub-ch{font-family:"Noto Serif TC",serif;
-                    font-size:17px;
-                    letter-spacing:3px;
-                    color:#fff;
-                    transition:all .6s .2s;
-                    display:inline-block;
                 }
             }
         }
-        
+    
+    }
+    .menu-btn {
+        position: fixed;
+        right: 5%;
+        top: 0;
+        margin: 1.2em 0;
+        font-family: 'Playfair Display','Noto Serif TC', serif;
+        font-size:25px;
+        letter-spacing:5px;
+        color:#000;
+        cursor:pointer;
+        .open{
+            color: #000;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
+        }
         .close{
-            font-family: 'Playfair Display','Noto Serif TC', serif;
-            font-size:25px;
-            letter-spacing:5px;
-            color:#fff;
-            cursor:pointer;
-            position:absolute;
-            top:40px;
-            right:60px;
+            color: #fff;
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 10;
         }
     }
-    
-}
+  }
 
 
   
