@@ -264,7 +264,8 @@ input, button, textarea, select {
 #header .menu-overlay {
   position: absolute;
   width: 100%;
-  height: 0vh;
+  height: 100vh;
+  opacity: 0;
   overflow: hidden;
 }
 
