@@ -19,7 +19,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    
+
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 
@@ -40,52 +40,53 @@
             </a>
         </h1>
 
-        <div class="menu-overlay">   
+        <div class="menu-overlay">
             <div class="block b1"></div>
         </div>
 
         <div class="menu topmenu-fixWrap">
             <ul class="topmenu-fixList">
-                    <li>
-                        <a href="index.html">
-                            <span class="ch">首頁</span>
-                            <span class="en">HOME</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="aboutus.html">
-                            <span class="ch">關於我們</span>
-                            <span class="en">ABOUT</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="news.html">
-                            <span class="ch">最新消息</span>
-                            <span class="en">NEWS</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="project.html">
-                            <span class="ch">建案資訊</span>
-                            <span class="en">PROJECTS</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contactus.html">
-                            <span class="ch">聯絡我們</span>
-                            <span class="en">CONTACT US</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://lin.ee/4j8ym6E" class="social"><img src="./img/line.svg" alt=""></a>
-                        <a href="https://www.youtube.com/@user-ww9kf6qm5o" class="social"><img src="./img/youtube.svg" alt=""></a>
-                    </li>
+                <li>
+                    <a href="index.html">
+                        <span class="ch">首頁</span>
+                        <span class="en">HOME</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutus.html">
+                        <span class="ch">關於我們</span>
+                        <span class="en">ABOUT</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="news.html">
+                        <span class="ch">最新消息</span>
+                        <span class="en">NEWS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="project.html">
+                        <span class="ch">建案資訊</span>
+                        <span class="en">PROJECTS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contactus.html">
+                        <span class="ch">聯絡我們</span>
+                        <span class="en">CONTACT US</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://lin.ee/4j8ym6E" class="social"><img src="./img/line.svg" alt=""></a>
+                    <a href="https://www.youtube.com/@user-ww9kf6qm5o" class="social"><img src="./img/youtube.svg"
+                            alt=""></a>
+                </li>
             </ul>
         </div>
 
         <div class="menu-btn">
-            <div class="open">MENU</div>      
-            <div class="close">CLOSE</div>   
+            <div class="open">MENU</div>
+            <div class="close">CLOSE</div>
         </div>
     </header>
     <section>
@@ -93,7 +94,7 @@
             <div class="container">
                 <video width="100%" height="100%" preload autoplay muted loop>
                     <source src="img/video-pc.mp4" type="video/mp4">
-                </video>  
+                </video>
             </div>
         </div>
         <div class="aboutus_organize">
@@ -165,11 +166,11 @@
                 <div class="intro">
                     <h4>型隨機轉的美學</h4>
                     <h5>師承芝加哥學派，呂文程建築師<br>
-                            將Form Follows Function(型隨機轉)<br>
-                            的概念導入空間,<br>
-                            讓硬體去適應每一位家庭成員的生活習慣、<br>
-                            每一寸空間都是我們將國際建築的閱歷,<br>
-                            捏成最適合桃園人的形狀。</h5>
+                        將Form Follows Function(型隨機轉)<br>
+                        的概念導入空間,<br>
+                        讓硬體去適應每一位家庭成員的生活習慣、<br>
+                        每一寸空間都是我們將國際建築的閱歷,<br>
+                        捏成最適合桃園人的形狀。</h5>
                     <div class="signature">
                         <img src="img/aboutus_team_signature.png" alt="">
                     </div>
@@ -195,23 +196,23 @@
 
         //aboutus_team
         var controller = new ScrollMagic.Controller();
-        $(".aboutus_team").each(function(){
-            
+        $(".aboutus_team").each(function () {
+
             var picOverlay = $(this).find(".overlay");
             var animateIn = new TimelineMax();
-                
+
             animateIn
-            .fromTo(picOverlay, 5, 
-            {skewX:0, scale:1.5}, 
-            {skewX:0, xPercent:100, transformOrigin: "0% 100%", ease: Power4.easeOut},
-            "-=1")
-            
+                .fromTo(picOverlay, 5,
+                    { skewX: 0, scale: 1.5 },
+                    { skewX: 0, xPercent: 100, transformOrigin: "0% 100%", ease: Power4.easeOut },
+                    "-=1")
+
             var scene = new ScrollMagic.Scene({
                 triggerElement: this,
             })
 
-            // .addIndicators()
-            .setTween(animateIn).addTo(controller);
+                // .addIndicators()
+                .setTween(animateIn).addTo(controller);
 
         });
 
@@ -221,40 +222,39 @@
         projectTriggers.forEach(addTimeline);
 
         function addTimeline(project, index) {
-        const imageT = project.querySelector(".project-image-top");
-        const imageB = project.querySelector(".project-image-bottom");
-        
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-            trigger: project,
-            start: "center center",
-            ease: "power2",
-            toggleActions: "play none none reverse"
-            }
-        })
-        .from(imageT, {
-            y: 200,
-            opacity: 0,
-            duration: 1
-        })
-        .from(imageB, {
-            y: -100,
-            opacity: 0,
-            duration: 0.5,
-            stagger: 0.5
-        }, "-=0.5");
+            const imageT = project.querySelector(".project-image-top");
+            const imageB = project.querySelector(".project-image-bottom");
+
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: project,
+                    start: "center center",
+                    ease: "power2",
+                    toggleActions: "play none none reverse"
+                }
+            })
+            .from(imageT, {
+                y: 100,
+                opacity: 0,
+                duration: 2
+            })
+            .from(imageB, {
+                y: -100,
+                opacity: 0,
+                duration: 2
+            }, "-=2");
         }
 
     });
 
 
 
-    var tnav = new TimelineMax({paused : true});
+    var tnav = new TimelineMax({ paused: true });
 
     tnav.to("#header", 0.1, {
         height: "100vh"
     });
-    
+
     tnav.to(".menu-overlay", 0.5, {
         opacity: 1,
         ease: Power4.easeInOut
@@ -266,26 +266,26 @@
     });*/
 
     tnav.staggerFrom(".menu .topmenu-fixList li", 0.8, {
-        x: -40, 
-        opacity: 0, 
+        x: -40,
+        opacity: 0,
         ease: Power2.easeOut
     }, 0.1);
 
     tnav.reverse();
 
-    $(document).on("click", ".menu-btn", function() {
+    $(document).on("click", ".menu-btn", function () {
         tnav.reversed(!tnav.reversed());
     });
 
-    $(".open").click(function() {
+    $(".open").click(function () {
         $(this).hide();
         $(".close").delay(500).show();
-        $("#header").css("z-index","10");
+        $("#header").css("z-index", "10");
     });
 
-    $(".close").click(function() {
+    $(".close").click(function () {
         var self = this
-        setTimeout(function() {
+        setTimeout(function () {
             $(self).hide();
             $(".open").show();
         }, 1400);
@@ -293,7 +293,7 @@
     });
 
 
-    
+
 
 
 </script>
