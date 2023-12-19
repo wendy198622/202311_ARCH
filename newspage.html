@@ -203,42 +203,46 @@
     });
 
 
-
-
     var tnav = new TimelineMax({paused : true});
 
     tnav.to("#header", 0.1, {
         height: "100vh"
     });
+    
     tnav.to(".menu-overlay", 0.5, {
-        height: "100vh",
-        ease: Power4.easeInOut
-    });
-    tnav.to(".topmenu-fixWrap", 0.5, {
-        height: "100vh",
+        opacity: 1,
         ease: Power4.easeInOut
     });
 
-    tnav.staggerFrom(".menu .topmenu-fixList li", 0.5, {
+    /*tnav.to(".topmenu-fixWrap", 0.5, {
+        height: "100vh",
+        ease: Power4.easeInOut
+    });*/
+
+    tnav.staggerFrom(".menu .topmenu-fixList li", 0.8, {
         x: -40, 
         opacity: 0, 
         ease: Power2.easeOut
     }, 0.1);
 
     tnav.reverse();
+
     $(document).on("click", ".menu-btn", function() {
         tnav.reversed(!tnav.reversed());
     });
 
     $(".open").click(function() {
         $(this).hide();
-        $(".close").show();
+        $(".close").delay(500).show();
         $("#header").css("z-index","10");
     });
 
     $(".close").click(function() {
-        $(this).hide();
-        $(".open").delay('1000').fadeIn();
+        var self = this
+        setTimeout(function() {
+            $(self).hide();
+            $(".open").show();
+        }, 1400);
         // $("#header").css("z-index","0");
     });
 
