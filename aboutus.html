@@ -102,17 +102,17 @@
                 <ul>
                     <li class="project-trigger">
                         <div class="project">
-                            <img class="project-image project-image-top" src="img/aboutus_organize1.jpg" alt="">
+                            <img class="project-image project-image-one" src="img/aboutus_organize1.jpg" alt="">
                         </div>
                     </li>
                     <li class="project-trigger">
                         <div class="project">
-                            <img class="project-image project-image-bottom" src="img/aboutus_organize2.jpg" alt="">
+                            <img class="project-image project-image-two" src="img/aboutus_organize2.jpg" alt="">
                         </div>
                     </li>
                     <li class="project-trigger">
                         <div class="project">
-                            <img class="project-image project-image-top" src="img/aboutus_organize3.jpg" alt="">
+                            <img class="project-image project-image-three" src="img/aboutus_organize3.jpg" alt="">
                         </div>
                     </li>
                 </ul>
@@ -222,8 +222,10 @@
         projectTriggers.forEach(addTimeline);
 
         function addTimeline(project, index) {
-            const imageT = project.querySelector(".project-image-top");
-            const imageB = project.querySelector(".project-image-bottom");
+
+            const image_one = project.querySelector(".project-image-one");
+            const image_two = project.querySelector(".project-image-two");
+            const image_three = project.querySelector(".project-image-three");
 
             const timeline = gsap.timeline({
                 scrollTrigger: {
@@ -233,16 +235,43 @@
                     toggleActions: "play none none reverse"
                 }
             })
-            .from(imageT, {
-                y: 100,
+            .from(image_one, {
+                x: -100,
                 opacity: 0,
-                duration: 2
+                duration: 1.5
             })
-            .from(imageB, {
-                y: -100,
+            .from(image_two, {
+                x: -100,
                 opacity: 0,
-                duration: 2
-            }, "-=2");
+                duration: 1.5
+            })
+            .from(image_three, {
+                x: -100,
+                opacity: 0,
+                duration: 1.5
+            });
+
+            // const imageT = project.querySelector(".project-image-top");
+            // const imageB = project.querySelector(".project-image-bottom");
+
+            // const timeline = gsap.timeline({
+            //     scrollTrigger: {
+            //         trigger: project,
+            //         start: "center center",
+            //         ease: "power2",
+            //         toggleActions: "play none none reverse"
+            //     }
+            // })
+            // .from(imageT, {
+            //     y: 100,
+            //     opacity: 0,
+            //     duration: 2
+            // })
+            // .from(imageB, {
+            //     y: -100,
+            //     opacity: 0,
+            //     duration: 2
+            // }, "-=2");
         }
 
     });
