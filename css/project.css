@@ -296,9 +296,10 @@ input, button, textarea, select {
 }
 
 #header .topmenu-fixWrap .topmenu-fixList li {
-  padding: 12px 0;
+  padding: 20px 0;
   color: #fff;
   font-size: 36px;
+  line-height: 1;
   font-weight: 500;
   opacity: 1;
 }

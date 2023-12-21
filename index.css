@@ -2384,7 +2384,15 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 @media screen and (max-width: 106.24875em){
     .topmenuWrap .topmenuList>li .en{font-size:15px}
 }
-.topmenuWrap .topmenuList>li .ch{font-family:"Noto Serif TC",serif;font-size:17px;letter-spacing:3px;color:#000;-webkit-transition:opacity .6s;transition:opacity .6s;display:inline-block}
+.topmenuWrap .topmenuList>li .ch{
+    font-family:"Noto Serif TC",serif;
+    font-size:17px;
+    letter-spacing:3px;
+    color:#000;
+    -webkit-transition:opacity .6s;
+    transition:opacity .6s;
+    display:inline-block;
+}
 @media screen and (max-width: 106.24875em){
     .topmenuWrap .topmenuList>li .ch{font-size:14px}
 }
@@ -2395,7 +2403,7 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 .topmenuWrap .hamburger .item3{position:absolute;top:100%;-webkit-transition:top 0.4s 0.4s ,-webkit-transform 0.4s;transition:top 0.4s 0.4s ,-webkit-transform 0.4s;transition:transform 0.4s ,top 0.4s 0.4s;transition:transform 0.4s ,top 0.4s 0.4s ,-webkit-transform 0.4s}
 .search-form .icon{cursor:pointer}
 .search-form .icon svg{stroke:#1a1a1a}
-.search-form input[type='text']{font-family:Arial,Helvetica,"HEITI TC","暺煾��-蝜�","敺株��迤暺煾��","暺煾��",sans-serif;font-size:18px;letter-spacing:1px;color:#1a1a1a;background-color:transparent;border:none;border-bottom:1px solid #1a1a1a;max-width:200px}
+.search-form input[type='text']{font-family:Arial,Helvetica,"HEITI TC",sans-serif;font-size:18px;letter-spacing:1px;color:#1a1a1a;background-color:transparent;border:none;border-bottom:1px solid #1a1a1a;max-width:200px}
 .beforescene-progress{position:fixed;top:50%;left:50%;margin-left:-215px;margin-top:50px;z-index:79;width:430px;height:1px;background-color:rgba(255,255,255,0.5)}
 @media screen and (max-width: 64.06125em){
     .beforescene-progress{width:240px;margin-top:30px;margin-left:-120px}
