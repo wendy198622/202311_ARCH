@@ -231,17 +231,20 @@
         tnav.reversed(!tnav.reversed());
     });
 
-    $(".open").click(function() {
+
+    $(".open").click(function () {
         $(this).hide();
         $(".close").delay(500).show();
-        $("#header").css("z-index","10");
+        $("#header").css("z-index", "10");
+        $("h1").hide();
     });
 
-    $(".close").click(function() {
+    $(".close").click(function () {
         var self = this
-        setTimeout(function() {
+        setTimeout(function () {
             $(self).hide();
             $(".open").show();
+            $("h1").show();
         }, 1400);
         // $("#header").css("z-index","0");
     });

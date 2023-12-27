@@ -1053,4 +1053,20 @@ section main .spotlight {
     width: 100% !important;
   }
 }
+
+.index-buildingname .title-area {
+  color: #fff;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.index-buildingname .title-area span {
+  color: #fff;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 /*# sourceMappingURL=style.css.map */

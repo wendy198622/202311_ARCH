@@ -144,7 +144,7 @@
                         <div class="overlay"></div>
                     </li>
                     <li class="box">
-                        <h4>康明華</h4>
+                        <h4>康銘華</h4>
                         <h5>空間設計師</h5>
                         <img src="img/aboutus_team_photo4.png" alt="">
                         <div class="overlay"></div>
@@ -310,6 +310,7 @@
         $(this).hide();
         $(".close").delay(500).show();
         $("#header").css("z-index", "10");
+        $("h1").hide();
     });
 
     $(".close").click(function () {
@@ -317,6 +318,7 @@
         setTimeout(function () {
             $(self).hide();
             $(".open").show();
+            $("h1").show();
         }, 1400);
         // $("#header").css("z-index","0");
     });

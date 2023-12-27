@@ -2529,7 +2529,13 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
 @media screen and (max-width: 106.24875em){
     .index-buildingname .year i{margin-right:-4px}
 }
-.index-buildingname .title-area{-webkit-transform:translateY(30px);-ms-transform:translateY(30px);transform:translateY(30px);opacity:0;width:255px}
+.index-buildingname .title-area{
+    -webkit-transform:translateY(30px);
+    -ms-transform:translateY(30px);
+    transform:translateY(30px);
+    opacity:0;
+    width:255px;
+}
 @media screen and (max-width: 106.24875em){
     .index-buildingname .title-area{width:180px}
 }
