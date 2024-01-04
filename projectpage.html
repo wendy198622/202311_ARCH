@@ -185,24 +185,25 @@
 
     let autoplayTimeID = null
     let autoPlayTimer = 5000
-
+    let _currentPage = 0
     var myFullpage = new fullpage('#fullpage', {
         verticalCentered: false,
         navigation: true,
         navigationPosition: 'right',
         licenseKey:'gplv3-license',
         afterRender: function () {
-            console.log("afterRender")
+            //console.log("afterRender")
             autoPlaySide();
         },
         onLeave: function (origin, destination, direction) {
             clearTimeout(autoplayTimeID);
             var currentPage = destination.index + 1;
+            _currentPage = currentPage
             var totalPage = $('#fullpage').find('.section').length
             updatePageIndicator(currentPage, totalPage);
         },
         afterLoad: function (sorigin, destination, direction) {
-            console.log("afterLoad")
+            //console.log("afterLoad")
             var currentPage = destination.index + 1;
             var totalPage = $('#fullpage').find('.section').length
             if(currentPage == totalPage){
@@ -227,7 +228,9 @@
     $(".closedetail").click(function (e) {
         e.preventDefault();
         $(".closedetail img").toggleClass("active");
-        $(".projectpage_popup").toggleClass("active");
+        if (_currentPage != 2) {
+            $(".projectpage_popup").toggleClass("active");
+        } 
         $(".mask").toggleClass("active")
         // $(".projectpage_photo>ul>li").toggleClass("bg-active");
         // $(".toggleHide").toggle();
@@ -245,15 +248,18 @@
     //     $(this).siblings().removeClass("active");
     // });
     function updatePageIndicator(currentPage, totalPage) {
-        // if (currentPage == 2) {
-        //     $('.closedetail img').css({
-        //         'transform': 'translateY(-50%) rotate(0deg)'
-        //     });
-        // } else {
-        //     $('.closedetail img').css({
-        //         'transform': 'translateY(-50%) rotate(-135deg)'
-        //     });
-        // }
+        if (currentPage == 2) {
+            $('.closedetail img').css({
+                'transform': 'translateY(-50%) rotate(0deg)'
+            });
+        } else {
+            // $('.closedetail img').css({
+            //     'transform': 'translateY(-50%) rotate(-135deg)'
+            // });
+            $('.closedetail img').css({
+                'transform': ''
+            });
+        }
         numContainer = $('section').find('.num');
         numContainer.html(currentPage + '/' + totalPage);
         var scrollPercentage = (currentPage / totalPage) * 100;
