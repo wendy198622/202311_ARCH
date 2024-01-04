@@ -2536,6 +2536,10 @@ body .fancybox-is-open .fancybox-bg{opacity:1;background-color:#000}
     opacity:0;
     width:255px;
 }
+.index-buildingname .title-area span{
+    display: block;
+    line-height: 2;
+}
 @media screen and (max-width: 106.24875em){
     .index-buildingname .title-area{width:180px}
 }

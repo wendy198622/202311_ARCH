@@ -245,15 +245,15 @@
     //     $(this).siblings().removeClass("active");
     // });
     function updatePageIndicator(currentPage, totalPage) {
-        if (currentPage == 2) {
-            $('.closedetail img').css({
-                'transform': 'translateY(-50%) rotate(0deg)'
-            });
-        } else {
-            $('.closedetail img').css({
-                'transform': 'translateY(-50%) rotate(-135deg)'
-            });
-        }
+        // if (currentPage == 2) {
+        //     $('.closedetail img').css({
+        //         'transform': 'translateY(-50%) rotate(0deg)'
+        //     });
+        // } else {
+        //     $('.closedetail img').css({
+        //         'transform': 'translateY(-50%) rotate(-135deg)'
+        //     });
+        // }
         numContainer = $('section').find('.num');
         numContainer.html(currentPage + '/' + totalPage);
         var scrollPercentage = (currentPage / totalPage) * 100;

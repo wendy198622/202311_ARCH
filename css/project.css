@@ -1170,6 +1170,11 @@ footer .copyright a {
   }
 }
 
+.projectpage_content .closedetail a img.active {
+  -webkit-transform: translateY(-50%) rotate(0deg);
+          transform: translateY(-50%) rotate(0deg);
+}
+
 .projectpage_content .closedetail:hover {
   margin-right: -10px;
   -webkit-transform: translateX(-20px);
