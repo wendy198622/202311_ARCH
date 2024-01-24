@@ -225,6 +225,7 @@
         updatePageIndicator(currentIndex, totalItems)
     });
 
+    // 0104修改start
     $(".closedetail").click(function (e) {
         e.preventDefault();
         $(".closedetail img").toggleClass("active");
@@ -232,8 +233,6 @@
             $(".projectpage_popup").toggleClass("active");
         } 
         $(".mask").toggleClass("active")
-        // $(".projectpage_photo>ul>li").toggleClass("bg-active");
-        // $(".toggleHide").toggle();
     });
 
     $(document).ready(function () {
@@ -243,19 +242,12 @@
     });
 
 
-    // $(".news_filter li").toggle(function() {
-    //     $(this).addClass("active");
-    //     $(this).siblings().removeClass("active");
-    // });
     function updatePageIndicator(currentPage, totalPage) {
         if (currentPage == 2) {
             $('.closedetail img').css({
                 'transform': 'translateY(-50%) rotate(0deg)'
             });
         } else {
-            // $('.closedetail img').css({
-            //     'transform': 'translateY(-50%) rotate(-135deg)'
-            // });
             $('.closedetail img').css({
                 'transform': ''
             });
@@ -268,6 +260,7 @@
         $('.topline').css('height', scrollPercentage + '%');
 
     }
+    // 0104修改end
 
     function autoPlaySide(){
         autoplayTimeID = setTimeout(function () {
