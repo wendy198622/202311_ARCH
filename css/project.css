@@ -807,6 +807,7 @@ footer .copyright a {
   background-repeat: no-repeat;
   background-size: cover !important;
   background-attachment: fixed;
+  background-position: center center;
 }
 
 .projectpage_photo ul#fullpage li:nth-child(2).active .projectpage_popup {
