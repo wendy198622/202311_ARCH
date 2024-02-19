@@ -322,6 +322,10 @@ footer .infobox .item {
   letter-spacing: 1px;
 }
 
+footer .infobox .item.w100 {
+  width: 100%;
+}
+
 footer .infobox .item span {
   display: inline-block;
   font-family: 'Playfair Display','Noto Serif TC', serif;
