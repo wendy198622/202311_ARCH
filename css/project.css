@@ -250,7 +250,7 @@ input, button, textarea, select {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 10;
   overflow: hidden;
 }
 
@@ -641,6 +641,8 @@ footer .copyright a {
 }
 
 .projectpage_photo .projectpage_popup {
+  position: absolute;
+  top: 0;
   display: none;
 }
 
@@ -812,6 +814,33 @@ footer .copyright a {
   background-size: cover !important;
   background-attachment: fixed;
   background-position: center center;
+}
+
+.projectpage_photo ul#fullpage li .photo_group {
+  width: 100vw;
+  height: 100vh;
+}
+
+.projectpage_photo ul#fullpage li .photo_group .photo {
+  width: 100vw;
+  height: 100vh;
+}
+
+.projectpage_photo ul#fullpage li .photo_group .photo.pc {
+  display: block;
+}
+
+.projectpage_photo ul#fullpage li .photo_group .photo.mob {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .projectpage_photo ul#fullpage li .photo_group .photo.pc {
+    display: none;
+  }
+  .projectpage_photo ul#fullpage li .photo_group .photo.mob {
+    display: block;
+  }
 }
 
 .projectpage_photo ul#fullpage li:nth-child(2).active .projectpage_popup {
@@ -1038,18 +1067,6 @@ footer .copyright a {
   transition: all .3s;
 }
 
-@media (max-width: 1280px) {
-  .projectpage_content .backproject {
-    left: 120px;
-  }
-}
-
-@media (max-width: 800px) {
-  .projectpage_content .backproject {
-    left: 0px;
-  }
-}
-
 .projectpage_content .backproject a {
   color: #fff;
   text-align: left;
@@ -1067,7 +1084,7 @@ footer .copyright a {
   color: #fff;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .projectpage_content .backproject a span {
     display: none;
   }
@@ -1084,7 +1101,7 @@ footer .copyright a {
   transition: all .3s;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .projectpage_content .backproject a img {
     position: relative;
     left: auto;
@@ -1103,7 +1120,7 @@ footer .copyright a {
   left: -100px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .projectpage_content .backproject:hover img {
     left: auto;
   }
@@ -1145,7 +1162,7 @@ footer .copyright a {
   color: #fff;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .projectpage_content .closedetail a span {
     display: none;
   }
@@ -1164,7 +1181,7 @@ footer .copyright a {
   transition: all .3s;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .projectpage_content .closedetail a img {
     position: relative;
     right: auto;
@@ -1192,7 +1209,7 @@ footer .copyright a {
           transform: translateY(-10px) rotate(0deg);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .projectpage_content .closedetail:hover a img {
     right: auto;
   }
@@ -1203,7 +1220,7 @@ footer .copyright a {
           transform: translateY(-50%) rotate(0deg);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .projectpage_content .closedetail.active a img {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);

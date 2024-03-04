@@ -134,6 +134,8 @@
     position: relative;
 
     .projectpage_popup{
+        position: absolute;
+        top: 0;
         display: none;
         &.active{
             display: block;
@@ -275,6 +277,21 @@
             background-size: cover !important;
             background-attachment: fixed;
             background-position: center center;
+
+            .photo_group{
+                width: 100vw;
+                height: 100vh;
+                .photo{
+                    width: 100vw;
+                    height: 100vh;
+                    &.pc{ display: block;}
+                    &.mob{ display: none;}
+                    @media (max-width:960px){
+                        &.pc{ display: none;}
+                        &.mob{ display: block;}
+                    }
+                }
+            }
 
             &:nth-child(2).active{
 
@@ -476,12 +493,6 @@
         line-height: 2;
         letter-spacing: 2px;
         transition: all .3s;
-        @media (max-width:1280px){
-            left: 120px;
-        }
-        @media (max-width:800px){
-            left: 0px;
-        }
         
         a{
             color: #fff;
@@ -494,7 +505,7 @@
 
             span{
                 color: #fff;
-                @media (max-width:640px){
+                @media (max-width:800px){
                     display: none;
                 }
             }
@@ -507,7 +518,7 @@
                 transform: translateY(-50%);
                 transition: all .3s;
 
-                @media (max-width:640px){
+                @media (max-width:800px){
                     position: relative;
                     left: auto;
                     top: auto;
@@ -522,7 +533,7 @@
             
             img{
                 left: -100px;
-                @media (max-width:640px){
+                @media (max-width:800px){
                     left: auto;
                 }
             }
@@ -554,7 +565,7 @@
 
             span{
                 color: #fff;
-                @media (max-width:640px){
+                @media (max-width:800px){
                     display: none;
                 }
             }
@@ -568,7 +579,7 @@
                 transform-origin: 50% 50%;
                 transition: all .3s;
 
-                @media (max-width:640px){
+                @media (max-width:800px){
                     position: relative;
                     right: auto;
                     top: auto;
@@ -589,7 +600,7 @@
             a img{
                 right: -10px;
                 transform: translateY(-10px) rotate(0deg);
-                @media (max-width:640px){
+                @media (max-width:800px){
                     right: auto;
                 }
             }
@@ -598,7 +609,7 @@
         &.active{
             a img{
                 transform: translateY(-50%) rotate(0deg);
-                @media (max-width:640px){
+                @media (max-width:800px){
                     transform: rotate(0deg);
                 }
             }

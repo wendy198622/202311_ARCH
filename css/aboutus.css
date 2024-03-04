@@ -250,7 +250,7 @@ input, button, textarea, select {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 10;
   overflow: hidden;
 }
 
@@ -518,24 +518,36 @@ footer .copyright a {
   color: #000;
 }
 
-.aboutus_visual {
-  width: 100%;
-  height: 0;
-  padding-bottom: 41.5%;
-  overflow: hidden;
+#fullpage > li {
   position: relative;
-  z-index: -1;
+  width: 100%;
+  height: 100vh !important;
+  overflow: hidden;
+}
+
+.aboutus_visual #myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black;
+  background-position: center center;
+  background-size: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 3;
 }
 
 .aboutus_organize {
   width: 100%;
-  background: #f2f2f2;
 }
 
 .aboutus_organize .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 0;
 }
 
 @media (max-width: 1480px) {
@@ -544,30 +556,22 @@ footer .copyright a {
   }
 }
 
-@media (max-width: 1080px) {
-  .aboutus_organize .container {
-    overflow-x: scroll;
-  }
-}
-
 .aboutus_organize ul {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   overflow: hidden;
+  padding: 100px 0;
 }
 
-@media (max-width: 1080px) {
-  .aboutus_organize ul {
-    width: 1080px;
-  }
-}
-
-@media (max-width: 600px) {
-  .aboutus_organize ul {
-    width: 600px;
-  }
+.aboutus_organize ul:before {
+  content: "";
+  width: 0;
+  height: 100%;
 }
 
 .aboutus_organize ul li {
-  width: calc((100% - 16px) / 3);
+  width: calc((100% - 24px) / 3);
   float: left;
   margin-right: 8px;
 }
@@ -657,6 +661,8 @@ footer .copyright a {
   width: calc((100% - 56px) / 5);
   float: left;
   margin-right: 14px;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 1080px) {
@@ -692,6 +698,16 @@ footer .copyright a {
 
 .aboutus_team ul li img {
   margin-top: 14px;
+}
+
+.aboutus_team ul li .overlay {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
 }
 
 .aboutus_team_master {
@@ -765,28 +781,5 @@ footer .copyright a {
   width: 132px;
   float: right;
   margin-top: 60px;
-}
-
-.aboutus_team {
-  width: 100%;
-}
-
-.aboutus_team li {
-  position: relative;
-  overflow: hidden;
-}
-
-.aboutus_team li img {
-  width: 100%;
-}
-
-.aboutus_team li .overlay {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #fff;
-  width: 100%;
-  height: 100%;
 }
 /*# sourceMappingURL=aboutus.css.map */

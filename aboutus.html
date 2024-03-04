@@ -14,11 +14,13 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/slick.css" /> -->
     <!-- <link rel="stylesheet" type="text/css" href="css/slick-theme.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/examples.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/aboutus.css" />
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/fullpage.js"></script>
 
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
@@ -90,93 +92,101 @@
         </div>
     </header>
     <section>
-        <div class="aboutus_visual">
-            <div class="container">
-                <video width="100%" height="100%" preload autoplay muted loop>
-                    <source src="img/video-pc.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-        <div class="aboutus_organize">
-            <div class="container">
-                <ul>
-                    <li class="project-trigger">
-                        <div class="project">
-                            <img class="project-image project-image-one" src="img/aboutus_organize1.jpg" alt="">
-                        </div>
-                    </li>
-                    <li class="project-trigger">
-                        <div class="project">
-                            <img class="project-image project-image-two" src="img/aboutus_organize2.jpg" alt="">
-                        </div>
-                    </li>
-                    <li class="project-trigger">
-                        <div class="project">
-                            <img class="project-image project-image-three" src="img/aboutus_organize3.jpg" alt="">
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="aboutus_team project-left">
-            <div class="container">
-                <h3>
-                    建築團隊
-                    <span>team</span>
-                </h3>
-                <ul>
-                    <li class="box">
-                        <img src="img/aboutus_team_photo1.png" alt="">
-                        <h4>呂文程</h4>
-                        <h5>全台十大建築師</h5>
-                        <div class="overlay"></div>
-                    </li>
-                    <li class="box">
-                        <h4>林大俊</h4>
-                        <h5>全台十大建築師</h5>
-                        <img src="img/aboutus_team_photo2.png" alt="">
-                        <div class="overlay"></div>
-                    </li>
-                    <li class="box">
-                        <img src="img/aboutus_team_photo3.png" alt="">
-                        <h4>楊永豐</h4>
-                        <h5>結構顧問</h5>
-                        <div class="overlay"></div>
-                    </li>
-                    <li class="box">
-                        <h4>康銘華</h4>
-                        <h5>空間設計師</h5>
-                        <img src="img/aboutus_team_photo4.png" alt="">
-                        <div class="overlay"></div>
-                    </li>
-                    <li class="box">
-                        <img src="img/aboutus_team_photo5.png" alt="">
-                        <h4>鄭詩哲</h4>
-                        <h5>機電技師</h5>
-                        <div class="overlay"></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="aboutus_team_master">
-            <div class="container">
-                <div class="photo wow fadeInUp" data-wow-duration="2s">
-                    <img src="img/aboutus_team_master.png" alt="">
+        <ul id="fullpage">
+            <li class="section" id="section1">
+                <div class="aboutus_visual">
+                    <video id="myVideo" loop muted data-autoplay>
+                        <source src="img/video-pc.mp4" type="video/mp4">
+                    </video>                    
                 </div>
-                <div class="intro">
-                    <h4>型隨機轉的美學</h4>
-                    <h5>師承芝加哥學派，呂文程建築師<br>
-                        將Form Follows Function(型隨機轉)<br>
-                        的概念導入空間,<br>
-                        讓硬體去適應每一位家庭成員的生活習慣、<br>
-                        每一寸空間都是我們將國際建築的閱歷,<br>
-                        捏成最適合桃園人的形狀。</h5>
-                    <div class="signature">
-                        <img src="img/aboutus_team_signature.png" alt="">
+            </li>
+            <li class="section" id="section2">
+                <div class="aboutus_organize">
+                    <!-- <div class="container"> -->
+                        <ul>
+                            <li class="project-trigger">
+                                <div class="project">
+                                    <img class="project-image project-image-one" src="img/aboutus_organize1.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="project-trigger">
+                                <div class="project">
+                                    <img class="project-image project-image-two" src="img/aboutus_organize2.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="project-trigger">
+                                <div class="project">
+                                    <img class="project-image project-image-three" src="img/aboutus_organize3.jpg" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    <!-- </div> -->
+                </div>
+            </li>
+            <li class="section" id="section3">
+                <div class="aboutus_team project-left">
+                    <div class="container">
+                        <h3>
+                            建築團隊
+                            <span>team</span>
+                        </h3>
+                        <ul>
+                            <li class="box">
+                                <img src="img/aboutus_team_photo1.png" alt="">
+                                <h4>呂文程</h4>
+                                <h5>全台十大建築師</h5>
+                                <div class="overlay"></div>
+                            </li>
+                            <li class="box">
+                                <h4>林大俊</h4>
+                                <h5>全台十大建築師</h5>
+                                <img src="img/aboutus_team_photo2.png" alt="">
+                                <div class="overlay"></div>
+                            </li>
+                            <li class="box">
+                                <img src="img/aboutus_team_photo3.png" alt="">
+                                <h4>楊永豐</h4>
+                                <h5>結構顧問</h5>
+                                <div class="overlay"></div>
+                            </li>
+                            <li class="box">
+                                <h4>康銘華</h4>
+                                <h5>空間設計師</h5>
+                                <img src="img/aboutus_team_photo4.png" alt="">
+                                <div class="overlay"></div>
+                            </li>
+                            <li class="box">
+                                <img src="img/aboutus_team_photo5.png" alt="">
+                                <h4>鄭詩哲</h4>
+                                <h5>機電技師</h5>
+                                <div class="overlay"></div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
+            </li>
+            <li class="section" id="section4">
+                <div class="aboutus_team_master">
+                    <div class="container">
+                        <div class="photo wow fadeInUp" data-wow-duration="2s">
+                            <img src="img/aboutus_team_master.png" alt="">
+                        </div>
+                        <div class="intro">
+                            <h4>型隨機轉的美學</h4>
+                            <h5>師承芝加哥學派，呂文程建築師<br>
+                                將Form Follows Function(型隨機轉)<br>
+                                的概念導入空間,<br>
+                                讓硬體去適應每一位家庭成員的生活習慣、<br>
+                                每一寸空間都是我們將國際建築的閱歷,<br>
+                                捏成最適合桃園人的形狀。</h5>
+                            <div class="signature">
+                                <img src="img/aboutus_team_signature.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </section>
 
 
@@ -324,7 +334,23 @@
     });
 
 
+    // $('#fullpage').fullpage({
+    //     autoScrolling:true,
+    //     scrollBar:true,
+    //     verticalCentered: true,
+    //     sectionsColor : ['#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+    //     scrollHorizontally: true
+    // });
 
+    
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['01', '02', '03', '04'],
+        sectionsColor: ['#f2f2f2', '#f2f2f2', '#fff', '#fff'],
+        navigation: false,
+        verticalCentered: true,
+        scrollBar: true,
+        autoScrolling: true
+    });
 
 
 </script>
