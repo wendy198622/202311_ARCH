@@ -556,12 +556,24 @@ footer .copyright a {
   }
 }
 
+@media (max-width: 1080px) {
+  .aboutus_organize .container {
+    overflow-x: scroll;
+  }
+}
+
 .aboutus_organize ul {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   padding: 100px 0;
+}
+
+@media (max-width: 1080px) {
+  .aboutus_organize ul {
+    width: 1080px;
+  }
 }
 
 .aboutus_organize ul:before {

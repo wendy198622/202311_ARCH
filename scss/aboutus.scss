@@ -55,13 +55,13 @@
 
     .container{
         // max-width: 1200px;
-        margin:0 auto;
+        margin: 0 auto;
         // padding: 100px 0;
         @media (max-width:1480px){
             width: 90%;
         }
         @media (max-width:1080px){
-            // overflow-x: scroll;
+            overflow-x: scroll;
         }
     }
 
@@ -71,6 +71,9 @@
         margin:0 auto;
         overflow: hidden;
         padding: 100px 0;
+        @media (max-width:1080px){
+            width: 1080px;
+        }
 
         &:before{
             content: "";
