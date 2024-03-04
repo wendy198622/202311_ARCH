@@ -562,13 +562,13 @@ section{
                     height:calc(100% - 28px);
                 }
 
-                img{ max-height:100%;}
-            }
-        }
+                // img{ max-height:100%;}
 
-        img{
-            width: auto;
-            max-height: 90vh;
+                img{
+                    width: auto;
+                    max-height: 90vh;
+                }
+            }
         }
     }
 

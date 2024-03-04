@@ -1024,10 +1024,6 @@ section main .spotlight {
 }
 
 .fancyWrap .fancy-container a .pic-area img {
-  max-height: 100%;
-}
-
-.fancyWrap .fancy-container img {
   width: auto;
   max-height: 90vh;
 }
