@@ -622,18 +622,13 @@ footer .copyright a {
   transition: all .3s;
 }
 
-.project_list ul li:hover {
-  cursor: pointer;
-}
-
-.project_list ul li:hover h4, .project_list ul li:hover h5, .project_list ul li:hover h6 {
+.project_list ul li:hover h4, .project_list ul li:hover h5, .project_list ul li:hover h6, .project_list ul li.active h4, .project_list ul li.active h5, .project_list ul li.active h6 {
   color: #c49e6b;
   letter-spacing: 10px;
 }
 
-.project_list ul li.active h4, .project_list ul li.active h5, .project_list ul li.active h6 {
-  color: #c49e6b;
-  letter-spacing: 10px;
+.project_list ul li:hover h5, .project_list ul li.active h5 {
+  letter-spacing: 6px;
 }
 
 .projectpage_photo {
@@ -1188,7 +1183,10 @@ footer .copyright a {
     top: auto;
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
-    margin: 10px auto 0;
+    -webkit-transform-origin: 25% 25%;
+            transform-origin: 25% 25%;
+    margin: 12px auto 0;
+    display: block;
   }
 }
 

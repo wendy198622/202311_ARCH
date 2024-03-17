@@ -111,20 +111,15 @@
                 transition: all .3s;
             }
 
-            &:hover{
-                cursor: pointer;
+            &:hover, &.active{
 
                 h4, h5, h6{
                     color: #c49e6b;
                     letter-spacing: 10px;
                 }
-            }
 
-            &.active{
-
-                h4, h5, h6{
-                    color: #c49e6b;
-                    letter-spacing: 10px;
+                h5{
+                    letter-spacing: 6px;
                 }
             }       
         }
@@ -584,7 +579,9 @@
                     right: auto;
                     top: auto;
                     transform: rotate(-135deg);
-                    margin: 10px auto 0;
+                    transform-origin: 25% 25%;
+                    margin: 12px auto 0;
+                    display: block;
                 }
 
                 &.active{
