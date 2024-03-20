@@ -6,28 +6,27 @@
 // font-family: 'Noto Serif TC', serif;
 // font-family: 'Playfair Display', serif;
 // font-family: 'Roboto', sans-serif;
-#header{
+.topmenuWrap{
     background-image: none;
     z-index: 2;
-    
-    h1{
-        .white{ display: none;}
-        .black{ display: block;}
+    // display: block;
+    @media (max-width:1024px){
+        display: none;
     }
-    .nav{
-        .menu{ color: #000;}
+
+    .logo{
+        width: 180px !important;
     }
 }
-#header.inner_hd{
-    background-image: none;
+.topmenu-fixWrap{
+    height: 100vh !important;
+}
+.only-index-logo{
+    display: none;
+    @media (max-width:1024px){
+        display: block;
+    }
     
-    h1{
-        .white{ display: block;}
-        .black{ display: none;}
-    }
-    .menu-btn{
-        div{ color: #fff;}
-    }
 }
 
 .project_title{
@@ -143,123 +142,6 @@
             position: fixed;
             z-index: 2;
             backdrop-filter: blur(3px);
-        }
-
-        ol.projectpage_content_detail{
-            width: 100%;
-            max-width: 1000px;
-            position: fixed;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 140px;
-            z-index: 5;
-            overflow: hidden;
-            text-align: left;
-            @media (max-width:1080px){
-                width: 80%;
-            }
-            @media (max-width:600px){
-                top: 10%;
-            }
-
-            li{
-                width: 100%;
-                max-width: 600px;
-                position: relative;
-                margin-bottom: 120px;
-
-                h4{
-                    font-family: 'Noto Serif TC', serif;
-                    font-size: 36px;
-                    line-height: 1.4;
-                    font-weight: 600;
-                    color: #fff;
-                    // text-align: center;
-                    letter-spacing: 4px;
-                    transition: all .3s;
-                    @media (max-width:600px){
-                        font-size: 24px;
-                    }
-                }   
-            
-                h5{
-                    font-size: 20px;
-                    line-height: 1.4;
-                    font-weight: 200;
-                    color: #fff;
-                    // text-align: center;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-                    transition: all .3s;
-                    @media (max-width:600px){
-                        font-size: 16px;
-                    }
-                }
-            
-                h6{
-                    font-family: 'Noto Serif TC', serif;
-                    font-size: 20px;
-                    line-height: 3;
-                    font-weight: 600;
-                    color: #fff;
-                    display: block;
-                    // text-align: center;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-                    transition: all .3s;
-                    @media (max-width:600px){
-                        font-size: 16px;
-                        line-height: 2;
-                    }
-                }
-
-                p{
-                    font-size: 15px;
-                    line-height: 1.6;
-                    font-weight: 300;
-                    color: #fff;
-                    letter-spacing: 2px;
-                    margin-top: 36px;
-                    text-align: justify;
-                    @media (max-width:600px){
-                        font-size: 13px;
-                        margin-top: 20px;
-                    }
-                } 
-
-                ol.projectinfo{
-                    margin-top: 60px;
-                    overflow: hidden;
-                    @media (max-width:600px){
-                        margin-top: 20px;
-                    }
-                    
-                    li{
-                        width: 50%;
-                        float: left;
-                        font-size: 14px;
-                        font-family: 'Noto Serif TC', serif;
-                        letter-spacing: 2px;
-                        color: #fff;
-                        margin-bottom: 20px;
-                        @media (max-width:800px){
-                            width: 100%;
-                        }
-                        @media (max-width:600px){
-                            margin-bottom: 10px;
-                            font-size: 12px;
-                        }
-
-                        span{
-                            font-family: 'Noto Sans TC', sans-serif;
-                            letter-spacing: 2px;
-                            color: #fff;
-                            display: inline-block;
-                            margin-right: 20px;
-                        }
-                    }
-                }
-            }
         }
 
     }
@@ -458,6 +340,117 @@
     }
 }
 
+
+.projectpage_content_detail{
+    width: 100%;
+    max-width: 1000px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 140px;
+    z-index: 5;
+    overflow: hidden;
+    text-align: left;
+    @media (max-width:1080px){
+        width: 80%;
+    }
+    @media (max-width:600px){
+        top: 10%;
+    }
+
+
+    // h4{
+    //     font-family: 'Noto Serif TC', serif;
+    //     font-size: 36px;
+    //     line-height: 1.4;
+    //     font-weight: 600;
+    //     color: #fff;
+    //     // text-align: center;
+    //     letter-spacing: 4px;
+    //     transition: all .3s;
+    //     @media (max-width:600px){
+    //         font-size: 24px;
+    //     }
+    // }   
+
+    // h5{
+    //     font-size: 20px;
+    //     line-height: 1.4;
+    //     font-weight: 200;
+    //     color: #fff;
+    //     // text-align: center;
+    //     text-transform: uppercase;
+    //     letter-spacing: 2px;
+    //     transition: all .3s;
+    //     @media (max-width:600px){
+    //         font-size: 16px;
+    //     }
+    // }
+
+    // h6{
+    //     font-family: 'Noto Serif TC', serif;
+    //     font-size: 20px;
+    //     line-height: 3;
+    //     font-weight: 600;
+    //     color: #fff;
+    //     display: block;
+    //     // text-align: center;
+    //     text-transform: uppercase;
+    //     letter-spacing: 2px;
+    //     transition: all .3s;
+    //     @media (max-width:600px){
+    //         font-size: 16px;
+    //         line-height: 2;
+    //     }
+    // }
+
+    // p{
+    //     font-size: 15px;
+    //     line-height: 1.6;
+    //     font-weight: 300;
+    //     color: #fff;
+    //     letter-spacing: 2px;
+    //     margin-top: 36px;
+    //     text-align: justify;
+    //     @media (max-width:600px){
+    //         font-size: 13px;
+    //         margin-top: 20px;
+    //     }
+    // } 
+
+    // ol.projectinfo{
+    //     margin-top: 60px;
+    //     overflow: hidden;
+    //     @media (max-width:600px){
+    //         margin-top: 20px;
+    //     }
+        
+    //     li{
+    //         width: 50%;
+    //         float: left;
+    //         font-size: 14px;
+    //         font-family: 'Noto Serif TC', serif;
+    //         letter-spacing: 2px;
+    //         color: #fff;
+    //         margin-bottom: 20px;
+    //         @media (max-width:800px){
+    //             width: 100%;
+    //         }
+    //         @media (max-width:600px){
+    //             margin-bottom: 10px;
+    //             font-size: 12px;
+    //         }
+
+    //         span{
+    //             font-family: 'Noto Sans TC', sans-serif;
+    //             letter-spacing: 2px;
+    //             color: #fff;
+    //             display: inline-block;
+    //             margin-right: 20px;
+    //         }
+    //     }
+    // }
+}
 .projectpage_content{
     width: 80%;
     // max-width: 1000px;
@@ -773,3 +766,113 @@
 .fp-slidesNav ul li a.active span, 
 .fp-slidesNav ul li:hover a.active span{ height: 100%;}
 
+.pd-fancyWrap{
+    .content{
+        h4{
+            font-family: 'Noto Serif TC', serif;
+            font-size: 36px;
+            line-height: 1.4;
+            font-weight: 600;
+            color: #fff;
+            // text-align: center;
+            letter-spacing: 4px;
+            transition: all .3s;
+            @media (max-width:600px){
+                font-size: 24px;
+            }
+        }   
+    
+        h5{
+            font-size: 20px;
+            line-height: 1.4;
+            font-weight: 200;
+            color: #fff;
+            // text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all .3s;
+            @media (max-width:600px){
+                font-size: 16px;
+            }
+        }
+    
+        h6{
+            font-family: 'Noto Serif TC', serif;
+            font-size: 20px;
+            line-height: 3;
+            font-weight: 600;
+            color: #fff;
+            display: block;
+            // text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all .3s;
+            @media (max-width:600px){
+                font-size: 16px;
+                line-height: 2;
+            }
+        }
+    
+        p{
+            font-size: 15px;
+            line-height: 1.6;
+            font-weight: 300;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-top: 36px;
+            text-align: justify;
+            @media (max-width:600px){
+                font-size: 13px;
+                margin-top: 20px;
+            }
+        } 
+    }    
+    
+    .info-container{
+        width: 100%;
+        overflow: hidden;
+        
+        .info-list{
+            width: calc((100% - 20px) / 2;
+            float: left;
+            font-size: 14px;
+            font-family: 'Noto Serif TC', serif;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 20px;
+            margin-right: 0;
+            @media (max-width:800px){
+                width: 100%;
+            }
+            @media (max-width:600px){
+                margin-bottom: 10px;
+                font-size: 12px;
+            }
+
+            em{
+                font-family: 'Noto Sans TC', sans-serif;
+                letter-spacing: 2px;
+                color: #fff;
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            &:nth-child(odd){
+                margin-right: 20px;
+            }
+        }
+    }
+}
+.projectDetailList{
+    &.pc{ display: block;}
+    &.mob{ display: none;}
+    @media (max-width:960px){
+        &.pc{ display: none;}
+        &.mob{ display: block;}
+    }
+}
+.pd-pages{
+    span{
+        color: #fff;
+    }
+}

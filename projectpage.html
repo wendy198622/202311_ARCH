@@ -1,389 +1,816 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>明筑建築團隊</title>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>明筑建築團隊</title>
-    <meta name="author" content="" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="Resource-type" content="" />
-    <!-- <meta property="og:image" content="https://www.zyed.com.tw/VITRUVIUS/img/1200x630.png"> -->
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
-    <link rel="stylesheet" type="text/css" href="css/project.css" />
-    <!-- js -->
-    <!-- <script src="js/wow.min.js"></script> -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="js/slick.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+        <link rel='stylesheet' id='wp-block-library-css' href='https://www.greatbuilding.com.tw/wp-includes/css/dist/block-library/style.min.css?ver=f66b5da96f118bcbd1080b996a251a3c' type='text/css' media='all'/>
+        <link rel='stylesheet' id='classic-theme-styles-css' href='https://www.greatbuilding.com.tw/wp-includes/css/classic-themes.min.css?ver=f66b5da96f118bcbd1080b996a251a3c' type='text/css' media='all'/>
+        <style id='global-styles-inline-css' type='text/css'>
+            body {
+                --wp--preset--color--black: #000;
+                --wp--preset--color--cyan-bluish-gray: #abb8c3;
+                --wp--preset--color--white: #fff;
+                --wp--preset--color--pale-pink: #f78da7;
+                --wp--preset--color--vivid-red: #cf2e2e;
+                --wp--preset--color--luminous-vivid-orange: #ff6900;
+                --wp--preset--color--luminous-vivid-amber: #fcb900;
+                --wp--preset--color--light-green-cyan: #7bdcb5;
+                --wp--preset--color--vivid-green-cyan: #00d084;
+                --wp--preset--color--pale-cyan-blue: #8ed1fc;
+                --wp--preset--color--vivid-cyan-blue: #0693e3;
+                --wp--preset--color--vivid-purple: #9b51e0;
+                --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,#9b51e0 100%);
+                --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,#7adcb4 0%,#00d082 100%);
+                --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);
+                --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,#cf2e2e 100%);
+                --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,#eee 0%,#a9b8c3 100%);
+                --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,#4aeadc 0%,#9778d1 20%,#cf2aba 40%,#ee2c82 60%,#fb6962 80%,#fef84c 100%);
+                --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,#ffceec 0%,#9896f0 100%);
+                --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,#fecda5 0%,#fe2d2d 50%,#6b003e 100%);
+                --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,#ffcb70 0%,#c751c0 50%,#4158d0 100%);
+                --wp--preset--gradient--pale-ocean: linear-gradient(135deg,#fff5cb 0%,#b6e3d4 50%,#33a7b5 100%);
+                --wp--preset--gradient--electric-grass: linear-gradient(135deg,#caf880 0%,#71ce7e 100%);
+                --wp--preset--gradient--midnight: linear-gradient(135deg,#020381 0%,#2874fc 100%);
+                --wp--preset--duotone--dark-grayscale: url(#wp-duotone-dark-grayscale);
+                --wp--preset--duotone--grayscale: url(#wp-duotone-grayscale);
+                --wp--preset--duotone--purple-yellow: url(#wp-duotone-purple-yellow);
+                --wp--preset--duotone--blue-red: url(#wp-duotone-blue-red);
+                --wp--preset--duotone--midnight: url(#wp-duotone-midnight);
+                --wp--preset--duotone--magenta-yellow: url(#wp-duotone-magenta-yellow);
+                --wp--preset--duotone--purple-green: url(#wp-duotone-purple-green);
+                --wp--preset--duotone--blue-orange: url(#wp-duotone-blue-orange);
+                --wp--preset--font-size--small: 13px;
+                --wp--preset--font-size--medium: 20px;
+                --wp--preset--font-size--large: 36px;
+                --wp--preset--font-size--x-large: 42px;
+                --wp--preset--spacing--20: .44rem;
+                --wp--preset--spacing--30: .67rem;
+                --wp--preset--spacing--40: 1rem;
+                --wp--preset--spacing--50: 1.5rem;
+                --wp--preset--spacing--60: 2.25rem;
+                --wp--preset--spacing--70: 3.38rem;
+                --wp--preset--spacing--80: 5.06rem;
+                --wp--preset--shadow--natural: 6px 6px 9px rgba(0,0,0,.2);
+                --wp--preset--shadow--deep: 12px 12px 50px rgba(0,0,0,.4);
+                --wp--preset--shadow--sharp: 6px 6px 0 rgba(0,0,0,.2);
+                --wp--preset--shadow--outlined: 6px 6px 0 -3px rgba(255,255,255,1) , 6px 6px rgba(0,0,0,1);
+                --wp--preset--shadow--crisp: 6px 6px 0 rgba(0,0,0,1)
+            }
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.1/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript"
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/jquery.fullPage.min.js"></script>
+            :where(.is-layout-flex) {
+                gap: .5em
+            }
 
-        <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/imgLiquid.js"></script>
-    <script type="text/javascript" src="js/fullpage.js"></script>
-    <script type="text/javascript" src="js/examples.js"></script>
+            body .is-layout-flow>.alignleft {
+                float: left;
+                margin-inline-start:0;margin-inline-end:2em}
 
-    <script type="text/javascript" src="temp.js"></script>
-    
+            body .is-layout-flow>.alignright {
+                float: right;
+                margin-inline-start:2em;margin-inline-end:0}
+
+            body .is-layout-flow>.aligncenter {
+                margin-left: auto!important;
+                margin-right: auto!important
+            }
+
+            body .is-layout-constrained>.alignleft {
+                float: left;
+                margin-inline-start:0;margin-inline-end:2em}
+
+            body .is-layout-constrained>.alignright {
+                float: right;
+                margin-inline-start:2em;margin-inline-end:0}
+
+            body .is-layout-constrained>.aligncenter {
+                margin-left: auto!important;
+                margin-right: auto!important
+            }
+
+            body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+                max-width: var(--wp--style--global--content-size);
+                margin-left: auto!important;
+                margin-right: auto!important
+            }
+
+            body .is-layout-constrained>.alignwide {
+                max-width: var(--wp--style--global--wide-size)
+            }
+
+            body .is-layout-flex {
+                display: flex
+            }
+
+            body .is-layout-flex {
+                flex-wrap: wrap;
+                align-items: center
+            }
+
+            body .is-layout-flex>* {
+                margin: 0
+            }
+
+            :where(.wp-block-columns.is-layout-flex) {
+                gap: 2em
+            }
+
+            .has-black-color {
+                color: var(--wp--preset--color--black)!important
+            }
+
+            .has-cyan-bluish-gray-color {
+                color: var(--wp--preset--color--cyan-bluish-gray)!important
+            }
+
+            .has-white-color {
+                color: var(--wp--preset--color--white)!important
+            }
+
+            .has-pale-pink-color {
+                color: var(--wp--preset--color--pale-pink)!important
+            }
+
+            .has-vivid-red-color {
+                color: var(--wp--preset--color--vivid-red)!important
+            }
+
+            .has-luminous-vivid-orange-color {
+                color: var(--wp--preset--color--luminous-vivid-orange)!important
+            }
+
+            .has-luminous-vivid-amber-color {
+                color: var(--wp--preset--color--luminous-vivid-amber)!important
+            }
+
+            .has-light-green-cyan-color {
+                color: var(--wp--preset--color--light-green-cyan)!important
+            }
+
+            .has-vivid-green-cyan-color {
+                color: var(--wp--preset--color--vivid-green-cyan)!important
+            }
+
+            .has-pale-cyan-blue-color {
+                color: var(--wp--preset--color--pale-cyan-blue)!important
+            }
+
+            .has-vivid-cyan-blue-color {
+                color: var(--wp--preset--color--vivid-cyan-blue)!important
+            }
+
+            .has-vivid-purple-color {
+                color: var(--wp--preset--color--vivid-purple)!important
+            }
+
+            .has-black-background-color {
+                background-color: var(--wp--preset--color--black)!important
+            }
+
+            .has-cyan-bluish-gray-background-color {
+                background-color: var(--wp--preset--color--cyan-bluish-gray)!important
+            }
+
+            .has-white-background-color {
+                background-color: var(--wp--preset--color--white)!important
+            }
+
+            .has-pale-pink-background-color {
+                background-color: var(--wp--preset--color--pale-pink)!important
+            }
+
+            .has-vivid-red-background-color {
+                background-color: var(--wp--preset--color--vivid-red)!important
+            }
+
+            .has-luminous-vivid-orange-background-color {
+                background-color: var(--wp--preset--color--luminous-vivid-orange)!important
+            }
+
+            .has-luminous-vivid-amber-background-color {
+                background-color: var(--wp--preset--color--luminous-vivid-amber)!important
+            }
+
+            .has-light-green-cyan-background-color {
+                background-color: var(--wp--preset--color--light-green-cyan)!important
+            }
+
+            .has-vivid-green-cyan-background-color {
+                background-color: var(--wp--preset--color--vivid-green-cyan)!important
+            }
+
+            .has-pale-cyan-blue-background-color {
+                background-color: var(--wp--preset--color--pale-cyan-blue)!important
+            }
+
+            .has-vivid-cyan-blue-background-color {
+                background-color: var(--wp--preset--color--vivid-cyan-blue)!important
+            }
+
+            .has-vivid-purple-background-color {
+                background-color: var(--wp--preset--color--vivid-purple)!important
+            }
+
+            .has-black-border-color {
+                border-color: var(--wp--preset--color--black)!important
+            }
+
+            .has-cyan-bluish-gray-border-color {
+                border-color: var(--wp--preset--color--cyan-bluish-gray)!important
+            }
+
+            .has-white-border-color {
+                border-color: var(--wp--preset--color--white)!important
+            }
+
+            .has-pale-pink-border-color {
+                border-color: var(--wp--preset--color--pale-pink)!important
+            }
+
+            .has-vivid-red-border-color {
+                border-color: var(--wp--preset--color--vivid-red)!important
+            }
+
+            .has-luminous-vivid-orange-border-color {
+                border-color: var(--wp--preset--color--luminous-vivid-orange)!important
+            }
+
+            .has-luminous-vivid-amber-border-color {
+                border-color: var(--wp--preset--color--luminous-vivid-amber)!important
+            }
+
+            .has-light-green-cyan-border-color {
+                border-color: var(--wp--preset--color--light-green-cyan)!important
+            }
+
+            .has-vivid-green-cyan-border-color {
+                border-color: var(--wp--preset--color--vivid-green-cyan)!important
+            }
+
+            .has-pale-cyan-blue-border-color {
+                border-color: var(--wp--preset--color--pale-cyan-blue)!important
+            }
+
+            .has-vivid-cyan-blue-border-color {
+                border-color: var(--wp--preset--color--vivid-cyan-blue)!important
+            }
+
+            .has-vivid-purple-border-color {
+                border-color: var(--wp--preset--color--vivid-purple)!important
+            }
+
+            .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+                background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple)!important
+            }
+
+            .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+                background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan)!important
+            }
+
+            .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+                background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange)!important
+            }
+
+            .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+                background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red)!important
+            }
+
+            .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+                background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray)!important
+            }
+
+            .has-cool-to-warm-spectrum-gradient-background {
+                background: var(--wp--preset--gradient--cool-to-warm-spectrum)!important
+            }
+
+            .has-blush-light-purple-gradient-background {
+                background: var(--wp--preset--gradient--blush-light-purple)!important
+            }
+
+            .has-blush-bordeaux-gradient-background {
+                background: var(--wp--preset--gradient--blush-bordeaux)!important
+            }
+
+            .has-luminous-dusk-gradient-background {
+                background: var(--wp--preset--gradient--luminous-dusk)!important
+            }
+
+            .has-pale-ocean-gradient-background {
+                background: var(--wp--preset--gradient--pale-ocean)!important
+            }
+
+            .has-electric-grass-gradient-background {
+                background: var(--wp--preset--gradient--electric-grass)!important
+            }
+
+            .has-midnight-gradient-background {
+                background: var(--wp--preset--gradient--midnight)!important
+            }
+
+            .has-small-font-size {
+                font-size: var(--wp--preset--font-size--small)!important
+            }
+
+            .has-medium-font-size {
+                font-size: var(--wp--preset--font-size--medium)!important
+            }
+
+            .has-large-font-size {
+                font-size: var(--wp--preset--font-size--large)!important
+            }
+
+            .has-x-large-font-size {
+                font-size: var(--wp--preset--font-size--x-large)!important
+            }
+
+            .wp-block-navigation a:where(:not(.wp-element-button)) {
+                color: inherit
+            }
+
+            :where(.wp-block-columns.is-layout-flex) {
+                gap: 2em
+            }
+
+            .wp-block-pullquote {
+                font-size: 1.5em;
+                line-height: 1.6
+            }
+        </style>
+        
+        <style type="text/css">
+            .recentcomments a {
+                display: inline!important;
+                padding: 0!important;
+                margin: 0!important
+            }
+        </style>
+        
+        <style type="text/css" id="wp-custom-css">
+            h6 {
+                color: #fff !important;
+                font-size: 20px !important;
+                line-height: 3;
+            }
+
+            h4 {
+                font-size: 36px !important;
+                line-height: 1.4;
+            }
+
+            h5{
+                color: #fff !important;
+                font-size: 20px !important;
+                line-height: 1.4;
+            }
+            
+            p{
+                color: #fff !important;
+                font-size: 15px !important;
+            }
+
+            @media print, screen and (max-width: 99.99875em) {
+                h6 {
+                    font-size: 16px !important;
+                    line-height: 2 !important;
+                }
+
+                h4 {
+                    font-size: 24px !important;
+                }
+
+                h5{
+                    font-size: 16px !important;
+                }
+            }
+
+            @media print, screen and (max-width: 64.06125em) {
+                h6 {
+                    color: #7e7e7e !important;
+                    margin-top: -5px !important;
+                    font-size: 12px !important;
+                    /*照片下小標題*/
+                }
+
+                h4 {
+                    font-size: 18px !important;
+                    /*副標使用*/
+                }
+            }
+    </style>
 </head>
-
-<body>
-    <header id="header" class="inner_hd">
-
-        <h1>
-            <a href="index.html">
-                <img class="white" src="img/logo.svg" alt="">
-                <img class="black" src="img/logo_black.svg" alt="">
-            </a>
-        </h1>
-
-        <div class="menu-overlay">
-            <div class="block b1"></div>
-        </div>
-
-        <div class="menu topmenu-fixWrap">
-            <ul class="topmenu-fixList">
-                    <li>
+<body data-rsssl=1>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/project.css">
+    <section data-barba="wrapper">
+        <div id="preloadWrap" style="background-color: #f2f2f2; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 199;"></div>
+        <main data-barba="container" data-barba-namespace="project-detail">
+            <div id="header">
+                <!-- 電腦版TOP選單 -->
+                <header class="topmenuWrap grid-x align-justify align-middle">
+                    <div class="logo cell shrink">
                         <a href="index.html">
-                            <span class="ch">首頁</span>
-                            <span class="en">HOME</span>
+                            <img src="img/logo.svg" alt="">
                         </a>
-                    </li>
-                    <li>
-                        <a href="aboutus.html">
-                            <span class="ch">關於我們</span>
-                            <span class="en">ABOUT</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="news.html">
-                            <span class="ch">最新消息</span>
-                            <span class="en">NEWS</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="project.html">
-                            <span class="ch">建案資訊</span>
-                            <span class="en">PROJECTS</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contactus.html">
-                            <span class="ch">聯絡我們</span>
-                            <span class="en">CONTACT US</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://lin.ee/4j8ym6E" class="social"><img src="./img/line.svg" alt=""></a>
-                        <a href="https://www.youtube.com/@user-ww9kf6qm5o" class="social"><img src="./img/youtube.svg" alt=""></a>
-                    </li>
-            </ul>
-        </div>
+                    </div>
+                    <div class="menu cell shrink show-for-large">MENU</div>
+                    <div class="hamburger cell shrink hide-for-large">
+                        <span class="item1"></span>
+                        <span class="item2"></span>
+                        <span class="item3"></span>
+                    </div>
+                </header>
 
-        <div class="menu-btn">
-            <div class="open">MENU</div>
-            <div class="close">CLOSE</div>            
-        </div>
-    </header>
-    <section style="position: relative;">
-        <div class="projectpage_photo">
-            <div class="projectpage_popup">
-                <div class="mask"></div>
-                <ol class="projectpage_content_detail">
-                    <li>
+                <!-- 電腦版展開選單 -->
+                <div class="topmenu-fixWrap">
+                    <ul class="topmenu-fixList grid-y align-middle">
+                        <li class="cell shrink">
+                            <a href="home.html">
+                                <span class="ch">首頁</span>
+                                <span class="en">HOME</span>
+                            </a>
+                        </li>
+                        <li class="cell shrink">
+                            <a href="aboutus.html" data-barba-prevent>
+                                <span class="ch">關於我們</span>
+                                <span class="en">ABOUT</span>
+                            </a>
+                        </li>
+                        <li class="cell shrink">
+                            <a href="news.html" data-barba-prevent>
+                                <span class="ch">最新消息</span>
+                                <span class="en">NEWS</span>
+                            </a>
+                        </li>
+                        <li class="cell shrink">
+                            <a href="project.html" data-barba-prevent>
+                                <span class="ch">建案資訊</span>
+                                <span class="en">PROJECTS</span>
+                            </a>
+                        </li>
+                        <li class="cell shrink">
+                            <a href="contactus.html" data-barba-prevent>
+                                <span class="ch">聯絡我們</span>
+                                <span class="en">CONTACT US</span>
+                            </a>
+                        </li>
+
+                        <li class="cell">
+                            <a href="https://lin.ee/4j8ym6E" class="social"><img src="./img/line.svg" alt=""></a>
+                            <a href="https://www.youtube.com/@user-ww9kf6qm5o" class="social"><img src="./img/youtube.svg" alt=""></a>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="close">CLOSE</div>
+                </div>
+
+                <!-- 手機版TOP選單 -->
+                <div class="only-index-logo hide-for-large">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="only-index-hamburger hide-for-large">
+                    <span class="item1"></span>
+                    <span class="item2"></span>
+                    <span class="item3"></span>
+                </div>
+                </div> 
+            <!-- 電腦版圖片 -->
+            <ul class="projectDetailList pc">
+                <li style="background: url(img/projectphoto_01.jpg) center center/cover no-repeat;" href="img/projectphoto_01.jpg" data-ryder-fancy="images" rel="group">
+                    <img src="img/projectphoto_01.jpg">
+                </li>
+                <li style="background: url(img/projectphoto_01.jpg) center center/cover no-repeat;"></li>
+                <li style="background: url(img/projectphoto_02.jpg) center center/cover no-repeat;" href="img/projectphoto_02.jpg" data-ryder-fancy="images" rel="group">
+                    <img src="img/projectphoto_02.jpg">
+                </li>
+                <li style="background: url(img/projectphoto_03.jpg) center center/cover no-repeat;" href="img/projectphoto_03.jpg" data-ryder-fancy="images" rel="group">
+                    <img src="img/projectphoto_03.jpg">
+                </li>
+            </ul>
+            <!-- 電腦版圖片 end -->
+            <!-- 手機版圖片 -->
+            <ul class="projectDetailList mob">
+                <li style="background: url(img/projectphoto_01_mob.jpg) center center/cover no-repeat;" href="img/projectphoto_01_mob.jpg" data-ryder-fancy="images" rel="group">
+                    <img src="img/projectphoto_01.jpg">
+                </li>
+                <li style="background: url(img/projectphoto_01_mob.jpg) center center/cover no-repeat;"></li>
+                <li style="background: url(img/projectphoto_02.jpg) center center/cover no-repeat;" href="img/projectphoto_02.jpg" data-ryder-fancy="images" rel="group">
+                    <img src="img/projectphoto_02.jpg">
+                </li>
+                <li style="background: url(img/projectphoto_03.jpg) center center/cover no-repeat;" href="img/projectphoto_03.jpg" data-ryder-fancy="images" rel="group">
+                    <img src="img/projectphoto_03.jpg">
+                </li>
+            </ul>
+            <!-- 手機版圖片 end -->
+            <div class="pd-progress">
+                <div class="bar"></div>
+            </div>
+            <div class="pd-back-area">
+                <a href="index.html">
+                    <div class="arrow">
+                        <script data-pagespeed-no-defer type="text/javascript">
+                            //<![CDATA[
+                            (function() {
+                                for (var g = "function" == typeof Object.defineProperties ? Object.defineProperty : function(b, c, a) {
+                                    if (a.get || a.set)
+                                        throw new TypeError("ES3 does not support getters and setters.");
+                                    b != Array.prototype && b != Object.prototype && (b[c] = a.value)
+                                }
+                                , h = "undefined" != typeof window && window === this ? this : "undefined" != typeof global && null != global ? global : this, k = ["String", "prototype", "repeat"], l = 0; l < k.length - 1; l++) {
+                                    var m = k[l];
+                                    m in h || (h[m] = {});
+                                    h = h[m]
+                                }
+                                var n = k[k.length - 1]
+                                  , p = h[n]
+                                  , q = p ? p : function(b) {
+                                    var c;
+                                    if (null == this)
+                                        throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");
+                                    c = this + "";
+                                    if (0 > b || 1342177279 < b)
+                                        throw new RangeError("Invalid count value");
+                                    b |= 0;
+                                    for (var a = ""; b; )
+                                        if (b & 1 && (a += c),
+                                        b >>>= 1)
+                                            c += c;
+                                    return a
+                                }
+                                ;
+                                q != p && null != q && g(h, n, {
+                                    configurable: !0,
+                                    writable: !0,
+                                    value: q
+                                });
+                                var t = this;
+                                function u(b, c) {
+                                    var a = b.split(".")
+                                      , d = t;
+                                    a[0]in d || !d.execScript || d.execScript("var " + a[0]);
+                                    for (var e; a.length && (e = a.shift()); )
+                                        a.length || void 0 === c ? d[e] ? d = d[e] : d = d[e] = {} : d[e] = c
+                                }
+                                ;function v(b) {
+                                    var c = b.length;
+                                    if (0 < c) {
+                                        for (var a = Array(c), d = 0; d < c; d++)
+                                            a[d] = b[d];
+                                        return a
+                                    }
+                                    return []
+                                }
+                                ;function w(b) {
+                                    var c = window;
+                                    if (c.addEventListener)
+                                        c.addEventListener("load", b, !1);
+                                    else if (c.attachEvent)
+                                        c.attachEvent("onload", b);
+                                    else {
+                                        var a = c.onload;
+                                        c.onload = function() {
+                                            b.call(this);
+                                            a && a.call(this)
+                                        }
+                                    }
+                                }
+                                ;var x;
+                                function y(b, c, a, d, e) {
+                                    this.h = b;
+                                    this.j = c;
+                                    this.l = a;
+                                    this.f = e;
+                                    this.g = {
+                                        height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+                                        width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+                                    };
+                                    this.i = d;
+                                    this.b = {};
+                                    this.a = [];
+                                    this.c = {}
+                                }
+                                function z(b, c) {
+                                    var a, d, e = c.getAttribute("data-pagespeed-url-hash");
+                                    if (a = e && !(e in b.c))
+                                        if (0 >= c.offsetWidth && 0 >= c.offsetHeight)
+                                            a = !1;
+                                        else {
+                                            d = c.getBoundingClientRect();
+                                            var f = document.body;
+                                            a = d.top + ("pageYOffset"in window ? window.pageYOffset : (document.documentElement || f.parentNode || f).scrollTop);
+                                            d = d.left + ("pageXOffset"in window ? window.pageXOffset : (document.documentElement || f.parentNode || f).scrollLeft);
+                                            f = a.toString() + "," + d;
+                                            b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0,
+                                            a = a <= b.g.height && d <= b.g.width)
+                                        }
+                                    a && (b.a.push(e),
+                                    b.c[e] = !0)
+                                }
+                                y.prototype.checkImageForCriticality = function(b) {
+                                    b.getBoundingClientRect && z(this, b)
+                                }
+                                ;
+                                u("pagespeed.CriticalImages.checkImageForCriticality", function(b) {
+                                    x.checkImageForCriticality(b)
+                                });
+                                u("pagespeed.CriticalImages.checkCriticalImages", function() {
+                                    A(x)
+                                });
+                                function A(b) {
+                                    b.b = {};
+                                    for (var c = ["IMG", "INPUT"], a = [], d = 0; d < c.length; ++d)
+                                        a = a.concat(v(document.getElementsByTagName(c[d])));
+                                    if (a.length && a[0].getBoundingClientRect) {
+                                        for (d = 0; c = a[d]; ++d)
+                                            z(b, c);
+                                        a = "oh=" + b.l;
+                                        b.f && (a += "&n=" + b.f);
+                                        if (c = !!b.a.length)
+                                            for (a += "&ci=" + encodeURIComponent(b.a[0]),
+                                            d = 1; d < b.a.length; ++d) {
+                                                var e = "," + encodeURIComponent(b.a[d]);
+                                                131072 >= a.length + e.length && (a += e)
+                                            }
+                                        b.i && (e = "&rd=" + encodeURIComponent(JSON.stringify(B())),
+                                        131072 >= a.length + e.length && (a += e),
+                                        c = !0);
+                                        C = a;
+                                        if (c) {
+                                            d = b.h;
+                                            b = b.j;
+                                            var f;
+                                            if (window.XMLHttpRequest)
+                                                f = new XMLHttpRequest;
+                                            else if (window.ActiveXObject)
+                                                try {
+                                                    f = new ActiveXObject("Msxml2.XMLHTTP")
+                                                } catch (r) {
+                                                    try {
+                                                        f = new ActiveXObject("Microsoft.XMLHTTP")
+                                                    } catch (D) {}
+                                                }
+                                            f && (f.open("POST", d + (-1 == d.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(b)),
+                                            f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"),
+                                            f.send(a))
+                                        }
+                                    }
+                                }
+                                function B() {
+                                    var b = {}, c;
+                                    c = document.getElementsByTagName("IMG");
+                                    if (!c.length)
+                                        return {};
+                                    var a = c[0];
+                                    if (!("naturalWidth"in a && "naturalHeight"in a))
+                                        return {};
+                                    for (var d = 0; a = c[d]; ++d) {
+                                        var e = a.getAttribute("data-pagespeed-url-hash");
+                                        e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight || e in b && a.width >= b[e].o && a.height >= b[e].m) && (b[e] = {
+                                            rw: a.width,
+                                            rh: a.height,
+                                            ow: a.naturalWidth,
+                                            oh: a.naturalHeight
+                                        })
+                                    }
+                                    return b
+                                }
+                                var C = "";
+                                u("pagespeed.CriticalImages.getBeaconData", function() {
+                                    return C
+                                });
+                                u("pagespeed.CriticalImages.Run", function(b, c, a, d, e, f) {
+                                    var r = new y(b,c,a,e,f);
+                                    x = r;
+                                    d && w(function() {
+                                        window.setTimeout(function() {
+                                            A(r)
+                                        }, 0)
+                                    })
+                                });
+                            }
+                            )();
+                            pagespeed.CriticalImages.Run('/mod_pagespeed_beacon', 'https://www.greatbuilding.com.tw/project/platopalace/', '8Xxa2XQLv9', true, false, 'RktCrKRPV10');
+                            //]]>
+                        </script>
+                        <img src="img/backarrow.svg" >
+                    </div>
+                    <div class="en">BACK TO PROJECTS</div>
+                    <div class="ch">建案總覽</div>
+                </a>
+            </div>
+            <!-- <div class="pd-more-trigger">
+                <a href="https://www.greatbuilding.com.tw/contact/">
+                    <div class="en">LEARN MORE</div>
+                    <div class="ch">預約了解</div>
+                </a>
+            </div> -->
+            <div class="pd-article-trigger">
+                <div class="en">INTRODUCTION</div>
+                <div class="ch">建案介紹</div>
+                <div class="plus"></div>
+            </div>
+            <div class="pd-pages">
+                <span id="now">3</span>
+                / <span id="total">6</span>
+            </div>
+            <div class="pd-fancyWrap">
+                <div class="pd-fancyContainer">
+                    <!-- <div class="title-area">
+                        <img src="https://www.greatbuilding.com.tw/wp-content/uploads/2020/05/home_385.png" data-pagespeed-url-hash="750028561" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </div> -->
+                    <div class="content">
                         <h6>2023</h6>
                         <h4>明筑輝煌11</h4>
                         <h5>明築建設</h5>
                         <p>明築輝皇北北桃30分鐘,桃機國門界，三心一桃園城中心、中壢都會區、航空城特區，六線機捷、壢延伸線、溪延伸線、捷運綠線、捷運棕線、三鶯線延伸八德段，捷運綠線串接桃機站,銜接國際點，串聯桃園國際機場,推動城市全面發國際化，捷運紅線化,機能升級，增設5站提升輸效能,便利進化地段強增值，捷運棕線新北桃線,一線零時差，序起桃園火車站,接軌新北新莊,縫合兩座城。
                         </p>
-
-                        <ol class="projectinfo">
-                            <li><span>產品規劃</span>13.14F/B3．151戶 </li>
-                            <li><span>位置</span>桃園市桃園區延平路99號</li>
-                            <li><span>基地面積</span>896坪</li>
-                            <li><span>坪數</span>896坪</li>
-                        </ol>
-                    </li>
-                </ol>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="info-container grid-x">
+                        <div class="cell info-list large-shrink">
+                            <div>
+                                <em>產品規劃</em>
+                                地上14層/地下3層
+                            </div>
+                            <div>
+                                <em>基地面積</em>
+                                22-44坪/2-3房
+                            </div>
+                        </div>
+                        <div class="cell info-list large-shrink">
+                            <div>
+                                <em>位置</em>
+                                桃園市桃園區建國段771地號
+                            </div>
+                            <div>
+                                <em>坪數</em>
+                                863坪
+                            </div>
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                <div class="pd-fancy-closeBlock"></div>
             </div>
-            <!-- 0308修改 start -->
-            <ul id="fullpage">
-                <li class="section" id="section1">
-                    <div class="photo_group">
-                        <div class="photo pc imgLiquidFill">
-                            <img src="img/projectphoto_01.jpg" alt="">
-                        </div>
-                        <div class="photo mob imgLiquidFill">
-                            <img src="img/projectphoto_01_mob.jpg" alt="">
-                        </div>
-                    </div>
+            <div class="ryderp-close">
+                <img src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/images/ppp-arrow.svg" data-pagespeed-url-hash="1803327554" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            </div>
+            <div class="ryderp-square">
+                <img src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/images/ppp-square.svg" data-pagespeed-url-hash="600948152" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            </div>
+            <div class="ryderp-square-four">
+                <img src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/images/ppp-square-four.svg" data-pagespeed-url-hash="1127117971" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            </div>
+            <ul class="ryderp-pdThumbList">
+                <li>
+                    <img src="img/projectphoto_01.jpg">
                 </li>
-                <li class="section opentext" id="section2">
-                    <div class="photo_group">
-                        <div class="photo pc imgLiquidFill">
-                            <img src="img/projectphoto_01.jpg" alt="">
-                        </div>
-                        <div class="photo mob imgLiquidFill">
-                            <img src="img/projectphoto_01_mob.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="projectpage_popup">
-                        <div class="mask"></div>
-                        <ol class="projectpage_content_detail">
-                            <li>
-                                <h6>2023</h6>
-                                <h4>明筑輝煌11</h4>
-                                <h5>明築建設</h5>
-                                <p>明築輝皇北北桃30分鐘,桃機國門界，三心一桃園城中心、中壢都會區、航空城特區，六線機捷、壢延伸線、溪延伸線、捷運綠線、捷運棕線、三鶯線延伸八德段，捷運綠線串接桃機站,銜接國際點，串聯桃園國際機場,推動城市全面發國際化，捷運紅線化,機能升級，增設5站提升輸效能,便利進化地段強增值，捷運棕線新北桃線,一線零時差，序起桃園火車站,接軌新北新莊,縫合兩座城。
-                                </p>
-
-                                <ol class="projectinfo">
-                                    <li><span>產品規劃</span>13.14F/B3．151戶 </li>
-                                    <li><span>位置</span>桃園市桃園區延平路99號</li>
-                                    <li><span>基地面積</span>896坪</li>
-                                    <li><span>坪數</span>896坪</li>
-                                </ol>
-                            </li>
-                        </ol>
-                    </div>
+                <li>
+                    <img src="img/projectphoto_02.jpg">
                 </li>
-                <li class="section" id="section3">
-                    <div class="photo_group">
-                        <div class="photo pc imgLiquidFill">
-                            <img src="img/projectphoto_03.jpg" alt="">
-                        </div>
-                        <div class="photo mob imgLiquidFill">
-                            <img src="img/projectphoto_01_mob.jpg" alt="">
-                        </div>
-                    </div>
+                <li>
+                    <img src="img/projectphoto_03.jpg">
                 </li>
-                <li class="section" id="section4">
-                    <div class="photo_group">
-                        <div class="photo pc imgLiquidFill">
-                            <img src="img/projectphoto_04.jpg" alt="">
-                        </div>
-                        <div class="photo mob imgLiquidFill">
-                            <img src="img/projectphoto_01_mob.jpg" alt="">
-                        </div>
-                    </div>
+                <li>
+                    <img src="img/projectphoto_04.jpg">
                 </li>
-                <li class="section" id="section5">
-                    <div class="photo_group">
-                        <div class="photo pc imgLiquidFill">
-                            <img src="img/projectphoto_05.jpg" alt="">
-                        </div>
-                        <div class="photo mob imgLiquidFill">
-                            <img src="img/projectphoto_01_mob.jpg" alt="">
-                        </div>
-                    </div>
+                <li>
+                    <img src="img/projectphoto_05.jpg">
                 </li>
-                <li class="section" id="section6">
-                    <div class="photo_group">
-                        <div class="photo pc imgLiquidFill">
-                            <img src="img/projectphoto_06.jpg" alt="">
-                        </div>
-                        <div class="photo mob imgLiquidFill">
-                            <img src="img/projectphoto_01_mob.jpg" alt="">
-                        </div>
-                    </div>
+                <li>
+                    <img src="img/projectphoto_06.jpg">
                 </li>
             </ul>
-            <!-- 0308修改 end -->
-            <div class="fullpage_scrollbar wow fadeInRight" data-wow-delay="0.5s">
-                <div class="topline"></div>
-                <div class="bgline"></div>
-            </div>
-        </div>
-        <div class="projectpage_content">
-            <div class="container">
-
-                <div class="backproject wow fadeInLeft">
-                    <a href="project.html" target="_blank">
-                        <span>BACK TO PROJECTS</span><br>建案總覽
-                        <img src="img/backarrow.svg" alt="">
-                    </a>
-                </div>
-
-                <div class="closedetail wow fadeInRight">
-                    <a href="javascript:;" target="_blank">
-                        <span>INTRODUCTION</span><br>建案介紹
-                        <img src="img/close.svg" alt="">
-                    </a>
-                </div>
-
-                <div class="slideContent wow fadeInUp" data-wow-delay="1s" id="slideContent">
-                    <div class="num"></div>
-                </div>
-            </div>
-        </div>
+        </main>
     </section>
-    <footer id="footer"></footer>
 </body>
-
-<script>
-
-    $(document).ready(function () {
-
-        new WOW().init();
-
-        $('#footer').load('page/footer.html');
-
-    });
-
-    $(".imgLiquidFill").imgLiquid({
-        fill: true,
-        horizontalAlign: "center",
-        verticalAlign: "center"
-    }); 
-
-
-    let autoplayTimeID = null
-    let autoPlayTimer = 8000
-    let _currentPage = 0
-    var myFullpage = new fullpage('#fullpage', {
-        verticalCentered: false,
-        navigation: true,
-        navigationPosition: 'right',
-        licenseKey:'gplv3-license',
-        afterRender: function () {
-            //console.log("afterRender")
-            autoPlaySide();
-        },
-        onLeave: function (origin, destination, direction) {
-            clearTimeout(autoplayTimeID);
-            var currentPage = destination.index + 1;
-            _currentPage = currentPage
-            var totalPage = $('#fullpage').find('.section').length
-            updatePageIndicator(currentPage, totalPage);
-        },
-        afterLoad: function (sorigin, destination, direction) {
-            //console.log("afterLoad")
-            var currentPage = destination.index + 1;
-            var totalPage = $('#fullpage').find('.section').length
-            if(currentPage == totalPage){
-                autoplayTimeID = setTimeout(function () {
-                    fullpage_api.moveTo(1);
-                }, autoPlayTimer);
-            }else if(currentPage != 2){
-                autoPlaySide()
-            }
-
-        }
-    });
-
-    $('#fullpage').each(function () {
-        var section = $(this)
-        sectionSlides = section.find('.section')
-        totalItems = sectionSlides.length
-        currentIndex = sectionSlides.filter('.active').index() + 1
-        updatePageIndicator(currentIndex, totalItems)
-    });
-
-    // 0104修改start
-    $(".closedetail").click(function (e) {
-        e.preventDefault();
-        $(".closedetail img").toggleClass("active");
-        if (_currentPage != 2) {
-            $(".projectpage_popup").toggleClass("active");
-        } 
-        $(".mask").toggleClass("active")
-    });
-
-    $(document).ready(function () {
-        if ($('.opentext.active').length > 0) {
-            $('.closedetail img').addClass('active');
-        }
-    });
-
-
-    function updatePageIndicator(currentPage, totalPage) {
-        if (currentPage == 2) {
-            $('.closedetail img').css({
-                'transform': 'translateY(-50%) rotate(0deg)'
-            });
-        } else {
-            $('.closedetail img').css({
-                'transform': ''
-            });
-            $('.closedetail img').removeClass('active');
-            $('.projectpage_popup').removeClass('active');
-        }
-        numContainer = $('section').find('.num');
-        numContainer.html(currentPage + '/' + totalPage);
-        var scrollPercentage = (currentPage / totalPage) * 100;
-        scrollPercentage = Math.min(100, Math.max(0, scrollPercentage));
-        // 更新topline的高度
-        $('.topline').css('height', scrollPercentage + '%');
-
-    }
-    // 0104修改end
-
-    function autoPlaySide(){
-        autoplayTimeID = setTimeout(function () {
-            fullpage_api.moveSectionDown();
-        }, autoPlayTimer);
-    }
-
-
-    var tnav = new TimelineMax({paused : true});
-
-    tnav.to("#header", 0.1, {
-        height: "100vh"
-    });
-    
-    tnav.to(".menu-overlay", 0.5, {
-        opacity: 1,
-        ease: Power4.easeInOut
-    });
-
-    /*tnav.to(".topmenu-fixWrap", 0.5, {
-        height: "100vh",
-        ease: Power4.easeInOut
-    });*/
-
-    tnav.staggerFrom(".menu .topmenu-fixList li", 2, {
-        x: -40, 
-        opacity: 0, 
-        ease: Power2.easeOut
-    }, 0.1);
-
-    tnav.reverse();
-
-    $(document).on("click", ".menu-btn", function() {
-        tnav.reversed(!tnav.reversed());
-    });
-
-    $(".open").click(function () {
-        $(this).hide();
-        $(".close").delay(500).show();
-        $("#header").css("z-index", "10");
-        $("h1").hide();
-    });
-
-    $(".close").click(function () {
-        var self = this
-        setTimeout(function () {
-            $(self).hide();
-            $(".open").show();
-            $("h1").show();
-        }, 1400);
-        // $("#header").css("z-index","0");
-    });
-
-
-</script>
-
-
-
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.min.js"></script>
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/TweenMax.min.js"></script>
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/slick.min.js"></script>
+<link rel="stylesheet" href="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/css/slick.css">
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.mousewheel.min.js"></script>
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/barba.umd.js"></script>
+<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
+<link rel="stylesheet" href="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/css/animate.css">
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/wow.min.js"></script>
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.validate.min.js"></script>
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.touchSwipe.min.js"></script>
+<link rel="stylesheet" href="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/css/jquery.fancybox.min.css"/>
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.fancybox.min.js"></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
+<link rel="stylesheet" href="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/css/twentytwenty.css">
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/js/jquery.twentytwenty.js"></script>
+<script src="https://www.greatbuilding.com.tw/wp-content/themes/goods-design/dist/common.js?t=1136"></script>
 </html>
+<script>
+    $(".pn-article .content img").each(function(i, el) {
+        $(el).removeAttr("height")
+    })
+</script>
