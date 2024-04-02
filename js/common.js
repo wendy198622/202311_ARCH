@@ -252,73 +252,64 @@
     
                 $(".pd-pages").addClass("is-show");
     
-                $('.projectDetailList').on('init beforeChange', function (event, slick, currentSlide, nextSlide) {
-    
-                    var i = (nextSlide ? nextSlide : 0) + 1;
-    
-                    $("#now").text(i);
-    
-                    $("#total").text(slick.slideCount);
-    
-                    TweenMax.to('.pd-progress .bar', 1, {
-    
-                        height: 100 / slick.slideCount * i + "%"
-    
-                    });
-    
-                    if (nextSlide != undefined) {
-    
-                        if (nextSlide == 1) {
-    
-                            $(".projectDetailList").addClass("is-blur");
-    
-                            $(".pd-article-trigger").addClass("is-open");
-    
-                            $(".pd-fancyWrap").stop(true).fadeIn(500);
-    
-                            $('.projectDetailList').slick('slickPause');
-                        } else {
-    
-                            $(".projectDetailList").removeClass("is-blur");
-    
-                            $(".pd-article-trigger").removeClass("is-open");
-    
-                            $(".pd-fancyWrap").stop(true).fadeOut(500);
-    
-                            $('.projectDetailList').slick('slickPlay');
+                function handleCarousel($element) {
+                    $element.on('init beforeChange', function (event, slick, currentSlide, nextSlide) {
+                        var i = (nextSlide ? nextSlide : 0) + 1;
+                
+                        $("#now").text(i);
+                        $("#total").text(slick.slideCount);
+                
+                        TweenMax.to('.pd-progress .bar', 1, {
+                            height: 100 / slick.slideCount * i + "%"
+                        });
+                
+                        if (nextSlide != undefined) {
+                            if (nextSlide == 1) {
+                                $element.addClass("is-blur");
+                                $(".pd-article-trigger").addClass("is-open");
+                                $(".pd-fancyWrap").stop(true).fadeIn(500);
+                                $element.slick('slickPause');
+                            } else {
+                                $element.removeClass("is-blur");
+                                $(".pd-article-trigger").removeClass("is-open");
+                                $(".pd-fancyWrap").stop(true).fadeOut(500);
+                                $element.slick('slickPlay');
+                            }
                         }
-                    }
-                }).slick({
-    
-                    fade: true,
-    
-                    dots: false,
-    
-                    infinite: true,
-    
-                    speed: 1200,
-    
-                    arrows: false,
-    
-                    focusOnSelect: false,
-    
-                    autoplay: true,
-    
-                    autoplaySpeed: 1000
-    
-                }).on('mousewheel', function (e) {
-    
-                    e.preventDefault();
-    
-                    if (e.deltaY < 0) {
-    
-                        $(this).slick('slickNext');
-                    } else {
-    
-                        $(this).slick('slickPrev');
-                    }
-                });
-    
+                    }).slick({
+                        fade: true,
+                        dots: false,
+                        infinite: true,
+                        speed: 1200,
+                        arrows: false,
+                        focusOnSelect: false,
+                        autoplay: true,
+                        autoplaySpeed: 1000
+                    }).on('mousewheel', function (e) {
+                        e.preventDefault();
+                        if (e.deltaY < 0) {
+                            $(this).slick('slickNext');
+                        } else {
+                            $(this).slick('slickPrev');
+                        }
+                    });
+                }
+                
+                if ($(window).width() <= 800) {
+                    handleCarousel($('.projectDetailList.mob'));
+                } else {
+                    handleCarousel($('.projectDetailList.pc'));
+                }
+            
+                // $(window).resize(function () {
+                //     // 当窗口大小变化时重新选择元素并处理轮播逻辑
+                //     if ($(window).width() <= 800) {
+                //         handleCarousel($('.projectDetailList.mob'));
+                //     } else {
+                //         handleCarousel($('.projectDetailList.pc'));
+                //     }
+                // });
+
                 $('.projectDetailList').swipe({
     
                     swipe: function swipe(event, direction, distance, duration, fingerCount, fingerData) {
