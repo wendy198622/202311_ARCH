@@ -390,7 +390,7 @@ input, button, textarea, select {
 
 footer {
   background: url(../img/theme_bg.jpg) center top repeat;
-  padding: 120px 0 140px;
+  padding: 120px 0 140px !important;
 }
 
 footer .container {

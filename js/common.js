@@ -304,7 +304,7 @@
     
                     autoplay: true,
     
-                    autoplaySpeed: 5000
+                    autoplaySpeed: 1000
     
                 }).on('mousewheel', function (e) {
     
@@ -368,6 +368,9 @@
                 $("body").removeClass("is-index");
     
                 $('.projectDetailList').slick('unslick');
+
+                $("section").removeClass("home");
+
             }
         }, {
     
@@ -471,7 +474,7 @@
                     if ($(this).data("events") == undefined) {
     
                         //var _url = "news_data.php"
-                        var _url = "https://www.greatbuilding.com.tw/more-news-data";
+                        var _url = "";
                     } else {
     
                         var _url = "events_data.php";

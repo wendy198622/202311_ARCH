@@ -244,153 +244,9 @@ input, button, textarea, select {
   align-items: center;
 }
 
-#header {
-  width: 100%;
-  height: 90px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  overflow: hidden;
-}
-
-#header h1 {
-  width: 150px;
-  position: fixed;
-  top: 26px;
-  left: 5%;
-  z-index: 1;
-}
-
-#header .menu-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  opacity: 0;
-  overflow: hidden;
-}
-
-#header .menu-overlay .block {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background: #101010;
-  left: 0;
-  background: url(../img/theme_bg.jpg) top center repeat;
-}
-
-#header .topmenu-fixWrap {
-  height: 90px;
-}
-
-#header .topmenu-fixWrap .topmenu-fixList {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1;
-  list-style: none;
-}
-
-#header .topmenu-fixWrap .topmenu-fixList li {
-  padding: 20px 0;
-  color: #fff;
-  font-size: 36px;
-  line-height: 1;
-  font-weight: 500;
-  opacity: 1;
-}
-
-#header .topmenu-fixWrap .topmenu-fixList li .en {
-  font-family: "Playfair Display",Arial,Helvetica,serif;
-  font-size: 30px;
-  letter-spacing: 6px;
-  color: #dfdfdf;
-  display: inline-block;
-  position: absolute;
-  top: 21px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  opacity: 0;
-  -webkit-transition: all .6s;
-  transition: all .6s;
-  white-space: nowrap;
-  margin-left: -30px;
-  text-align: center;
-}
-
-#header .topmenu-fixWrap .topmenu-fixList li .ch {
-  font-family: "Noto Serif TC",serif;
-  font-size: 25px;
-  letter-spacing: 6px;
-  color: #dfdfdf;
-  display: inline-block;
-  -webkit-transition: all .6s .2s;
-  transition: all .6s .2s;
-}
-
-#header .topmenu-fixWrap .topmenu-fixList li .social {
-  width: 32px;
-  height: 32px;
-  display: inline-block;
-  text-align: center;
-  margin: 0 5px;
-}
-
-#header .topmenu-fixWrap .topmenu-fixList li:hover .en {
-  opacity: 1;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  margin-left: 0;
-  color: #c9a063;
-}
-
-#header .topmenu-fixWrap .topmenu-fixList li:hover .ch {
-  opacity: 0;
-  -webkit-transform: translateX(30px);
-          transform: translateX(30px);
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-#header .menu-btn {
-  position: fixed;
-  right: 5%;
-  top: 0;
-  margin: 1.2em 0;
-  font-family: 'Playfair Display','Noto Serif TC', serif;
-  font-size: 25px;
-  letter-spacing: 5px;
-  color: #000;
-  cursor: pointer;
-}
-
-#header .menu-btn .open {
-  color: #000;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 0;
-}
-
-#header .menu-btn .close {
-  color: #fff;
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 10;
-}
-
 footer {
   background: url(../img/theme_bg.jpg) center top repeat;
-  padding: 120px 0 140px;
+  padding: 120px 0 140px !important;
 }
 
 footer .container {
@@ -603,6 +459,12 @@ footer .copyright a {
   letter-spacing: 2px;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media (max-width: 800px) {
+  .project_list ul li h5 {
+    font-size: 14px;
+  }
 }
 
 .project_list ul li h6 {

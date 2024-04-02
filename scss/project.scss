@@ -1,11 +1,12 @@
 @import './setting';
-@import './header';
+// @import './header';
 @import './footer';
 
 // font-family: 'Noto Sans TC', sans-serif;
 // font-family: 'Noto Serif TC', serif;
 // font-family: 'Playfair Display', serif;
 // font-family: 'Roboto', sans-serif;
+
 .topmenuWrap{
     background-image: none;
     z-index: 2;
@@ -28,7 +29,6 @@
     }
     
 }
-
 .project_title{
     .container{
         max-width: 1000px;
@@ -96,6 +96,9 @@
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 transition: all .3s;
+                @media (max-width:800px){
+                    font-size: 14px;
+                }
             }
         
             h6{

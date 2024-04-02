@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700,900|Playfair+Display:400,700,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
 section{
-    background: url(img/theme_bg.jpg) top center repeat;
+    /* background: url(img/theme_bg.jpg) top center repeat; */
 }
 header{
     position: relative;

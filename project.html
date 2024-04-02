@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="css/project.css" />
     <!-- js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -23,228 +25,305 @@
 
 </head>
 
-<body>
-        <header id="header">
-    
-            <h1>
-                <a href="index.html">
-                    <img class="white" src="img/logo.svg" alt="">
-                    <img class="black" src="img/logo_black.svg" alt="">
-                </a>
-            </h1>
-    
-            <div class="menu-overlay">
-                <div class="block b1"></div>
-            </div>
-    
-            <div class="menu topmenu-fixWrap">
-                <ul class="topmenu-fixList">
-                        <li>
-                            <a href="index.html">
-                                <span class="ch">首頁</span>
-                                <span class="en">HOME</span>
-                            </a>
+<body data-rsssl="1">
+    <section data-barba="wrapper">
+        <main data-barba="container" data-barba-namespace="project-all">
+            <div id="header">
+                <!-- 電腦版TOP選單 -->
+                <header class="topmenuWrap grid-x align-justify align-middle">
+                    <div class="logo cell shrink">
+                        <a href="index.html">
+                        <img src="img/logo_black.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="menu cell shrink show-for-large">MENU</div>
+                    <div class="hamburger cell shrink hide-for-large">
+                        <span class="item1"></span>
+                        <span class="item2"></span>
+                        <span class="item3"></span>
+                    </div>
+                </header>
+            
+                <!-- 電腦版展開選單 -->
+                <div class="topmenu-fixWrap">
+                    <ul class="topmenu-fixList grid-y align-middle">
+                        <li class="cell shrink">
+                        <a href="home.html">
+                            <span class="ch">首頁</span>
+                            <span class="en">HOME</span>
+                        </a>
                         </li>
-                        <li>
-                            <a href="aboutus.html">
-                                <span class="ch">關於我們</span>
-                                <span class="en">ABOUT</span>
-                            </a>
+            
+                        <li class="cell shrink">
+                        <a href="aboutus.html" data-barba-prevent>
+                            <span class="ch">關於我們</span>
+                            <span class="en">ABOUT</span>
+                        </a>
                         </li>
-                        <li>
-                            <a href="news.html">
-                                <span class="ch">最新消息</span>
-                                <span class="en">NEWS</span>
-                            </a>
+            
+                        <li class="cell shrink">
+                        <a href="news.html" data-barba-prevent>
+                            <span class="ch">最新消息</span>
+                            <span class="en">NEWS</span>
+                        </a>
                         </li>
-                        <li>
-                            <a href="project.html">
-                                <span class="ch">建案資訊</span>
-                                <span class="en">PROJECTS</span>
-                            </a>
+            
+                        <li class="cell shrink">
+                        <a href="project.html" data-barba-prevent>
+                            <span class="ch">建案資訊</span>
+                            <span class="en">PROJECTS</span>
+                        </a>
                         </li>
-                        <li>
-                            <a href="contactus.html">
-                                <span class="ch">聯絡我們</span>
-                                <span class="en">CONTACT US</span>
-                            </a>
+            
+                        <li class="cell shrink">
+                        <a href="contactus.html" data-barba-prevent>
+                            <span class="ch">聯絡我們</span>
+                            <span class="en">CONTACT US</span>
+                        </a>
                         </li>
-                        <li>
+            
+                        <li class="cell">
                             <a href="https://lin.ee/4j8ym6E" class="social"><img src="./img/line.svg" alt=""></a>
                             <a href="https://www.youtube.com/@user-ww9kf6qm5o" class="social"><img src="./img/youtube.svg" alt=""></a>
+                            </a>
                         </li>
-                </ul>
+                    </ul>
+                    <div class="close">CLOSE</div>
+                </div>
+        
+                <!-- 手機版TOP選單 -->
+                <div class="only-index-logo hide-for-large">
+                    <a href="index.html">
+                        <img src="img/logo_black.svg" alt="">
+                    </a>
+                </div>
+                <div class="only-index-hamburger hide-for-large">
+                    <span class="item1"></span>
+                    <span class="item2"></span>
+                    <span class="item3"></span>
+                </div>
+            </div> 
+            <div class="project_title">
+                <div class="container">
+                    <h3>
+                        <span>ALL PROJECTS</span>
+                    </h3>
+                </div>
             </div>
-    
-            <div class="menu-btn">
-                <div class="open">MENU</div>
-                <div class="close">CLOSE</div>            
+            <div class="project_list">
+                <div class="container">
+                    <ul class="projectList">
+                        <li class="active wow fadeInUp">
+                            <a href="projectpage.html">
+                                <h6>2023</h6>
+                                <h4>明筑輝煌</h4>
+                                <h5>明築建設</h5>
+                            </a>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay=".1s">
+                            <a href="projectpage.html">
+                                <h6>2023</h6>
+                                <h4>明筑輝煌</h4>
+                                <h5>明築建設</h5>
+                            </a>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay=".2s">
+                            <a href="projectpage.html">
+                                <h6>2023</h6>
+                                <h4>明筑輝煌</h4>
+                                <h5>明築建設</h5>
+                            </a>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay=".3s">
+                            <a href="projectpage.html">
+                                <h6>2023</h6>
+                                <h4>明筑輝煌</h4>
+                                <h5>明築建設</h5>
+                            </a>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay=".4s">
+                            <a href="projectpage.html">
+                                <h6>2023</h6>
+                                <h4>明筑輝煌</h4>
+                                <h5>明築建設</h5>
+                            </a>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay=".5s">
+                            <a href="projectpage.html">
+                                <h6>2023</h6>
+                                <h4>明筑輝煌</h4>
+                                <h5>明築建設</h5>
+                            </a>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay=".6s">
+                            <a href="projectpage.html">
+                                <h6>2023</h6>
+                                <h4>明筑輝煌</h4>
+                                <h5>明築建設</h5>
+                            </a>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay=".7s">
+                            <a href="projectpage.html">
+                                <h6>2023</h6>
+                                <h4>明筑輝煌</h4>
+                                <h5>明築建設</h5>
+                            </a>
+                        </li>
+                        <li class="wow fadeInUp" data-wow-delay=".8s">
+                            <a href="projectpage.html">
+                                <h6>2023</h6>
+                                <h4>明筑輝煌</h4>
+                                <h5>明築建設</h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </header>
-    <section>
-        <div class="project_title">
-            <div class="container">
-                <h3>
-                    <span>ALL PROJECTS</span>
-                </h3>
-            </div>
-        </div>
-        <div class="project_list">
-            <div class="container">
-                <ul>
-                    <li class="active wow fadeInUp">
-                        <a href="projectpage.html">
-                            <h6>2023</h6>
-                            <h4>明筑輝煌</h4>
-                            <h5>明築建設</h5>
-                        </a>
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay=".1s">
-                        <a href="projectpage.html">
-                            <h6>2023</h6>
-                            <h4>明筑輝煌</h4>
-                            <h5>明築建設</h5>
-                        </a>
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay=".2s">
-                        <a href="projectpage.html">
-                            <h6>2023</h6>
-                            <h4>明筑輝煌</h4>
-                            <h5>明築建設</h5>
-                        </a>
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay=".3s">
-                        <a href="projectpage.html">
-                            <h6>2023</h6>
-                            <h4>明筑輝煌</h4>
-                            <h5>明築建設</h5>
-                        </a>
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay=".4s">
-                        <a href="projectpage.html">
-                            <h6>2023</h6>
-                            <h4>明筑輝煌</h4>
-                            <h5>明築建設</h5>
-                        </a>
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay=".5s">
-                        <a href="projectpage.html">
-                            <h6>2023</h6>
-                            <h4>明筑輝煌</h4>
-                            <h5>明築建設</h5>
-                        </a>
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay=".6s">
-                        <a href="projectpage.html">
-                            <h6>2023</h6>
-                            <h4>明筑輝煌</h4>
-                            <h5>明築建設</h5>
-                        </a>
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay=".7s">
-                        <a href="projectpage.html">
-                            <h6>2023</h6>
-                            <h4>明筑輝煌</h4>
-                            <h5>明築建設</h5>
-                        </a>
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay=".8s">
-                        <a href="projectpage.html">
-                            <h6>2023</h6>
-                            <h4>明筑輝煌</h4>
-                            <h5>明築建設</h5>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            <footer id="footer">
+                <div class="container">
+                    <div class="logobox">
+                        <a href="index.html" class="logo"><img src="./img/logo.svg" alt=""></a>
+                        <hr>
+                        <a href="https://lin.ee/4j8ym6E" class="social"><img src="./img/line.svg" alt=""></a>
+                        <a href="https://www.youtube.com/@user-ww9kf6qm5o" class="social"><img src="./img/youtube.svg" alt=""></a>
+                    </div>
+                    <div class="infobox">
+                        <div class="item w100">明瑋建設：桃園市桃園區中山路551號5樓</div>
+                        <div class="item">
+                            <span>T</span>
+                            <a href="tel:033335659">03-3318869</a>            
+                        </div>
+                        <div class="item">
+                            <span>E</span>
+                            <a href="mingwei90138759@gmail.com">mingwei90138759@gmail.com</a>
+                        </div>
+                        
+                        <div class="item w100">明築建設：桃園市桃園區文中里正光二街151巷10號</div>
+                        <div class="item">
+                            <span>T</span>
+                            <a href="tel:033335659">03-3335659</a>            
+                        </div>
+                        <div class="item">
+                            <span>E</span>
+                            <a href="moredreamlu@gmail.com">moredreamlu@gmail.com</a>
+                        </div>
+                        <!-- <div class="item">
+                            <a href="https://lin.ee/4j8ym6E" class="social"><img src="./img/line.svg" alt=""></a>明筑建築團隊官方LINE@
+                        </div> -->
+                    </div>
+                    <div class="copyright">
+                        © 明筑建筑團隊 All Rights Reserved. . | <a href="#">隱私權政策</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
     </section>
-    <footer id="footer"></footer>
 </body>
 
+
+<script src="js/jquery.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/slick.min.js"></script>
+<link rel="stylesheet" href="css/slick.css">
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/barba.umd.js"></script>
+
+<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
+
+<link rel="stylesheet" href="css/animate.css">
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+<script src="js/jquery.fancybox.min.js"></script>
+
+<script src="js/jquery.event.move.min.js"></script>
+<link rel="stylesheet" href="css/twentytwenty.css">
+<script src="js/jquery.twentytwenty.js"></script>
+<script src="js/common.js"></script>
 
 <script>
 
     $(document).ready(function () {
 
-        new WOW().init();
+    //     new WOW().init();
 
-        // $('#header').load('page/header.html');
+    //     // $('#header').load('page/header.html');
         $('#footer').load('page/footer.html');
         
-        $('.news_content_slick').slick({
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            vertical: true,
-            verticalSwiping: true,
-            arrow: true,
-            dots: true,
-            infinite: true,
-            speed: 500,
-            customPaging : function(slider, i) {
-                var thumb = $(slider.$slides[i]).data();
-                return '<a class="dot">'+ ('0' + (++i) + '/' + '0'+ Math.ceil(slider.slideCount/3) ) +'</a>';
-            },
-        });
+    //     $('.news_content_slick').slick({
+    //         slidesToShow: 3,
+    //         slidesToScroll: 3,
+    //         vertical: true,
+    //         verticalSwiping: true,
+    //         arrow: true,
+    //         dots: true,
+    //         infinite: true,
+    //         speed: 500,
+    //         customPaging : function(slider, i) {
+    //             var thumb = $(slider.$slides[i]).data();
+    //             return '<a class="dot">'+ ('0' + (++i) + '/' + '0'+ Math.ceil(slider.slideCount/3) ) +'</a>';
+    //         },
+    //     });
 
-        $(".slick-dots").click(function() {
-			$(".slick-dots .li").css("display","block");
-        });
+    //     $(".slick-dots").click(function() {
+	// 		$(".slick-dots .li").css("display","block");
+    //     });
 
-        $(".project_list li").click(function() {
-            $(this).addClass("active");
-            $(this).siblings().removeClass("active");
-        });
+    //     $(".project_list li").click(function() {
+    //         $(this).addClass("active");
+    //         $(this).siblings().removeClass("active");
+    //     });
         
 
     });
 
 
-    var tnav = new TimelineMax({paused : true});
+    // var tnav = new TimelineMax({paused : true});
 
-    tnav.to("#header", 0.1, {
-        height: "100vh"
-    });
+    // tnav.to("#header", 0.1, {
+    //     height: "100vh"
+    // });
     
-    tnav.to(".menu-overlay", 0.5, {
-        opacity: 1,
-        ease: Power4.easeInOut
-    });
+    // tnav.to(".menu-overlay", 0.5, {
+    //     opacity: 1,
+    //     ease: Power4.easeInOut
+    // });
 
-    /*tnav.to(".topmenu-fixWrap", 0.5, {
-        height: "100vh",
-        ease: Power4.easeInOut
-    });*/
+    // /*tnav.to(".topmenu-fixWrap", 0.5, {
+    //     height: "100vh",
+    //     ease: Power4.easeInOut
+    // });*/
 
-    tnav.staggerFrom(".menu .topmenu-fixList li", 2, {
-        x: -40, 
-        opacity: 0, 
-        ease: Power2.easeOut
-    }, 0.1);
+    // tnav.staggerFrom(".menu .topmenu-fixList li", 2, {
+    //     x: -40, 
+    //     opacity: 0, 
+    //     ease: Power2.easeOut
+    // }, 0.1);
 
-    tnav.reverse();
+    // tnav.reverse();
 
-    $(document).on("click", ".menu-btn", function() {
-        tnav.reversed(!tnav.reversed());
-    });
+    // $(document).on("click", ".menu-btn", function() {
+    //     tnav.reversed(!tnav.reversed());
+    // });
 
     
-    $(".open").click(function () {
-        $(this).hide();
-        $(".close").delay(500).show();
-        $("#header").css("z-index", "10");
-        $("h1").hide();
-    });
+    // $(".open").click(function () {
+    //     $(this).hide();
+    //     $(".close").delay(500).show();
+    //     $("#header").css("z-index", "10");
+    //     $("h1").hide();
+    // });
 
-    $(".close").click(function () {
-        var self = this
-        setTimeout(function () {
-            $(self).hide();
-            $(".open").show();
-            $("h1").show();
-        }, 1400);
-        // $("#header").css("z-index","0");
-    });
+    // $(".close").click(function () {
+    //     var self = this
+    //     setTimeout(function () {
+    //         $(self).hide();
+    //         $(".open").show();
+    //         $("h1").show();
+    //     }, 1400);
+    //     // $("#header").css("z-index","0");
+    // });
 
 </script>
 

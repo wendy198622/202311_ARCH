@@ -26,12 +26,16 @@ $subText:#878176;
 }
 
 section{
-    background: url(img/theme_bg.jpg) top center repeat;
     width: 100%;
-    height: 100vh;
+    height: auto;
     overflow: hidden;
     position: relative;
-    background-color: #000;
+    background-color: #f2f2f2;
+
+    &.home{
+        background: url(../img/theme_bg.jpg) top center repeat transparent;
+        height: 100vh;
+    }
 
     .preloadWrap{}
 
@@ -596,5 +600,117 @@ section{
         font-size: 24px;
         font-weight: 600;
         letter-spacing: 2px;
+    }
+}
+
+footer{
+    background: url(../img/theme_bg.jpg) center top repeat;
+    padding: 120px 0 140px;
+
+    .container{
+        max-width: 1000px;
+        margin:0 auto;
+        @media (max-width:1080px){
+            width: 90%;
+        }
+    }
+
+    .logobox{
+        overflow: hidden;
+
+        .logo{
+            @media (max-width:600px){
+                width: 100%;
+                height: 66px;
+            }
+        }
+
+        img{
+            width: 190px;
+            float: left;
+        }
+        
+        hr{
+            width: calc(100% - 316px);
+            display: block;
+            float: left;
+            margin: 14px 32px;
+            @media (max-width:600px){
+                display: none;
+            }
+        }
+        
+        .social{
+            width: 26px;
+            float: left;
+            font-size: 12px;
+            color: #fff;
+            margin-right: 10px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .infobox{
+        margin-top: 30px;
+
+        .item{
+            font-size: 16px;
+            line-height: 2;
+            font-family: 'Noto Serif TC', serif;
+            color: #fff;
+            display: inline-block;
+            margin-right: 20px;
+            letter-spacing: 1px;
+
+            &.w100{
+                width: 100%;
+            }
+
+            span{
+                display: inline-block;
+                font-family: 'Playfair Display','Noto Serif TC', serif;
+                font-size: 20px;
+                line-height: 1.4;
+                color: #00404b;
+                background-color: #fff;
+                padding: 0 2px;  
+                margin-right: 6px;   
+                vertical-align: middle;           
+            }
+
+            a{
+                font-size: 16px;
+                font-family: 'Noto Serif TC', serif;
+                color: #fff;
+                display: inline-block;
+                margin-right: -4px;
+            }
+            .social{
+                width: 22px;
+                float: left;
+                margin-right: 10px;
+                margin-top: 5px;
+            }
+
+        }
+    }
+
+    .copyright{
+        font-size: 12px;
+        color: #fff;
+        margin-top: 16px;
+
+        a{
+            font-size: 12px;
+            color: #fff;
+            display: inline-block;
+        }
     }
 }

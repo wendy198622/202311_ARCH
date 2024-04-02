@@ -304,7 +304,7 @@
     
                     autoplay: true,
     
-                    autoplaySpeed: 5000
+                    autoplaySpeed: 1000
     
                 }).on('mousewheel', function (e) {
     
