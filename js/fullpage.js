@@ -1,5 +1,5 @@
 /*!
-* fullPage 4.0.20
+* fullPage 4.0.22
 * https://github.com/alvarotrigo/fullPage.js
 *
 * @license GPLv3 for open source use only
@@ -153,13 +153,14 @@
 
     var win = window;
     var doc = document;
-    var isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);
+    var isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/) || navigator.userAgent.includes("Mac") && "ontouchend" in document; // iPad on iOS 13 detection
+
     var isMacDevice = /(Mac|iPhone|iPod|iPad)/i.test(win.navigator.userAgent); // @ts-ignore
 
     var isTouch = 'ontouchstart' in win || navigator.msMaxTouchPoints > 0 || navigator.maxTouchPoints;
     var isIE11 = !!window.MSInputMethodContext && !!document.documentMode; // taken from https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution/modal.js
 
-    var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]'; // cache common elements
+    var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], summary:not([disabled]), [contenteditable]'; // cache common elements
 
     var FP = {
       test: {},
@@ -1122,7 +1123,7 @@
       licenseKey: '',
       credits: {
         "enabled": true,
-        "label": 'Made with fullPage.js',
+        "label": '',
         "position": 'right'
       },
       //scrolling
@@ -5420,13 +5421,13 @@
     function init$1() {
       var position = getOptions().credits.position || 'right';
       var positionStyle = ['left', 'right'].indexOf(position) > -1 ? "".concat(position, ": 0;") : '';
-      // var waterMark = "\n        <div class=\"fp-watermark\" style=\"".concat(positionStyle, "\">\n            <a href=\"https://alvarotrigo.com/fullPage/\" \n                rel=\"nofollow noopener\" \n                target=\"_blank\" \n                style=\"text-decoration:none; color: #000;\">\n                    ").concat(getOptions().credits.label || 'Made with fullPage.js', "\n            </a>\n        </div>\n    ");
+      var waterMark = "\n        <div class=\"fp-watermark\" style=\"".concat(positionStyle, "\">\n            <a href=\"https://alvarotrigo.com/fullPage/\" \n                rel=\"nofollow noopener\" \n                target=\"_blank\" \n                style=\"text-decoration:none; color: #000;\">\n                    ").concat(getOptions().credits.label || '', "\n            </a>\n        </div>\n    ");
       var lastSection = getLast(state.sections);
-      // var shouldUseWaterMark = !state.isValid || getOptions().credits.enabled;
+      var shouldUseWaterMark = !state.isValid || getOptions().credits.enabled;
 
-      // if (lastSection && lastSection.item && shouldUseWaterMark) {
-      //   lastSection.item.insertAdjacentHTML('beforeend', waterMark);
-      // }
+      if (lastSection && lastSection.item && shouldUseWaterMark) {
+        lastSection.item.insertAdjacentHTML('beforeend', waterMark);
+      }
     }
 
     !function () {
@@ -5485,7 +5486,7 @@
         });
       });
       var t = ["-"];
-      var n = "\x32\x30\x32\x33\x2d\x34\x2d\x32\x39".split("-"),
+      var n = "\x32\x30\x32\x34\x2d\x30\x2d\x33\x31".split("-"),
           e = new Date(n[0], n[1], n[2]),
           r = ["se", "licen", "-", "v3", "l", "gp"];
 
@@ -5915,7 +5916,7 @@
       }; //public functions
 
 
-      FP.version = '4.0.20';
+      FP.version = '4.0.22';
       FP.test = Object.assign(FP.test, {
         top: '0px',
         translate3d: 'translate3d(0px, 0px, 0px)',
