@@ -27,8 +27,7 @@
     }
 }
 .aboutus_visual{
-//     width: 100%;
-//     height: 100vh;
+    padding-top: 70px;
 
     #myVideo{
         // height: 100vh;
@@ -69,7 +68,7 @@
         max-width: 1200px;
         margin:0 auto;
         overflow: hidden;
-        padding: 100px 0;
+        // padding: 100px 0;
         @media (max-width:1080px){
             width: 1080px;
         }
@@ -113,7 +112,7 @@
     .container{
         max-width: 1000px;
         margin:0 auto;
-        padding: 100px 0;
+        // padding: 100px 0;
         @media (max-width:1080px){
             width: 90%;
             overflow-x: scroll;
@@ -200,7 +199,7 @@
 
 .aboutus_team_master{
     width: 100%;
-    padding: 240px 0;
+    // padding: 240px 0;
     @media (max-width:960px){
         padding: 120px 0;
     }

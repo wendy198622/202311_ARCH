@@ -521,8 +521,11 @@ footer .copyright a {
 #fullpage > li {
   position: relative;
   width: 100%;
-  height: 100% !important;
   overflow: hidden;
+}
+
+.aboutus_visual {
+  padding-top: 70px;
 }
 
 .aboutus_visual #myVideo {
@@ -567,7 +570,6 @@ footer .copyright a {
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  padding: 100px 0;
 }
 
 @media (max-width: 1080px) {
@@ -629,7 +631,6 @@ footer .copyright a {
 .aboutus_team .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 100px 0;
 }
 
 @media (max-width: 1080px) {
@@ -724,8 +725,6 @@ footer .copyright a {
 
 .aboutus_team_master {
   width: 100%;
-  background: #f2f2f2;
-  padding: 240px 0;
 }
 
 @media (max-width: 960px) {
