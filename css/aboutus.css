@@ -451,6 +451,30 @@ footer .logobox .social img {
 
 footer .infobox {
   margin-top: 30px;
+  overflow: hidden;
+}
+
+footer .infobox .infogroup {
+  width: 55%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+  footer .infobox .infogroup {
+    width: calc(100% - 80px);
+  }
+}
+
+footer .infobox .line {
+  float: left;
+  width: 70px;
+}
+
+@media (max-width: 960px) {
+  footer .infobox .line {
+    float: right;
+  }
 }
 
 footer .infobox .item {
@@ -566,13 +590,13 @@ footer .copyright a {
 }
 
 .aboutus_organize ul {
-  width: 100%;
-  max-width: 1200px;
+  width: 96%;
+  max-width: 1280px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1280px) {
   .aboutus_organize ul {
     width: 1080px;
   }
@@ -585,14 +609,14 @@ footer .copyright a {
 }
 
 .aboutus_organize ul li {
-  width: calc((100% - 24px) / 3);
+  width: calc((100% - 24px) / 4);
   float: left;
   margin-right: 8px;
 }
 
 @media (max-width: 1080px) {
   .aboutus_organize ul li {
-    width: calc((100% - 24px) / 3);
+    width: calc((100% - 32px) / 4);
     float: unset;
     display: inline-block;
   }
@@ -622,6 +646,13 @@ footer .copyright a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.aboutus_teamsphoto .photo {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/aboutus_teamsphoto.png) center center no-repeat;
+  background-size: cover;
 }
 
 .aboutus_team {
@@ -662,6 +693,7 @@ footer .copyright a {
 .aboutus_team ul {
   overflow: hidden;
   margin-top: 60px;
+  padding: 10px 0;
 }
 
 @media (max-width: 1080px) {
@@ -671,16 +703,18 @@ footer .copyright a {
 }
 
 .aboutus_team ul li {
-  width: calc((100% - 56px) / 5);
+  width: calc((100% - 56px) / 3);
   float: left;
   margin-right: 14px;
   position: relative;
   overflow: hidden;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 1080px) {
   .aboutus_team ul li {
-    width: calc((100% - 72px) / 5);
+    width: calc((100% - 72px) / 3);
     float: unset;
     display: inline-block;
     vertical-align: top;
@@ -709,16 +743,12 @@ footer .copyright a {
   letter-spacing: 6px;
 }
 
-.aboutus_team ul li img {
-  margin-top: 14px;
-}
-
 .aboutus_team ul li .overlay {
   display: block;
   position: absolute;
   left: 0;
   top: 0;
-  background: #fff;
+  background: #a89077;
   width: 100%;
   height: 100%;
 }
@@ -792,5 +822,14 @@ footer .copyright a {
   width: 132px;
   float: right;
   margin-top: 60px;
+}
+
+#section3 {
+  background: url(../img/aboutus_bg.png) center center repeat;
+  background-size: contain;
+}
+
+.fp-watermark {
+  display: none !important;
 }
 /*# sourceMappingURL=aboutus.css.map */

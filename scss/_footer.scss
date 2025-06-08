@@ -54,6 +54,22 @@ footer{
 
     .infobox{
         margin-top: 30px;
+        overflow: hidden;
+        .infogroup{
+            width: 55%;
+            float: left;
+            margin-bottom: 20px;
+            @media (max-width:960px){
+                width: calc(100% - 80px);
+            }
+        }
+        .line{
+            float: left;
+            width: 70px;
+            @media (max-width:960px){
+                float: right;
+            }
+        }
 
         .item{
             font-size: 16px;

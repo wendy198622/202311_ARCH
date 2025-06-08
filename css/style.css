@@ -310,6 +310,30 @@ footer .logobox .social img {
 
 footer .infobox {
   margin-top: 30px;
+  overflow: hidden;
+}
+
+footer .infobox .infogroup {
+  width: 55%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+  footer .infobox .infogroup {
+    width: calc(100% - 80px);
+  }
+}
+
+footer .infobox .line {
+  float: left;
+  width: 70px;
+}
+
+@media (max-width: 960px) {
+  footer .infobox .line {
+    float: right;
+  }
 }
 
 footer .infobox .item {

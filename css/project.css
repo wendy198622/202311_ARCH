@@ -307,6 +307,30 @@ footer .logobox .social img {
 
 footer .infobox {
   margin-top: 30px;
+  overflow: hidden;
+}
+
+footer .infobox .infogroup {
+  width: 55%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+  footer .infobox .infogroup {
+    width: calc(100% - 80px);
+  }
+}
+
+footer .infobox .line {
+  float: left;
+  width: 70px;
+}
+
+@media (max-width: 960px) {
+  footer .infobox .line {
+    float: right;
+  }
 }
 
 footer .infobox .item {
@@ -456,9 +480,10 @@ footer .copyright a {
   color: #000;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   -webkit-transition: all .3s;
   transition: all .3s;
+  white-space: nowrap;
 }
 
 @media (max-width: 800px) {
@@ -486,7 +511,7 @@ footer .copyright a {
 }
 
 .project_list ul li:hover h5, .project_list ul li.active h5 {
-  letter-spacing: 6px;
+  letter-spacing: 4px;
 }
 
 .projectpage_photo {
