@@ -487,6 +487,12 @@ footer .infobox .item {
   letter-spacing: 1px;
 }
 
+@media (max-width: 960px) {
+  footer .infobox .item {
+    width: 120%;
+  }
+}
+
 footer .infobox .item.w100 {
   width: 100%;
 }
@@ -598,7 +604,7 @@ footer .copyright a {
 
 @media (max-width: 1280px) {
   .aboutus_organize ul {
-    width: 1080px;
+    width: 96%;
   }
 }
 
@@ -609,21 +615,26 @@ footer .copyright a {
 }
 
 .aboutus_organize ul li {
-  width: calc((100% - 24px) / 4);
+  width: calc((100% - 32px) / 4);
   float: left;
   margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 @media (max-width: 1080px) {
   .aboutus_organize ul li {
-    width: calc((100% - 32px) / 4);
-    float: unset;
-    display: inline-block;
+    width: calc((100% - 8px) / 2);
   }
 }
 
-.aboutus_organize ul li:last-child {
+.aboutus_organize ul li:nth-child(4) {
   margin-right: 0;
+}
+
+@media (max-width: 1080px) {
+  .aboutus_organize ul li:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 .aboutus_organize ul li:nth-child(1) {
@@ -653,6 +664,14 @@ footer .copyright a {
   height: 100vh;
   background: url(../img/aboutus_teamsphoto.png) center center no-repeat;
   background-size: cover;
+}
+
+@media (max-width: 1080px) {
+  .aboutus_teamsphoto .photo {
+    width: auto;
+    background: url(../img/aboutus_teamsphoto_mob.png) center center no-repeat;
+    background-size: auto 100%;
+  }
 }
 
 .aboutus_team {
@@ -692,20 +711,24 @@ footer .copyright a {
 
 .aboutus_team ul {
   overflow: hidden;
-  margin-top: 60px;
   padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
 }
 
 @media (max-width: 1080px) {
   .aboutus_team ul {
-    width: 1080px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 .aboutus_team ul li {
-  width: calc((100% - 56px) / 3);
-  float: left;
-  margin-right: 14px;
+  width: calc((100% - 32px) / 3);
   position: relative;
   overflow: hidden;
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
@@ -714,15 +737,8 @@ footer .copyright a {
 
 @media (max-width: 1080px) {
   .aboutus_team ul li {
-    width: calc((100% - 72px) / 3);
-    float: unset;
-    display: inline-block;
-    vertical-align: top;
+    width: 100%;
   }
-}
-
-.aboutus_team ul li:last-child {
-  margin-right: 0;
 }
 
 .aboutus_team ul li h4 {

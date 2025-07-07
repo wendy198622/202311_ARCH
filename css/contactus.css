@@ -487,6 +487,12 @@ footer .infobox .item {
   letter-spacing: 1px;
 }
 
+@media (max-width: 960px) {
+  footer .infobox .item {
+    width: 120%;
+  }
+}
+
 footer .infobox .item.w100 {
   width: 100%;
 }

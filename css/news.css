@@ -487,6 +487,12 @@ footer .infobox .item {
   letter-spacing: 1px;
 }
 
+@media (max-width: 960px) {
+  footer .infobox .item {
+    width: 120%;
+  }
+}
+
 footer .infobox .item.w100 {
   width: 100%;
 }
@@ -1038,6 +1044,24 @@ section {
 .newspage_content .video iframe {
   width: 100%;
   height: 560px;
+}
+
+@media (max-width: 800px) {
+  .newspage_content .video iframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newspage_content .video iframe {
+    height: 305px;
+  }
+}
+
+@media (max-width: 420px) {
+  .newspage_content .video iframe {
+    height: 204px;
+  }
 }
 
 .newspage_content .date {
