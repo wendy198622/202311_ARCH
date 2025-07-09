@@ -1,21 +1,20 @@
+<?require("fun/fconfig.php");?>
 <!DOCTYPE html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>明筑建築團隊</title>
+    <?require("top1.php");?>    
     <meta name="author" content="" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    
     <meta name="Resource-type" content="" />
     <!-- <meta property="og:image" content="https://www.zyed.com.tw/VITRUVIUS/img/1200x630.png"> -->
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/slick.css" /> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/slick-theme.css" /> -->
 	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
-	<!-- <link rel="stylesheet" type="text/css" href="css/examples.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/slick-theme.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/aboutus.css" />
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -23,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/fullpage.js"></script>
     <script type="text/javascript" src="js/examples.js"></script>
-
+    
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 
@@ -35,73 +34,17 @@
 </head>
 
 <body>
-    <header id="header">
-
-        <h1>
-            <a href="index.html">
-                <img class="white" src="img/logo.svg" alt="">
-                <img class="black" src="img/logo_black.svg" alt="">
-            </a>
-        </h1>
-
-        <div class="menu-overlay">
-            <div class="block b1"></div>
-        </div>
-
-        <div class="menu topmenu-fixWrap">
-            <ul class="topmenu-fixList">
-                <li>
-                    <a href="index.html">
-                        <span class="ch">首頁</span>
-                        <span class="en">HOME</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aboutus.html">
-                        <span class="ch">關於我們</span>
-                        <span class="en">ABOUT</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="news.html">
-                        <span class="ch">最新消息</span>
-                        <span class="en">NEWS</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="project.html">
-                        <span class="ch">建案資訊</span>
-                        <span class="en">PROJECTS</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="contactus.html">
-                        <span class="ch">聯絡我們</span>
-                        <span class="en">CONTACT US</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://lin.ee/4j8ym6E" class="social"><img src="./img/line.svg" alt=""></a>
-                    <a href="https://www.youtube.com/@user-ww9kf6qm5o" class="social"><img src="./img/youtube.svg"
-                            alt=""></a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="menu-btn">
-            <div class="open">MENU</div>
-            <div class="close">CLOSE</div>
-        </div>
-    </header>
-    <div id="fullpage">
+  <?require("top.php");?>
+    
+  <div id="fullpage">
         <div class="section" id="section0">
             <div class="aboutus_visual">
-                <!-- <div style="padding:41.67% 0 0 0;position:relative;">
+                <div style="padding:41.67% 0 0 0;position:relative;">
                     <iframe src="https://player.vimeo.com/video/931640437?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&controls=0&muted=1&quality=1080p" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="明筑建設"></iframe>
-                </div><script src="https://player.vimeo.com/api/player.js"></script> -->
-                <div style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/1091093931?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&controls=0&muted=1&quality=1080p" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="明築建設"></iframe>
                 </div><script src="https://player.vimeo.com/api/player.js"></script>
+                <!-- <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe src="https://player.vimeo.com/video/1091093931?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&controls=0&muted=1&quality=1080p" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="明築建設"></iframe>
+                </div><script src="https://player.vimeo.com/api/player.js"></script> -->
             </div>
         </div>
         <div class="section" id="section1">
@@ -158,27 +101,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="section" id="section4">
-            <div class="aboutus_team_master">
-                <div class="container">
-                    <div class="photo wow fadeInUp" data-wow-duration="2s">
-                        <img src="img/aboutus_team_master.png" alt="">
-                    </div>
-                    <div class="intro">
-                        <h4>型隨機轉的美學</h4>
-                        <h5>師承芝加哥學派，呂文程建築師<br>
-                            將Form Follows Function(型隨機轉)<br>
-                            的概念導入空間,<br>
-                            讓硬體去適應每一位家庭成員的生活習慣、<br>
-                            每一寸空間都是我們將國際建築的閱歷,<br>
-                            捏成最適合桃園人的形狀。</h5>
-                        <div class="signature">
-                            <img src="img/aboutus_team_signature.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </div>
 
     <footer id="footer"></footer>
@@ -274,6 +196,9 @@
     //     scrollBar: true,
     //     autoScrolling: true
     // });
+
+
+
 
 
 </script>
